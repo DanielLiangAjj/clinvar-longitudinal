@@ -1,0 +1,178 @@
+{
+  "cancer_vs_noncancer": {
+    "group1": "Cancer (COSMIC CGC)",
+    "n1": 483822,
+    "changed1": 80408,
+    "rate1_pct": 16.619,
+    "group2": "Non-cancer",
+    "n2": 3194481,
+    "changed2": 261649,
+    "rate2_pct": 8.191,
+    "risk_ratio": 2.029,
+    "rr_95ci": [
+      2.014,
+      2.044
+    ],
+    "odds_ratio": 2.234,
+    "or_95ci": [
+      2.215,
+      2.253
+    ],
+    "chi2": 35391.2,
+    "p_value": "<1e-300"
+  },
+  "common_vs_rare": {
+    "group1": "Higher-prevalence Mendelian",
+    "n1": 28487,
+    "changed1": 5599,
+    "rate1_pct": 19.655,
+    "group2": "Rare disease",
+    "n2": 3649816,
+    "changed2": 336458,
+    "rate2_pct": 9.218,
+    "risk_ratio": 2.132,
+    "rr_95ci": [
+      2.082,
+      2.183
+    ],
+    "odds_ratio": 2.409,
+    "or_95ci": [
+      2.339,
+      2.481
+    ],
+    "chi2": 3649.9,
+    "p_value": "<1e-300"
+  },
+  "domain_Hereditary Cancer_vs_other": {
+    "group1": "Hereditary Cancer",
+    "n1": 359743,
+    "changed1": 65410,
+    "rate1_pct": 18.182,
+    "group2": "Other/Unclassified",
+    "n2": 2828407,
+    "changed2": 204540,
+    "rate2_pct": 7.232,
+    "risk_ratio": 2.514,
+    "rr_95ci": [
+      2.494,
+      2.535
+    ],
+    "odds_ratio": 2.851,
+    "or_95ci": [
+      2.824,
+      2.878
+    ],
+    "chi2": 49381.7,
+    "p_value": "<1e-300"
+  },
+  "domain_Cardiovascular_vs_other": {
+    "group1": "Cardiovascular",
+    "n1": 198676,
+    "changed1": 32095,
+    "rate1_pct": 16.154,
+    "group2": "Other/Unclassified",
+    "n2": 2828407,
+    "changed2": 204540,
+    "rate2_pct": 7.232,
+    "risk_ratio": 2.234,
+    "rr_95ci": [
+      2.21,
+      2.258
+    ],
+    "odds_ratio": 2.472,
+    "or_95ci": [
+      2.44,
+      2.503
+    ],
+    "chi2": 20509.8,
+    "p_value": "<1e-300"
+  },
+  "domain_Neurological_vs_other": {
+    "group1": "Neurological",
+    "n1": 118581,
+    "changed1": 16951,
+    "rate1_pct": 14.295,
+    "group2": "Other/Unclassified",
+    "n2": 2828407,
+    "changed2": 204540,
+    "rate2_pct": 7.232,
+    "risk_ratio": 1.977,
+    "rr_95ci": [
+      1.948,
+      2.006
+    ],
+    "odds_ratio": 2.14,
+    "or_95ci": [
+      2.104,
+      2.176
+    ],
+    "chi2": 8168.5,
+    "p_value": "<1e-300"
+  },
+  "domain_Renal_vs_other": {
+    "group1": "Renal",
+    "n1": 85215,
+    "changed1": 11246,
+    "rate1_pct": 13.197,
+    "group2": "Other/Unclassified",
+    "n2": 2828407,
+    "changed2": 204540,
+    "rate2_pct": 7.232,
+    "risk_ratio": 1.825,
+    "rr_95ci": [
+      1.793,
+      1.858
+    ],
+    "odds_ratio": 1.95,
+    "or_95ci": [
+      1.911,
+      1.99
+    ],
+    "chi2": 4293.0,
+    "p_value": "<1e-300"
+  },
+  "domain_Ophthalmologic_vs_other": {
+    "group1": "Ophthalmologic",
+    "n1": 87681,
+    "changed1": 11815,
+    "rate1_pct": 13.475,
+    "group2": "Other/Unclassified",
+    "n2": 2828407,
+    "changed2": 204540,
+    "rate2_pct": 7.232,
+    "risk_ratio": 1.863,
+    "rr_95ci": [
+      1.831,
+      1.896
+    ],
+    "odds_ratio": 1.998,
+    "or_95ci": [
+      1.958,
+      2.038
+    ],
+    "chi2": 4826.1,
+    "p_value": "<1e-300"
+  },
+  "domain_Other/Unclassified_vs_other": {
+    "group1": "Other/Unclassified",
+    "n1": 2828407,
+    "changed1": 204540,
+    "rate1_pct": 7.232,
+    "group2": "Other/Unclassified",
+    "n2": 2828407,
+    "changed2": 204540,
+    "rate2_pct": 7.232,
+    "risk_ratio": 1.0,
+    "rr_95ci": [
+      0.994,
+      1.006
+    ],
+    "odds_ratio": 1.0,
+    "or_95ci": [
+      0.994,
+      1.006
+    ],
+    "chi2": 0.0,
+    "p_value": "1.00e+00"
+  }
+}

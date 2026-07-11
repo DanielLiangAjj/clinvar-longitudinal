@@ -1,0 +1,42 @@
+{
+  "total_variants": 3678303,
+  "reclassified_any_change": {
+    "n": 342057,
+    "pct_of_all": 9.3
+  },
+  "partition_by_most_severe_change": {
+    "Medically significant (crosses actionability: P/LP↔VUS, P/LP↔B/LB)": {
+      "n": 25105,
+      "pct_of_all": 0.68,
+      "pct_of_reclassified": 7.3
+    },
+    "Involves composite/uncertain category (VUS↔Conflicting, ↔P/LP, ↔B/LB)": {
+      "n": 272477,
+      "pct_of_all": 7.41,
+      "pct_of_reclassified": 79.7
+    },
+    "Non-medically significant (VUS↔LB, VUS↔B)": {
+      "n": 28931,
+      "pct_of_all": 0.79,
+      "pct_of_reclassified": 8.5
+    },
+    "Within-tier adjacent only (P↔LP or B↔LB) — ClinVar-concordant": {
+      "n": 15544,
+      "pct_of_all": 0.42,
+      "pct_of_reclassified": 4.5
+    }
+  },
+  "variants_with_any_medically_significant_change": {
+    "n": 25105,
+    "pct_of_all": 0.68
+  },
+  "variants_within_tier_adjacent_only": {
+    "n": 15544,
+    "pct_of_reclassified": 4.5,
+    "note": "arguably should NOT count as reclassification (ClinVar treats P/LP and B/LB as concordant)"
+  },
+  "variants_involving_VUS_conflicting": {
+    "n": 108656,
+    "pct_of_reclassified": 31.8
+  }
+}

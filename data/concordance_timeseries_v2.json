@@ -1,0 +1,2701 @@
+{
+  "generated_at": "2026-02-19T22:16:02.906464",
+  "description": "Inter-submitter concordance analysis across ClinVar longitudinal snapshots. Uses Review_Status field to determine concordance: \"conflicting interpretations\" = discordant, \"multiple submitters, no conflicts\" / \"expert panel\" / \"practice guideline\" = concordant.",
+  "method": "review_status_based",
+  "total_rows_processed": 144766782,
+  "snapshots": [
+    {
+      "date": "2012-11",
+      "total_variants": 28426,
+      "single_submitter": 26013,
+      "multi_sub_variants": 2413,
+      "concordant": 0,
+      "discordant": 0,
+      "excluded": 2413,
+      "concordance_rate_pct": 0.0,
+      "discordance_rate_pct": 0.0,
+      "top_discordance_patterns": []
+    },
+    {
+      "date": "2013-01",
+      "total_variants": 29128,
+      "single_submitter": 26466,
+      "multi_sub_variants": 2662,
+      "concordant": 0,
+      "discordant": 0,
+      "excluded": 2662,
+      "concordance_rate_pct": 0.0,
+      "discordance_rate_pct": 0.0,
+      "top_discordance_patterns": []
+    },
+    {
+      "date": "2013-04",
+      "total_variants": 26643,
+      "single_submitter": 24175,
+      "multi_sub_variants": 2468,
+      "concordant": 0,
+      "discordant": 0,
+      "excluded": 2468,
+      "concordance_rate_pct": 0.0,
+      "discordance_rate_pct": 0.0,
+      "top_discordance_patterns": []
+    },
+    {
+      "date": "2013-05",
+      "total_variants": 35248,
+      "single_submitter": 32290,
+      "multi_sub_variants": 2958,
+      "concordant": 0,
+      "discordant": 0,
+      "excluded": 2958,
+      "concordance_rate_pct": 0.0,
+      "discordance_rate_pct": 0.0,
+      "top_discordance_patterns": []
+    },
+    {
+      "date": "2013-08",
+      "total_variants": 86290,
+      "single_submitter": 78481,
+      "multi_sub_variants": 7809,
+      "concordant": 246,
+      "discordant": 0,
+      "excluded": 7563,
+      "concordance_rate_pct": 3.2,
+      "discordance_rate_pct": 0.0,
+      "top_discordance_patterns": []
+    },
+    {
+      "date": "2013-09",
+      "total_variants": 45357,
+      "single_submitter": 41287,
+      "multi_sub_variants": 4070,
+      "concordant": 0,
+      "discordant": 0,
+      "excluded": 4070,
+      "concordance_rate_pct": 0.0,
+      "discordance_rate_pct": 0.0,
+      "top_discordance_patterns": []
+    },
+    {
+      "date": "2013-10",
+      "total_variants": 46112,
+      "single_submitter": 42017,
+      "multi_sub_variants": 4095,
+      "concordant": 0,
+      "discordant": 0,
+      "excluded": 4095,
+      "concordance_rate_pct": 0.0,
+      "discordance_rate_pct": 0.0,
+      "top_discordance_patterns": []
+    },
+    {
+      "date": "2013-11",
+      "total_variants": 58998,
+      "single_submitter": 54673,
+      "multi_sub_variants": 4325,
+      "concordant": 44,
+      "discordant": 0,
+      "excluded": 4281,
+      "concordance_rate_pct": 1.0,
+      "discordance_rate_pct": 0.0,
+      "top_discordance_patterns": []
+    },
+    {
+      "date": "2013-12",
+      "total_variants": 59128,
+      "single_submitter": 54797,
+      "multi_sub_variants": 4331,
+      "concordant": 44,
+      "discordant": 0,
+      "excluded": 4287,
+      "concordance_rate_pct": 1.0,
+      "discordance_rate_pct": 0.0,
+      "top_discordance_patterns": []
+    },
+    {
+      "date": "2014-01",
+      "total_variants": 62354,
+      "single_submitter": 57864,
+      "multi_sub_variants": 4490,
+      "concordant": 165,
+      "discordant": 0,
+      "excluded": 4325,
+      "concordance_rate_pct": 3.7,
+      "discordance_rate_pct": 0.0,
+      "top_discordance_patterns": []
+    },
+    {
+      "date": "2014-02",
+      "total_variants": 71276,
+      "single_submitter": 64894,
+      "multi_sub_variants": 6382,
+      "concordant": 233,
+      "discordant": 0,
+      "excluded": 6149,
+      "concordance_rate_pct": 3.7,
+      "discordance_rate_pct": 0.0,
+      "top_discordance_patterns": []
+    },
+    {
+      "date": "2014-03",
+      "total_variants": 74838,
+      "single_submitter": 68112,
+      "multi_sub_variants": 6726,
+      "concordant": 233,
+      "discordant": 0,
+      "excluded": 6493,
+      "concordance_rate_pct": 3.5,
+      "discordance_rate_pct": 0.0,
+      "top_discordance_patterns": []
+    },
+    {
+      "date": "2014-04",
+      "total_variants": 99070,
+      "single_submitter": 90249,
+      "multi_sub_variants": 8821,
+      "concordant": 237,
+      "discordant": 0,
+      "excluded": 8584,
+      "concordance_rate_pct": 2.7,
+      "discordance_rate_pct": 0.0,
+      "top_discordance_patterns": []
+    },
+    {
+      "date": "2014-05",
+      "total_variants": 100472,
+      "single_submitter": 91511,
+      "multi_sub_variants": 8961,
+      "concordant": 244,
+      "discordant": 0,
+      "excluded": 8717,
+      "concordance_rate_pct": 2.7,
+      "discordance_rate_pct": 0.0,
+      "top_discordance_patterns": []
+    },
+    {
+      "date": "2014-06",
+      "total_variants": 104239,
+      "single_submitter": 94312,
+      "multi_sub_variants": 9927,
+      "concordant": 310,
+      "discordant": 0,
+      "excluded": 9617,
+      "concordance_rate_pct": 3.1,
+      "discordance_rate_pct": 0.0,
+      "top_discordance_patterns": []
+    },
+    {
+      "date": "2014-07",
+      "total_variants": 110990,
+      "single_submitter": 99122,
+      "multi_sub_variants": 11868,
+      "concordant": 349,
+      "discordant": 0,
+      "excluded": 11519,
+      "concordance_rate_pct": 2.9,
+      "discordance_rate_pct": 0.0,
+      "top_discordance_patterns": []
+    },
+    {
+      "date": "2014-08",
+      "total_variants": 113543,
+      "single_submitter": 100810,
+      "multi_sub_variants": 12733,
+      "concordant": 444,
+      "discordant": 0,
+      "excluded": 12289,
+      "concordance_rate_pct": 3.5,
+      "discordance_rate_pct": 0.0,
+      "top_discordance_patterns": []
+    },
+    {
+      "date": "2014-09",
+      "total_variants": 124672,
+      "single_submitter": 111618,
+      "multi_sub_variants": 13054,
+      "concordant": 448,
+      "discordant": 0,
+      "excluded": 12606,
+      "concordance_rate_pct": 3.4,
+      "discordance_rate_pct": 0.0,
+      "top_discordance_patterns": []
+    },
+    {
+      "date": "2014-10",
+      "total_variants": 124906,
+      "single_submitter": 111827,
+      "multi_sub_variants": 13079,
+      "concordant": 448,
+      "discordant": 0,
+      "excluded": 12631,
+      "concordance_rate_pct": 3.4,
+      "discordance_rate_pct": 0.0,
+      "top_discordance_patterns": []
+    },
+    {
+      "date": "2014-11",
+      "total_variants": 125521,
+      "single_submitter": 112351,
+      "multi_sub_variants": 13170,
+      "concordant": 453,
+      "discordant": 0,
+      "excluded": 12717,
+      "concordance_rate_pct": 3.4,
+      "discordance_rate_pct": 0.0,
+      "top_discordance_patterns": []
+    },
+    {
+      "date": "2014-12",
+      "total_variants": 128524,
+      "single_submitter": 114851,
+      "multi_sub_variants": 13673,
+      "concordant": 453,
+      "discordant": 0,
+      "excluded": 13220,
+      "concordance_rate_pct": 3.3,
+      "discordance_rate_pct": 0.0,
+      "top_discordance_patterns": []
+    },
+    {
+      "date": "2015-01",
+      "total_variants": 129344,
+      "single_submitter": 115632,
+      "multi_sub_variants": 13712,
+      "concordant": 459,
+      "discordant": 0,
+      "excluded": 13253,
+      "concordance_rate_pct": 3.3,
+      "discordance_rate_pct": 0.0,
+      "top_discordance_patterns": []
+    },
+    {
+      "date": "2015-02",
+      "total_variants": 135746,
+      "single_submitter": 120976,
+      "multi_sub_variants": 14770,
+      "concordant": 462,
+      "discordant": 0,
+      "excluded": 14308,
+      "concordance_rate_pct": 3.1,
+      "discordance_rate_pct": 0.0,
+      "top_discordance_patterns": []
+    },
+    {
+      "date": "2015-03",
+      "total_variants": 139211,
+      "single_submitter": 123535,
+      "multi_sub_variants": 15676,
+      "concordant": 505,
+      "discordant": 0,
+      "excluded": 15171,
+      "concordance_rate_pct": 3.2,
+      "discordance_rate_pct": 0.0,
+      "top_discordance_patterns": []
+    },
+    {
+      "date": "2015-04",
+      "total_variants": 143527,
+      "single_submitter": 127044,
+      "multi_sub_variants": 16483,
+      "concordant": 580,
+      "discordant": 0,
+      "excluded": 15903,
+      "concordance_rate_pct": 3.5,
+      "discordance_rate_pct": 0.0,
+      "top_discordance_patterns": []
+    },
+    {
+      "date": "2015-05",
+      "total_variants": 145312,
+      "single_submitter": 128034,
+      "multi_sub_variants": 17278,
+      "concordant": 587,
+      "discordant": 0,
+      "excluded": 16691,
+      "concordance_rate_pct": 3.4,
+      "discordance_rate_pct": 0.0,
+      "top_discordance_patterns": []
+    },
+    {
+      "date": "2015-06",
+      "total_variants": 146336,
+      "single_submitter": 128962,
+      "multi_sub_variants": 17374,
+      "concordant": 588,
+      "discordant": 0,
+      "excluded": 16786,
+      "concordance_rate_pct": 3.4,
+      "discordance_rate_pct": 0.0,
+      "top_discordance_patterns": []
+    },
+    {
+      "date": "2015-07",
+      "total_variants": 153400,
+      "single_submitter": 133855,
+      "multi_sub_variants": 19545,
+      "concordant": 2787,
+      "discordant": 1667,
+      "excluded": 15091,
+      "concordance_rate_pct": 14.3,
+      "discordance_rate_pct": 8.5,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 1667
+        }
+      ]
+    },
+    {
+      "date": "2015-08",
+      "total_variants": 121717,
+      "single_submitter": 101011,
+      "multi_sub_variants": 20706,
+      "concordant": 3162,
+      "discordant": 1931,
+      "excluded": 15613,
+      "concordance_rate_pct": 15.3,
+      "discordance_rate_pct": 9.3,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 1931
+        }
+      ]
+    },
+    {
+      "date": "2015-09",
+      "total_variants": 125018,
+      "single_submitter": 103901,
+      "multi_sub_variants": 21117,
+      "concordant": 3267,
+      "discordant": 2161,
+      "excluded": 15689,
+      "concordance_rate_pct": 15.5,
+      "discordance_rate_pct": 10.2,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 2161
+        }
+      ]
+    },
+    {
+      "date": "2015-10",
+      "total_variants": 125297,
+      "single_submitter": 104082,
+      "multi_sub_variants": 21215,
+      "concordant": 3282,
+      "discordant": 2117,
+      "excluded": 15816,
+      "concordance_rate_pct": 15.5,
+      "discordance_rate_pct": 10.0,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 2117
+        }
+      ]
+    },
+    {
+      "date": "2015-11",
+      "total_variants": 133921,
+      "single_submitter": 110886,
+      "multi_sub_variants": 23035,
+      "concordant": 4055,
+      "discordant": 2372,
+      "excluded": 16608,
+      "concordance_rate_pct": 17.6,
+      "discordance_rate_pct": 10.3,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 2372
+        }
+      ]
+    },
+    {
+      "date": "2015-12",
+      "total_variants": 134547,
+      "single_submitter": 111306,
+      "multi_sub_variants": 23241,
+      "concordant": 4121,
+      "discordant": 2260,
+      "excluded": 16860,
+      "concordance_rate_pct": 17.7,
+      "discordance_rate_pct": 9.7,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 2260
+        }
+      ]
+    },
+    {
+      "date": "2016-01",
+      "total_variants": 135126,
+      "single_submitter": 111764,
+      "multi_sub_variants": 23362,
+      "concordant": 4150,
+      "discordant": 2176,
+      "excluded": 17036,
+      "concordance_rate_pct": 17.8,
+      "discordance_rate_pct": 9.3,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 2176
+        }
+      ]
+    },
+    {
+      "date": "2016-02",
+      "total_variants": 137477,
+      "single_submitter": 113186,
+      "multi_sub_variants": 24291,
+      "concordant": 4239,
+      "discordant": 2118,
+      "excluded": 17934,
+      "concordance_rate_pct": 17.5,
+      "discordance_rate_pct": 8.7,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 2118
+        }
+      ]
+    },
+    {
+      "date": "2016-03",
+      "total_variants": 138392,
+      "single_submitter": 113987,
+      "multi_sub_variants": 24405,
+      "concordant": 4258,
+      "discordant": 2226,
+      "excluded": 17921,
+      "concordance_rate_pct": 17.4,
+      "discordance_rate_pct": 9.1,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 2226
+        }
+      ]
+    },
+    {
+      "date": "2016-04",
+      "total_variants": 140565,
+      "single_submitter": 115795,
+      "multi_sub_variants": 24770,
+      "concordant": 4334,
+      "discordant": 2302,
+      "excluded": 18134,
+      "concordance_rate_pct": 17.5,
+      "discordance_rate_pct": 9.3,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 2302
+        }
+      ]
+    },
+    {
+      "date": "2016-05",
+      "total_variants": 140496,
+      "single_submitter": 115583,
+      "multi_sub_variants": 24913,
+      "concordant": 4362,
+      "discordant": 2458,
+      "excluded": 18093,
+      "concordance_rate_pct": 17.5,
+      "discordance_rate_pct": 9.9,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 2458
+        }
+      ]
+    },
+    {
+      "date": "2016-06",
+      "total_variants": 148566,
+      "single_submitter": 122392,
+      "multi_sub_variants": 26174,
+      "concordant": 4739,
+      "discordant": 2579,
+      "excluded": 18856,
+      "concordance_rate_pct": 18.1,
+      "discordance_rate_pct": 9.9,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 2579
+        }
+      ]
+    },
+    {
+      "date": "2016-07",
+      "total_variants": 155667,
+      "single_submitter": 126684,
+      "multi_sub_variants": 28983,
+      "concordant": 5244,
+      "discordant": 2614,
+      "excluded": 21125,
+      "concordance_rate_pct": 18.1,
+      "discordance_rate_pct": 9.0,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 2614
+        }
+      ]
+    },
+    {
+      "date": "2016-08",
+      "total_variants": 158976,
+      "single_submitter": 129190,
+      "multi_sub_variants": 29786,
+      "concordant": 5397,
+      "discordant": 2783,
+      "excluded": 21606,
+      "concordance_rate_pct": 18.1,
+      "discordance_rate_pct": 9.3,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 2783
+        }
+      ]
+    },
+    {
+      "date": "2016-09",
+      "total_variants": 159218,
+      "single_submitter": 129384,
+      "multi_sub_variants": 29834,
+      "concordant": 5410,
+      "discordant": 2730,
+      "excluded": 21694,
+      "concordance_rate_pct": 18.1,
+      "discordance_rate_pct": 9.2,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 2730
+        }
+      ]
+    },
+    {
+      "date": "2016-10",
+      "total_variants": 170662,
+      "single_submitter": 135884,
+      "multi_sub_variants": 34778,
+      "concordant": 9699,
+      "discordant": 3841,
+      "excluded": 21238,
+      "concordance_rate_pct": 27.9,
+      "discordance_rate_pct": 11.0,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 3841
+        }
+      ]
+    },
+    {
+      "date": "2016-11",
+      "total_variants": 173090,
+      "single_submitter": 137479,
+      "multi_sub_variants": 35611,
+      "concordant": 10294,
+      "discordant": 3497,
+      "excluded": 21820,
+      "concordance_rate_pct": 28.9,
+      "discordance_rate_pct": 9.8,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 3497
+        }
+      ]
+    },
+    {
+      "date": "2016-12",
+      "total_variants": 173681,
+      "single_submitter": 136885,
+      "multi_sub_variants": 36796,
+      "concordant": 11436,
+      "discordant": 3856,
+      "excluded": 21504,
+      "concordance_rate_pct": 31.1,
+      "discordance_rate_pct": 10.5,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 3856
+        }
+      ]
+    },
+    {
+      "date": "2017-01",
+      "total_variants": 263320,
+      "single_submitter": 195733,
+      "multi_sub_variants": 67587,
+      "concordant": 12875,
+      "discordant": 5241,
+      "excluded": 49471,
+      "concordance_rate_pct": 19.0,
+      "discordance_rate_pct": 7.8,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 5241
+        }
+      ]
+    },
+    {
+      "date": "2017-02",
+      "total_variants": 268244,
+      "single_submitter": 199196,
+      "multi_sub_variants": 69048,
+      "concordant": 13549,
+      "discordant": 5645,
+      "excluded": 49854,
+      "concordance_rate_pct": 19.6,
+      "discordance_rate_pct": 8.2,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 5645
+        }
+      ]
+    },
+    {
+      "date": "2017-03",
+      "total_variants": 268916,
+      "single_submitter": 199743,
+      "multi_sub_variants": 69173,
+      "concordant": 13594,
+      "discordant": 5565,
+      "excluded": 50014,
+      "concordance_rate_pct": 19.7,
+      "discordance_rate_pct": 8.0,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 5565
+        }
+      ]
+    },
+    {
+      "date": "2017-04",
+      "total_variants": 294140,
+      "single_submitter": 220037,
+      "multi_sub_variants": 74103,
+      "concordant": 15621,
+      "discordant": 7659,
+      "excluded": 50823,
+      "concordance_rate_pct": 21.1,
+      "discordance_rate_pct": 10.3,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 7659
+        }
+      ]
+    },
+    {
+      "date": "2017-05",
+      "total_variants": 316327,
+      "single_submitter": 235780,
+      "multi_sub_variants": 80547,
+      "concordant": 16871,
+      "discordant": 7801,
+      "excluded": 55875,
+      "concordance_rate_pct": 20.9,
+      "discordance_rate_pct": 9.7,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 7801
+        }
+      ]
+    },
+    {
+      "date": "2017-06",
+      "total_variants": 318716,
+      "single_submitter": 237714,
+      "multi_sub_variants": 81002,
+      "concordant": 16950,
+      "discordant": 7541,
+      "excluded": 56511,
+      "concordance_rate_pct": 20.9,
+      "discordance_rate_pct": 9.3,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 7541
+        }
+      ]
+    },
+    {
+      "date": "2017-07",
+      "total_variants": 321646,
+      "single_submitter": 239914,
+      "multi_sub_variants": 81732,
+      "concordant": 17033,
+      "discordant": 7688,
+      "excluded": 57011,
+      "concordance_rate_pct": 20.8,
+      "discordance_rate_pct": 9.4,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 7688
+        }
+      ]
+    },
+    {
+      "date": "2017-08",
+      "total_variants": 322218,
+      "single_submitter": 239915,
+      "multi_sub_variants": 82303,
+      "concordant": 17990,
+      "discordant": 7582,
+      "excluded": 56731,
+      "concordance_rate_pct": 21.9,
+      "discordance_rate_pct": 9.2,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 7582
+        }
+      ]
+    },
+    {
+      "date": "2017-09",
+      "total_variants": 328829,
+      "single_submitter": 245120,
+      "multi_sub_variants": 83709,
+      "concordant": 18719,
+      "discordant": 7510,
+      "excluded": 57480,
+      "concordance_rate_pct": 22.4,
+      "discordance_rate_pct": 9.0,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 7510
+        }
+      ]
+    },
+    {
+      "date": "2017-10",
+      "total_variants": 331458,
+      "single_submitter": 246508,
+      "multi_sub_variants": 84950,
+      "concordant": 19761,
+      "discordant": 8529,
+      "excluded": 56660,
+      "concordance_rate_pct": 23.3,
+      "discordance_rate_pct": 10.0,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 8529
+        }
+      ]
+    },
+    {
+      "date": "2017-11",
+      "total_variants": 335025,
+      "single_submitter": 249688,
+      "multi_sub_variants": 85337,
+      "concordant": 19791,
+      "discordant": 7478,
+      "excluded": 58068,
+      "concordance_rate_pct": 23.2,
+      "discordance_rate_pct": 8.8,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 7478
+        }
+      ]
+    },
+    {
+      "date": "2017-12",
+      "total_variants": 336075,
+      "single_submitter": 250372,
+      "multi_sub_variants": 85703,
+      "concordant": 19954,
+      "discordant": 8054,
+      "excluded": 57695,
+      "concordance_rate_pct": 23.3,
+      "discordance_rate_pct": 9.4,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 8054
+        }
+      ]
+    },
+    {
+      "date": "2018-01",
+      "total_variants": 374899,
+      "single_submitter": 277377,
+      "multi_sub_variants": 97522,
+      "concordant": 21408,
+      "discordant": 6356,
+      "excluded": 69758,
+      "concordance_rate_pct": 22.0,
+      "discordance_rate_pct": 6.5,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 6356
+        }
+      ]
+    },
+    {
+      "date": "2018-02",
+      "total_variants": 376031,
+      "single_submitter": 278301,
+      "multi_sub_variants": 97730,
+      "concordant": 21554,
+      "discordant": 8095,
+      "excluded": 68081,
+      "concordance_rate_pct": 22.1,
+      "discordance_rate_pct": 8.3,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 8095
+        }
+      ]
+    },
+    {
+      "date": "2018-03",
+      "total_variants": 380576,
+      "single_submitter": 281004,
+      "multi_sub_variants": 99572,
+      "concordant": 25099,
+      "discordant": 8390,
+      "excluded": 66083,
+      "concordance_rate_pct": 25.2,
+      "discordance_rate_pct": 8.4,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 8390
+        }
+      ]
+    },
+    {
+      "date": "2018-04",
+      "total_variants": 389385,
+      "single_submitter": 287237,
+      "multi_sub_variants": 102148,
+      "concordant": 26041,
+      "discordant": 9162,
+      "excluded": 66945,
+      "concordance_rate_pct": 25.5,
+      "discordance_rate_pct": 9.0,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 9162
+        }
+      ]
+    },
+    {
+      "date": "2018-05",
+      "total_variants": 406816,
+      "single_submitter": 298936,
+      "multi_sub_variants": 107880,
+      "concordant": 27533,
+      "discordant": 11819,
+      "excluded": 68528,
+      "concordance_rate_pct": 25.5,
+      "discordance_rate_pct": 11.0,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 11819
+        }
+      ]
+    },
+    {
+      "date": "2018-06",
+      "total_variants": 428320,
+      "single_submitter": 314949,
+      "multi_sub_variants": 113371,
+      "concordant": 34764,
+      "discordant": 3391,
+      "excluded": 75216,
+      "concordance_rate_pct": 30.7,
+      "discordance_rate_pct": 3.0,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 3391
+        }
+      ]
+    },
+    {
+      "date": "2018-07",
+      "total_variants": 428531,
+      "single_submitter": 315118,
+      "multi_sub_variants": 113413,
+      "concordant": 34779,
+      "discordant": 3312,
+      "excluded": 75322,
+      "concordance_rate_pct": 30.7,
+      "discordance_rate_pct": 2.9,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 3312
+        }
+      ]
+    },
+    {
+      "date": "2018-08",
+      "total_variants": 432435,
+      "single_submitter": 317102,
+      "multi_sub_variants": 115333,
+      "concordant": 36273,
+      "discordant": 4386,
+      "excluded": 74674,
+      "concordance_rate_pct": 31.5,
+      "discordance_rate_pct": 3.8,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 4386
+        }
+      ]
+    },
+    {
+      "date": "2018-09",
+      "total_variants": 442729,
+      "single_submitter": 324738,
+      "multi_sub_variants": 117991,
+      "concordant": 37064,
+      "discordant": 4107,
+      "excluded": 76820,
+      "concordance_rate_pct": 31.4,
+      "discordance_rate_pct": 3.5,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 4107
+        }
+      ]
+    },
+    {
+      "date": "2018-10",
+      "total_variants": 447448,
+      "single_submitter": 328943,
+      "multi_sub_variants": 118505,
+      "concordant": 37009,
+      "discordant": 3840,
+      "excluded": 77656,
+      "concordance_rate_pct": 31.2,
+      "discordance_rate_pct": 3.2,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 3840
+        }
+      ]
+    },
+    {
+      "date": "2018-11",
+      "total_variants": 468813,
+      "single_submitter": 345347,
+      "multi_sub_variants": 123466,
+      "concordant": 38098,
+      "discordant": 4206,
+      "excluded": 81162,
+      "concordance_rate_pct": 30.9,
+      "discordance_rate_pct": 3.4,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 4206
+        }
+      ]
+    },
+    {
+      "date": "2018-12",
+      "total_variants": 472279,
+      "single_submitter": 347268,
+      "multi_sub_variants": 125011,
+      "concordant": 38198,
+      "discordant": 3358,
+      "excluded": 83455,
+      "concordance_rate_pct": 30.6,
+      "discordance_rate_pct": 2.7,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 3358
+        }
+      ]
+    },
+    {
+      "date": "2019-01",
+      "total_variants": 479588,
+      "single_submitter": 353174,
+      "multi_sub_variants": 126414,
+      "concordant": 38256,
+      "discordant": 2838,
+      "excluded": 85320,
+      "concordance_rate_pct": 30.3,
+      "discordance_rate_pct": 2.2,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 2838
+        }
+      ]
+    },
+    {
+      "date": "2019-02",
+      "total_variants": 498260,
+      "single_submitter": 371651,
+      "multi_sub_variants": 126609,
+      "concordant": 38316,
+      "discordant": 2807,
+      "excluded": 85486,
+      "concordance_rate_pct": 30.3,
+      "discordance_rate_pct": 2.2,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 2807
+        }
+      ]
+    },
+    {
+      "date": "2019-03",
+      "total_variants": 499756,
+      "single_submitter": 372395,
+      "multi_sub_variants": 127361,
+      "concordant": 38529,
+      "discordant": 2828,
+      "excluded": 86004,
+      "concordance_rate_pct": 30.3,
+      "discordance_rate_pct": 2.2,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 2828
+        }
+      ]
+    },
+    {
+      "date": "2019-04",
+      "total_variants": 502447,
+      "single_submitter": 372363,
+      "multi_sub_variants": 130084,
+      "concordant": 39674,
+      "discordant": 2897,
+      "excluded": 87513,
+      "concordance_rate_pct": 30.5,
+      "discordance_rate_pct": 2.2,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 2897
+        }
+      ]
+    },
+    {
+      "date": "2019-05",
+      "total_variants": 503557,
+      "single_submitter": 373169,
+      "multi_sub_variants": 130388,
+      "concordant": 40331,
+      "discordant": 2621,
+      "excluded": 87436,
+      "concordance_rate_pct": 30.9,
+      "discordance_rate_pct": 2.0,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 2621
+        }
+      ]
+    },
+    {
+      "date": "2019-06",
+      "total_variants": 510269,
+      "single_submitter": 376593,
+      "multi_sub_variants": 133676,
+      "concordant": 43125,
+      "discordant": 2927,
+      "excluded": 87624,
+      "concordance_rate_pct": 32.3,
+      "discordance_rate_pct": 2.2,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 2927
+        }
+      ]
+    },
+    {
+      "date": "2019-07",
+      "total_variants": 511931,
+      "single_submitter": 377197,
+      "multi_sub_variants": 134734,
+      "concordant": 43844,
+      "discordant": 3151,
+      "excluded": 87739,
+      "concordance_rate_pct": 32.5,
+      "discordance_rate_pct": 2.3,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 3151
+        }
+      ]
+    },
+    {
+      "date": "2019-08",
+      "total_variants": 514747,
+      "single_submitter": 379347,
+      "multi_sub_variants": 135400,
+      "concordant": 44003,
+      "discordant": 3170,
+      "excluded": 88227,
+      "concordance_rate_pct": 32.5,
+      "discordance_rate_pct": 2.3,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 3170
+        }
+      ]
+    },
+    {
+      "date": "2019-09",
+      "total_variants": 560768,
+      "single_submitter": 419735,
+      "multi_sub_variants": 141033,
+      "concordant": 45227,
+      "discordant": 3318,
+      "excluded": 92488,
+      "concordance_rate_pct": 32.1,
+      "discordance_rate_pct": 2.4,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 3318
+        }
+      ]
+    },
+    {
+      "date": "2019-10",
+      "total_variants": 566119,
+      "single_submitter": 424065,
+      "multi_sub_variants": 142054,
+      "concordant": 45285,
+      "discordant": 3357,
+      "excluded": 93412,
+      "concordance_rate_pct": 31.9,
+      "discordance_rate_pct": 2.4,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 3357
+        }
+      ]
+    },
+    {
+      "date": "2019-11",
+      "total_variants": 568107,
+      "single_submitter": 425800,
+      "multi_sub_variants": 142307,
+      "concordant": 45138,
+      "discordant": 3373,
+      "excluded": 93796,
+      "concordance_rate_pct": 31.7,
+      "discordance_rate_pct": 2.4,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 3373
+        }
+      ]
+    },
+    {
+      "date": "2019-12",
+      "total_variants": 569272,
+      "single_submitter": 426866,
+      "multi_sub_variants": 142406,
+      "concordant": 45241,
+      "discordant": 3344,
+      "excluded": 93821,
+      "concordance_rate_pct": 31.8,
+      "discordance_rate_pct": 2.3,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 3344
+        }
+      ]
+    },
+    {
+      "date": "2020-01",
+      "total_variants": 675895,
+      "single_submitter": 517107,
+      "multi_sub_variants": 158788,
+      "concordant": 95427,
+      "discordant": 30278,
+      "excluded": 33083,
+      "concordance_rate_pct": 60.1,
+      "discordance_rate_pct": 19.1,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 30277
+        },
+        {
+          "pattern": "P",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "date": "2020-02",
+      "total_variants": 685611,
+      "single_submitter": 523287,
+      "multi_sub_variants": 162324,
+      "concordant": 97437,
+      "discordant": 31605,
+      "excluded": 33282,
+      "concordance_rate_pct": 60.0,
+      "discordance_rate_pct": 19.5,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 31604
+        },
+        {
+          "pattern": "P",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "date": "2020-03",
+      "total_variants": 688353,
+      "single_submitter": 524856,
+      "multi_sub_variants": 163497,
+      "concordant": 98253,
+      "discordant": 31742,
+      "excluded": 33502,
+      "concordance_rate_pct": 60.1,
+      "discordance_rate_pct": 19.4,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 31741
+        },
+        {
+          "pattern": "P",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "date": "2020-04",
+      "total_variants": 704072,
+      "single_submitter": 533407,
+      "multi_sub_variants": 170665,
+      "concordant": 104475,
+      "discordant": 32521,
+      "excluded": 33669,
+      "concordance_rate_pct": 61.2,
+      "discordance_rate_pct": 19.1,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 32520
+        },
+        {
+          "pattern": "P",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "date": "2020-05",
+      "total_variants": 743652,
+      "single_submitter": 565964,
+      "multi_sub_variants": 177688,
+      "concordant": 109861,
+      "discordant": 33509,
+      "excluded": 34318,
+      "concordance_rate_pct": 61.8,
+      "discordance_rate_pct": 18.9,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 33508
+        },
+        {
+          "pattern": "P",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "date": "2020-06",
+      "total_variants": 788720,
+      "single_submitter": 593802,
+      "multi_sub_variants": 194918,
+      "concordant": 114381,
+      "discordant": 40013,
+      "excluded": 40524,
+      "concordance_rate_pct": 58.7,
+      "discordance_rate_pct": 20.5,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 40012
+        },
+        {
+          "pattern": "P",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "date": "2020-07",
+      "total_variants": 802400,
+      "single_submitter": 601666,
+      "multi_sub_variants": 200734,
+      "concordant": 119608,
+      "discordant": 40710,
+      "excluded": 40416,
+      "concordance_rate_pct": 59.6,
+      "discordance_rate_pct": 20.3,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 40709
+        },
+        {
+          "pattern": "P",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "date": "2020-08",
+      "total_variants": 842339,
+      "single_submitter": 635265,
+      "multi_sub_variants": 207074,
+      "concordant": 126437,
+      "discordant": 41128,
+      "excluded": 39509,
+      "concordance_rate_pct": 61.1,
+      "discordance_rate_pct": 19.9,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 41127
+        },
+        {
+          "pattern": "P",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "date": "2020-09",
+      "total_variants": 844886,
+      "single_submitter": 637029,
+      "multi_sub_variants": 207857,
+      "concordant": 126704,
+      "discordant": 41281,
+      "excluded": 39872,
+      "concordance_rate_pct": 61.0,
+      "discordance_rate_pct": 19.9,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 41280
+        },
+        {
+          "pattern": "P",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "date": "2020-10",
+      "total_variants": 846451,
+      "single_submitter": 638082,
+      "multi_sub_variants": 208369,
+      "concordant": 126941,
+      "discordant": 41316,
+      "excluded": 40112,
+      "concordance_rate_pct": 60.9,
+      "discordance_rate_pct": 19.8,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 41315
+        },
+        {
+          "pattern": "P",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "date": "2020-11",
+      "total_variants": 850764,
+      "single_submitter": 641672,
+      "multi_sub_variants": 209092,
+      "concordant": 127263,
+      "discordant": 41466,
+      "excluded": 40363,
+      "concordance_rate_pct": 60.9,
+      "discordance_rate_pct": 19.8,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 41465
+        },
+        {
+          "pattern": "P",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "date": "2020-12",
+      "total_variants": 854659,
+      "single_submitter": 644663,
+      "multi_sub_variants": 209996,
+      "concordant": 127894,
+      "discordant": 41565,
+      "excluded": 40537,
+      "concordance_rate_pct": 60.9,
+      "discordance_rate_pct": 19.8,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 41564
+        },
+        {
+          "pattern": "P",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "date": "2021-01",
+      "total_variants": 858599,
+      "single_submitter": 643244,
+      "multi_sub_variants": 215355,
+      "concordant": 127978,
+      "discordant": 41822,
+      "excluded": 45555,
+      "concordance_rate_pct": 59.4,
+      "discordance_rate_pct": 19.4,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 41821
+        },
+        {
+          "pattern": "P",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "date": "2021-02",
+      "total_variants": 862168,
+      "single_submitter": 645252,
+      "multi_sub_variants": 216916,
+      "concordant": 129018,
+      "discordant": 42274,
+      "excluded": 45624,
+      "concordance_rate_pct": 59.5,
+      "discordance_rate_pct": 19.5,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 42273
+        },
+        {
+          "pattern": "P",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "date": "2021-03",
+      "total_variants": 863985,
+      "single_submitter": 646296,
+      "multi_sub_variants": 217689,
+      "concordant": 129332,
+      "discordant": 42385,
+      "excluded": 45972,
+      "concordance_rate_pct": 59.4,
+      "discordance_rate_pct": 19.5,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 42384
+        },
+        {
+          "pattern": "P",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "date": "2021-04",
+      "total_variants": 914143,
+      "single_submitter": 688688,
+      "multi_sub_variants": 225455,
+      "concordant": 135256,
+      "discordant": 43807,
+      "excluded": 46392,
+      "concordance_rate_pct": 60.0,
+      "discordance_rate_pct": 19.4,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 43806
+        },
+        {
+          "pattern": "P",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "date": "2021-05",
+      "total_variants": 930389,
+      "single_submitter": 702179,
+      "multi_sub_variants": 228210,
+      "concordant": 136744,
+      "discordant": 44095,
+      "excluded": 47371,
+      "concordance_rate_pct": 59.9,
+      "discordance_rate_pct": 19.3,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 44094
+        },
+        {
+          "pattern": "P",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "date": "2021-06",
+      "total_variants": 983417,
+      "single_submitter": 740055,
+      "multi_sub_variants": 243362,
+      "concordant": 141394,
+      "discordant": 46153,
+      "excluded": 55815,
+      "concordance_rate_pct": 58.1,
+      "discordance_rate_pct": 19.0,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 46152
+        },
+        {
+          "pattern": "P",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "date": "2021-07",
+      "total_variants": 1035627,
+      "single_submitter": 774424,
+      "multi_sub_variants": 261203,
+      "concordant": 148507,
+      "discordant": 48968,
+      "excluded": 63728,
+      "concordance_rate_pct": 56.9,
+      "discordance_rate_pct": 18.7,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 48967
+        },
+        {
+          "pattern": "P",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "date": "2021-08",
+      "total_variants": 1045731,
+      "single_submitter": 781351,
+      "multi_sub_variants": 264380,
+      "concordant": 150250,
+      "discordant": 49197,
+      "excluded": 64933,
+      "concordance_rate_pct": 56.8,
+      "discordance_rate_pct": 18.6,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 49196
+        },
+        {
+          "pattern": "P",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "date": "2021-09",
+      "total_variants": 1071071,
+      "single_submitter": 799310,
+      "multi_sub_variants": 271761,
+      "concordant": 153592,
+      "discordant": 50141,
+      "excluded": 68028,
+      "concordance_rate_pct": 56.5,
+      "discordance_rate_pct": 18.5,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 50140
+        },
+        {
+          "pattern": "P",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "date": "2021-10",
+      "total_variants": 1158803,
+      "single_submitter": 871869,
+      "multi_sub_variants": 286934,
+      "concordant": 168447,
+      "discordant": 52252,
+      "excluded": 66235,
+      "concordance_rate_pct": 58.7,
+      "discordance_rate_pct": 18.2,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 52251
+        },
+        {
+          "pattern": "P",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "date": "2021-11",
+      "total_variants": 1162402,
+      "single_submitter": 872219,
+      "multi_sub_variants": 290183,
+      "concordant": 169735,
+      "discordant": 52443,
+      "excluded": 68005,
+      "concordance_rate_pct": 58.5,
+      "discordance_rate_pct": 18.1,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 52442
+        },
+        {
+          "pattern": "P",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "date": "2021-12",
+      "total_variants": 1184702,
+      "single_submitter": 888122,
+      "multi_sub_variants": 296580,
+      "concordant": 174342,
+      "discordant": 53281,
+      "excluded": 68957,
+      "concordance_rate_pct": 58.8,
+      "discordance_rate_pct": 18.0,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 53280
+        },
+        {
+          "pattern": "P",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "date": "2022-01",
+      "total_variants": 1188616,
+      "single_submitter": 889852,
+      "multi_sub_variants": 298764,
+      "concordant": 175925,
+      "discordant": 53440,
+      "excluded": 69399,
+      "concordance_rate_pct": 58.9,
+      "discordance_rate_pct": 17.9,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 53439
+        },
+        {
+          "pattern": "P",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "date": "2022-02",
+      "total_variants": 1197040,
+      "single_submitter": 894356,
+      "multi_sub_variants": 302684,
+      "concordant": 179396,
+      "discordant": 54169,
+      "excluded": 69119,
+      "concordance_rate_pct": 59.3,
+      "discordance_rate_pct": 17.9,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 54168
+        },
+        {
+          "pattern": "P",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "date": "2022-03",
+      "total_variants": 1200993,
+      "single_submitter": 891205,
+      "multi_sub_variants": 309788,
+      "concordant": 179987,
+      "discordant": 54385,
+      "excluded": 75416,
+      "concordance_rate_pct": 58.1,
+      "discordance_rate_pct": 17.6,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 54384
+        },
+        {
+          "pattern": "P",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "date": "2022-04",
+      "total_variants": 1385847,
+      "single_submitter": 1054583,
+      "multi_sub_variants": 331264,
+      "concordant": 197298,
+      "discordant": 57793,
+      "excluded": 76173,
+      "concordance_rate_pct": 59.6,
+      "discordance_rate_pct": 17.4,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 57792
+        },
+        {
+          "pattern": "P",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "date": "2022-05",
+      "total_variants": 1535677,
+      "single_submitter": 1180804,
+      "multi_sub_variants": 354873,
+      "concordant": 210749,
+      "discordant": 62981,
+      "excluded": 81143,
+      "concordance_rate_pct": 59.4,
+      "discordance_rate_pct": 17.7,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 62980
+        },
+        {
+          "pattern": "P",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "date": "2022-06",
+      "total_variants": 1543359,
+      "single_submitter": 1186016,
+      "multi_sub_variants": 357343,
+      "concordant": 211924,
+      "discordant": 64238,
+      "excluded": 81181,
+      "concordance_rate_pct": 59.3,
+      "discordance_rate_pct": 18.0,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 64237
+        },
+        {
+          "pattern": "P",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "date": "2022-07",
+      "total_variants": 1546735,
+      "single_submitter": 1186527,
+      "multi_sub_variants": 360208,
+      "concordant": 214207,
+      "discordant": 65034,
+      "excluded": 80967,
+      "concordance_rate_pct": 59.5,
+      "discordance_rate_pct": 18.1,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 65033
+        },
+        {
+          "pattern": "P",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "date": "2022-08",
+      "total_variants": 1550791,
+      "single_submitter": 1188540,
+      "multi_sub_variants": 362251,
+      "concordant": 215742,
+      "discordant": 65271,
+      "excluded": 81238,
+      "concordance_rate_pct": 59.6,
+      "discordance_rate_pct": 18.0,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 65270
+        },
+        {
+          "pattern": "P",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "date": "2022-09",
+      "total_variants": 1555217,
+      "single_submitter": 1191270,
+      "multi_sub_variants": 363947,
+      "concordant": 216998,
+      "discordant": 65755,
+      "excluded": 81194,
+      "concordance_rate_pct": 59.6,
+      "discordance_rate_pct": 18.1,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 65754
+        },
+        {
+          "pattern": "P",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "date": "2022-10",
+      "total_variants": 1559528,
+      "single_submitter": 1194215,
+      "multi_sub_variants": 365313,
+      "concordant": 218181,
+      "discordant": 65985,
+      "excluded": 81147,
+      "concordance_rate_pct": 59.7,
+      "discordance_rate_pct": 18.1,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 65984
+        },
+        {
+          "pattern": "P/LP",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "date": "2022-11",
+      "total_variants": 1564346,
+      "single_submitter": 1197474,
+      "multi_sub_variants": 366872,
+      "concordant": 219475,
+      "discordant": 66272,
+      "excluded": 81125,
+      "concordance_rate_pct": 59.8,
+      "discordance_rate_pct": 18.1,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 66271
+        },
+        {
+          "pattern": "P/LP",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "date": "2022-12",
+      "total_variants": 1651033,
+      "single_submitter": 1241700,
+      "multi_sub_variants": 409333,
+      "concordant": 259042,
+      "discordant": 72829,
+      "excluded": 77462,
+      "concordance_rate_pct": 63.3,
+      "discordance_rate_pct": 17.8,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 72828
+        },
+        {
+          "pattern": "P/LP",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "date": "2023-01",
+      "total_variants": 1660929,
+      "single_submitter": 1229108,
+      "multi_sub_variants": 431821,
+      "concordant": 283018,
+      "discordant": 73475,
+      "excluded": 75328,
+      "concordance_rate_pct": 65.5,
+      "discordance_rate_pct": 17.0,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 73474
+        },
+        {
+          "pattern": "P/LP",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "date": "2023-02",
+      "total_variants": 2180889,
+      "single_submitter": 1701034,
+      "multi_sub_variants": 479855,
+      "concordant": 316285,
+      "discordant": 89036,
+      "excluded": 74534,
+      "concordance_rate_pct": 65.9,
+      "discordance_rate_pct": 18.6,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 89035
+        },
+        {
+          "pattern": "P/LP",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "date": "2023-03",
+      "total_variants": 2198285,
+      "single_submitter": 1715964,
+      "multi_sub_variants": 482321,
+      "concordant": 317690,
+      "discordant": 89986,
+      "excluded": 74645,
+      "concordance_rate_pct": 65.9,
+      "discordance_rate_pct": 18.7,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 89985
+        },
+        {
+          "pattern": "P/LP",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "date": "2023-04",
+      "total_variants": 2210298,
+      "single_submitter": 1717096,
+      "multi_sub_variants": 493202,
+      "concordant": 322077,
+      "discordant": 98380,
+      "excluded": 72745,
+      "concordance_rate_pct": 65.3,
+      "discordance_rate_pct": 19.9,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 98379
+        },
+        {
+          "pattern": "P/LP",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "date": "2023-05",
+      "total_variants": 2263819,
+      "single_submitter": 1777116,
+      "multi_sub_variants": 486703,
+      "concordant": 329050,
+      "discordant": 99984,
+      "excluded": 57669,
+      "concordance_rate_pct": 67.6,
+      "discordance_rate_pct": 20.5,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 99983
+        },
+        {
+          "pattern": "P/LP",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "date": "2023-06",
+      "total_variants": 2266375,
+      "single_submitter": 1778731,
+      "multi_sub_variants": 487644,
+      "concordant": 329834,
+      "discordant": 100197,
+      "excluded": 57613,
+      "concordance_rate_pct": 67.6,
+      "discordance_rate_pct": 20.5,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 100196
+        },
+        {
+          "pattern": "P/LP",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "date": "2023-07",
+      "total_variants": 2270025,
+      "single_submitter": 1781040,
+      "multi_sub_variants": 488985,
+      "concordant": 330822,
+      "discordant": 100554,
+      "excluded": 57609,
+      "concordance_rate_pct": 67.7,
+      "discordance_rate_pct": 20.6,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 100553
+        },
+        {
+          "pattern": "P/LP",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "date": "2023-08",
+      "total_variants": 2336996,
+      "single_submitter": 1839723,
+      "multi_sub_variants": 497273,
+      "concordant": 337975,
+      "discordant": 102108,
+      "excluded": 57190,
+      "concordance_rate_pct": 68.0,
+      "discordance_rate_pct": 20.5,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 102107
+        },
+        {
+          "pattern": "P/LP",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "date": "2023-09",
+      "total_variants": 2340630,
+      "single_submitter": 1841889,
+      "multi_sub_variants": 498741,
+      "concordant": 339273,
+      "discordant": 102357,
+      "excluded": 57111,
+      "concordance_rate_pct": 68.0,
+      "discordance_rate_pct": 20.5,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 102356
+        },
+        {
+          "pattern": "P/LP",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "date": "2023-10",
+      "total_variants": 2343706,
+      "single_submitter": 1843887,
+      "multi_sub_variants": 499819,
+      "concordant": 340123,
+      "discordant": 102546,
+      "excluded": 57150,
+      "concordance_rate_pct": 68.0,
+      "discordance_rate_pct": 20.5,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 102545
+        },
+        {
+          "pattern": "P/LP",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "date": "2023-11",
+      "total_variants": 2388563,
+      "single_submitter": 1882292,
+      "multi_sub_variants": 506271,
+      "concordant": 345605,
+      "discordant": 103624,
+      "excluded": 57042,
+      "concordance_rate_pct": 68.3,
+      "discordance_rate_pct": 20.5,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 103623
+        },
+        {
+          "pattern": "P/LP",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "date": "2023-12",
+      "total_variants": 2425636,
+      "single_submitter": 1904583,
+      "multi_sub_variants": 521053,
+      "concordant": 358533,
+      "discordant": 106071,
+      "excluded": 56449,
+      "concordance_rate_pct": 68.8,
+      "discordance_rate_pct": 20.4,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 106070
+        },
+        {
+          "pattern": "P/LP",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "date": "2024-01",
+      "total_variants": 2435991,
+      "single_submitter": 1908427,
+      "multi_sub_variants": 527564,
+      "concordant": 364579,
+      "discordant": 106772,
+      "excluded": 56213,
+      "concordance_rate_pct": 69.1,
+      "discordance_rate_pct": 20.2,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 106771
+        },
+        {
+          "pattern": "P/LP",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "date": "2024-02",
+      "total_variants": 2440498,
+      "single_submitter": 1911084,
+      "multi_sub_variants": 529414,
+      "concordant": 365840,
+      "discordant": 107311,
+      "excluded": 56263,
+      "concordance_rate_pct": 69.1,
+      "discordance_rate_pct": 20.3,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 107310
+        },
+        {
+          "pattern": "P/LP",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "date": "2024-03",
+      "total_variants": 2776654,
+      "single_submitter": 2212170,
+      "multi_sub_variants": 564484,
+      "concordant": 391695,
+      "discordant": 116614,
+      "excluded": 56175,
+      "concordance_rate_pct": 69.4,
+      "discordance_rate_pct": 20.7,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 116613
+        },
+        {
+          "pattern": "P/LP",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "date": "2024-04",
+      "total_variants": 2816554,
+      "single_submitter": 2222408,
+      "multi_sub_variants": 594146,
+      "concordant": 418967,
+      "discordant": 119977,
+      "excluded": 55202,
+      "concordance_rate_pct": 70.5,
+      "discordance_rate_pct": 20.2,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 119976
+        },
+        {
+          "pattern": "P/LP",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "date": "2024-05",
+      "total_variants": 2966485,
+      "single_submitter": 2347007,
+      "multi_sub_variants": 619478,
+      "concordant": 439248,
+      "discordant": 125449,
+      "excluded": 54781,
+      "concordance_rate_pct": 70.9,
+      "discordance_rate_pct": 20.3,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 125448
+        },
+        {
+          "pattern": "P/LP",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "date": "2024-06",
+      "total_variants": 2970119,
+      "single_submitter": 2349358,
+      "multi_sub_variants": 620761,
+      "concordant": 440304,
+      "discordant": 125579,
+      "excluded": 54878,
+      "concordance_rate_pct": 70.9,
+      "discordance_rate_pct": 20.2,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 125578
+        },
+        {
+          "pattern": "P/LP",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "date": "2024-07",
+      "total_variants": 2981853,
+      "single_submitter": 2357841,
+      "multi_sub_variants": 624012,
+      "concordant": 443285,
+      "discordant": 125713,
+      "excluded": 55014,
+      "concordance_rate_pct": 71.0,
+      "discordance_rate_pct": 20.1,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 125712
+        },
+        {
+          "pattern": "P/LP",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "date": "2024-08",
+      "total_variants": 2987082,
+      "single_submitter": 2359763,
+      "multi_sub_variants": 627319,
+      "concordant": 446221,
+      "discordant": 126063,
+      "excluded": 55035,
+      "concordance_rate_pct": 71.1,
+      "discordance_rate_pct": 20.1,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 126062
+        },
+        {
+          "pattern": "P/LP",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "date": "2024-09",
+      "total_variants": 3069367,
+      "single_submitter": 2426996,
+      "multi_sub_variants": 642371,
+      "concordant": 459321,
+      "discordant": 128537,
+      "excluded": 54513,
+      "concordance_rate_pct": 71.5,
+      "discordance_rate_pct": 20.0,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 128535
+        },
+        {
+          "pattern": "P/LP",
+          "count": 1
+        },
+        {
+          "pattern": "Other",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "date": "2024-10",
+      "total_variants": 3071459,
+      "single_submitter": 2359992,
+      "multi_sub_variants": 711467,
+      "concordant": 530617,
+      "discordant": 128405,
+      "excluded": 52445,
+      "concordance_rate_pct": 74.6,
+      "discordance_rate_pct": 18.0,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 128403
+        },
+        {
+          "pattern": "P/LP",
+          "count": 1
+        },
+        {
+          "pattern": "Other",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "date": "2024-11",
+      "total_variants": 3101643,
+      "single_submitter": 2377096,
+      "multi_sub_variants": 724547,
+      "concordant": 514905,
+      "discordant": 127065,
+      "excluded": 82577,
+      "concordance_rate_pct": 71.1,
+      "discordance_rate_pct": 17.5,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 127063
+        },
+        {
+          "pattern": "P/LP",
+          "count": 1
+        },
+        {
+          "pattern": "LP",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "date": "2024-12",
+      "total_variants": 3114412,
+      "single_submitter": 2384355,
+      "multi_sub_variants": 730057,
+      "concordant": 519517,
+      "discordant": 128129,
+      "excluded": 82411,
+      "concordance_rate_pct": 71.2,
+      "discordance_rate_pct": 17.6,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 128127
+        },
+        {
+          "pattern": "P/LP",
+          "count": 1
+        },
+        {
+          "pattern": "LP",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "date": "2025-01",
+      "total_variants": 3124066,
+      "single_submitter": 2389283,
+      "multi_sub_variants": 734783,
+      "concordant": 523421,
+      "discordant": 128795,
+      "excluded": 82567,
+      "concordance_rate_pct": 71.2,
+      "discordance_rate_pct": 17.5,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 128793
+        },
+        {
+          "pattern": "P/LP",
+          "count": 1
+        },
+        {
+          "pattern": "LP",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "date": "2025-02",
+      "total_variants": 3307166,
+      "single_submitter": 2540111,
+      "multi_sub_variants": 767055,
+      "concordant": 550257,
+      "discordant": 135486,
+      "excluded": 81312,
+      "concordance_rate_pct": 71.7,
+      "discordance_rate_pct": 17.7,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 135484
+        },
+        {
+          "pattern": "P/LP",
+          "count": 1
+        },
+        {
+          "pattern": "LP",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "date": "2025-03",
+      "total_variants": 3453648,
+      "single_submitter": 2664254,
+      "multi_sub_variants": 789394,
+      "concordant": 566985,
+      "discordant": 140093,
+      "excluded": 82316,
+      "concordance_rate_pct": 71.8,
+      "discordance_rate_pct": 17.7,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 140091
+        },
+        {
+          "pattern": "P/LP",
+          "count": 1
+        },
+        {
+          "pattern": "LP",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "date": "2025-04",
+      "total_variants": 3462752,
+      "single_submitter": 2667776,
+      "multi_sub_variants": 794976,
+      "concordant": 572216,
+      "discordant": 140671,
+      "excluded": 82089,
+      "concordance_rate_pct": 72.0,
+      "discordance_rate_pct": 17.7,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 140669
+        },
+        {
+          "pattern": "P/LP",
+          "count": 1
+        },
+        {
+          "pattern": "LP",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "date": "2025-05",
+      "total_variants": 3580947,
+      "single_submitter": 2767693,
+      "multi_sub_variants": 813254,
+      "concordant": 587186,
+      "discordant": 144510,
+      "excluded": 81558,
+      "concordance_rate_pct": 72.2,
+      "discordance_rate_pct": 17.8,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 144508
+        },
+        {
+          "pattern": "P/LP",
+          "count": 1
+        },
+        {
+          "pattern": "LP",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "date": "2025-06",
+      "total_variants": 3588307,
+      "single_submitter": 2771287,
+      "multi_sub_variants": 817020,
+      "concordant": 590442,
+      "discordant": 145084,
+      "excluded": 81494,
+      "concordance_rate_pct": 72.3,
+      "discordance_rate_pct": 17.8,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 145082
+        },
+        {
+          "pattern": "P/LP",
+          "count": 1
+        },
+        {
+          "pattern": "LP",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "date": "2025-07",
+      "total_variants": 3594583,
+      "single_submitter": 2773625,
+      "multi_sub_variants": 820958,
+      "concordant": 591986,
+      "discordant": 144703,
+      "excluded": 84269,
+      "concordance_rate_pct": 72.1,
+      "discordance_rate_pct": 17.6,
+      "top_discordance_patterns": [
+        {
+          "pattern": "Conflicting",
+          "count": 144701
+        },
+        {
+          "pattern": "P/LP",
+          "count": 1
+        },
+        {
+          "pattern": "LP",
+          "count": 1
+        }
+      ]
+    }
+  ]
+}

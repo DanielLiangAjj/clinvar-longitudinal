@@ -1,0 +1,96 @@
+{
+  "total_reversal_variants": 6340,
+  "p_to_b_variants": 6198,
+  "b_to_p_variants": 707,
+  "both_directions": 565,
+  "top_20_genes": [
+    {
+      "gene": "TTN",
+      "count": 552
+    },
+    {
+      "gene": "USH2A",
+      "count": 179
+    },
+    {
+      "gene": "BRCA2",
+      "count": 154
+    },
+    {
+      "gene": "CDH23",
+      "count": 134
+    },
+    {
+      "gene": "ADGRV1",
+      "count": 134
+    },
+    {
+      "gene": "RYR2",
+      "count": 108
+    },
+    {
+      "gene": "MYBPC3",
+      "count": 105
+    },
+    {
+      "gene": "BRCA1",
+      "count": 103
+    },
+    {
+      "gene": "OTOF",
+      "count": 101
+    },
+    {
+      "gene": "MYO7A",
+      "count": 99
+    },
+    {
+      "gene": "TTN-AS1",
+      "count": 85
+    },
+    {
+      "gene": "MYH7",
+      "count": 82
+    },
+    {
+      "gene": "",
+      "count": 74
+    },
+    {
+      "gene": "DSP",
+      "count": 67
+    },
+    {
+      "gene": "MYH6",
+      "count": 62
+    },
+    {
+      "gene": "PCDH15",
+      "count": 60
+    },
+    {
+      "gene": "MT-CYB",
+      "count": 50
+    },
+    {
+      "gene": "LAMA4",
+      "count": 50
+    },
+    {
+      "gene": "LDB3",
+      "count": 48
+    },
+    {
+      "gene": "USH1C",
+      "count": 44
+    }
+  ],
+  "drivers_of_drastic_reversals": {
+    "batch_event": 5509,
+    "reinterpretation": 3017,
+    "new_submitter": 697,
+    "likely_schema_driven": 24,
+    "likely_knowledge_driven": 10,
+    "transition_ambiguous": 1
+  }
+}

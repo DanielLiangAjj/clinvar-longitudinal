@@ -1,0 +1,71 @@
+severity,Prev_Category,Curr_Category,count
+Adjacent (B↔LB),LB,B,32091
+Adjacent (B↔LB),B,LB,25299
+Adjacent (P↔LP),P,LP,18899
+Adjacent (P↔LP),LP,P,17194
+Involves composite category,VUS,Conflicting,113678
+Involves composite category,LB,Conflicting,47957
+Involves composite category,LB,B/LB,34775
+Involves composite category,B,B/LB,34480
+Involves composite category,P,P/LP,21123
+Involves composite category,B,Conflicting,18473
+Involves composite category,Conflicting,LB,17576
+Involves composite category,LP,P/LP,16478
+Involves composite category,Other,VUS,13541
+Involves composite category,Other,P,13498
+Involves composite category,Conflicting,VUS,12975
+Involves composite category,B/LB,B,12958
+Involves composite category,Conflicting,B,12652
+Involves composite category,P,Other,11071
+Involves composite category,LP,Conflicting,10374
+Involves composite category,P,Conflicting,8239
+Involves composite category,Conflicting,B/LB,7823
+Involves composite category,P/LP,P,5187
+Involves composite category,B/LB,Conflicting,5039
+Involves composite category,Conflicting,P,4515
+Involves composite category,Conflicting,P/LP,4187
+Involves composite category,Conflicting,LP,3353
+Involves composite category,Other,B,2786
+Involves composite category,VUS,Other,2651
+Involves composite category,Other,LB,2247
+Involves composite category,Other,LP,1998
+Involves composite category,P/LP,Conflicting,1980
+Involves composite category,B/LB,LB,1933
+Involves composite category,P/LP,LP,1273
+Involves composite category,B,Other,1108
+Involves composite category,LP,Other,627
+Involves composite category,LB,Other,451
+Involves composite category,Other,Conflicting,425
+Involves composite category,VUS,B/LB,349
+Involves composite category,P/LP,VUS,159
+Involves composite category,Conflicting,Other,125
+Involves composite category,B/LB,VUS,88
+Involves composite category,VUS,P/LP,82
+Involves composite category,P,B/LB,45
+Involves composite category,Other,B/LB,32
+Involves composite category,Other,P/LP,32
+Involves composite category,P/LP,Other,13
+Involves composite category,P/LP,LB,7
+Involves composite category,LP,B/LB,6
+Involves composite category,B/LB,Other,3
+Involves composite category,B/LB,P,3
+Involves composite category,P/LP,B,3
+Involves composite category,B,P/LP,1
+Involves composite category,B/LB,LP,1
+Involves composite category,LB,P/LP,1
+Medically significant,VUS,LP,12068
+Medically significant,P,VUS,9359
+Medically significant,LP,VUS,9216
+Medically significant,VUS,P,9155
+Medically significant,P,B,3823
+Medically significant,P,LB,2945
+Medically significant,LB,P,719
+Medically significant,B,P,598
+Medically significant,LP,LB,397
+Medically significant,LB,LP,262
+Medically significant,LP,B,262
+Medically significant,B,LP,185
+Non-medically significant,VUS,LB,56681
+Non-medically significant,LB,VUS,29300
+Non-medically significant,VUS,B,13228
+Non-medically significant,B,VUS,7636

@@ -1,0 +1,6 @@
+severity,count,unique_variants,pct_of_events
+Involves composite category,448381,283652,64.3
+Non-medically significant,106845,50616,15.3
+Adjacent (B↔LB),57390,20245,8.2
+Medically significant,48989,25105,7.0
+Adjacent (P↔LP),36093,15281,5.2

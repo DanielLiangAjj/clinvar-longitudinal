@@ -1,0 +1,7 @@
+{
+  "hgvs_p_overall_pct": 78.04,
+  "hgvs_p_among_coding_pct": 99.73,
+  "n_coding": 2812380,
+  "n_total": 3678303,
+  "note": "coding = molecular consequence indicating a protein consequence"
+}

@@ -1,0 +1,211 @@
+{
+  "n_variants_with_citations": 2249743,
+  "top_pmids_for_manual_vetting": [
+    {
+      "pmid": "28492532",
+      "n_variants": 1890184,
+      "pct": 84.02,
+      "note": "Nykamp 2017 SHERLOC"
+    },
+    {
+      "pmid": "25741868",
+      "n_variants": 555318,
+      "pct": 24.68,
+      "note": "Richards 2015 ACMG/AMP standards & guidelines"
+    },
+    {
+      "pmid": "26467025",
+      "n_variants": 39396,
+      "pct": 1.75,
+      "note": ""
+    },
+    {
+      "pmid": "17576681",
+      "n_variants": 34362,
+      "pct": 1.53,
+      "note": ""
+    },
+    {
+      "pmid": "9536098",
+      "n_variants": 34361,
+      "pct": 1.53,
+      "note": ""
+    },
+    {
+      "pmid": "16199547",
+      "n_variants": 25464,
+      "pct": 1.13,
+      "note": ""
+    },
+    {
+      "pmid": "24033266",
+      "n_variants": 23355,
+      "pct": 1.04,
+      "note": "ACMG secondary-findings / incidental (candidate)"
+    },
+    {
+      "pmid": "20466091",
+      "n_variants": 17261,
+      "pct": 0.77,
+      "note": ""
+    },
+    {
+      "pmid": "31911673",
+      "n_variants": 6669,
+      "pct": 0.3,
+      "note": ""
+    },
+    {
+      "pmid": "25589632",
+      "n_variants": 5912,
+      "pct": 0.26,
+      "note": ""
+    },
+    {
+      "pmid": "31690835",
+      "n_variants": 5543,
+      "pct": 0.25,
+      "note": ""
+    },
+    {
+      "pmid": "23975875",
+      "n_variants": 5207,
+      "pct": 0.23,
+      "note": ""
+    }
+  ],
+  "scenarios": {
+    "SHERLOC only (28492532)": {
+      "excluded": [
+        "28492532"
+      ],
+      "mean_raw": 1.584,
+      "mean_filtered": 0.744,
+      "median_filtered": 0,
+      "variants_losing_all": 1406014,
+      "pct_losing_all": 62.5,
+      "pct_of_ALL_variants_with_genuine_citation": 23.47,
+      "by_domain": {
+        "Hereditary Cancer": {
+          "mean_raw": 2.074,
+          "mean_filtered": 1.192,
+          "n": 282110
+        },
+        "Cardiovascular": {
+          "mean_raw": 1.969,
+          "mean_filtered": 1.162,
+          "n": 159139
+        },
+        "Neurological": {
+          "mean_raw": 1.671,
+          "mean_filtered": 0.823,
+          "n": 93506
+        },
+        "Renal": {
+          "mean_raw": 1.877,
+          "mean_filtered": 1.138,
+          "n": 67790
+        },
+        "Ophthalmologic": {
+          "mean_raw": 1.927,
+          "mean_filtered": 1.042,
+          "n": 74969
+        },
+        "Other/Unclassified": {
+          "mean_raw": 1.423,
+          "mean_filtered": 0.585,
+          "n": 1572229
+        }
+      }
+    },
+    "SHERLOC + ACMG/AMP 2015": {
+      "excluded": [
+        "25741868",
+        "28492532"
+      ],
+      "mean_raw": 1.584,
+      "mean_filtered": 0.497,
+      "median_filtered": 0,
+      "variants_losing_all": 1825333,
+      "pct_losing_all": 81.14,
+      "pct_of_ALL_variants_with_genuine_citation": 11.81,
+      "by_domain": {
+        "Hereditary Cancer": {
+          "mean_raw": 2.074,
+          "mean_filtered": 0.886,
+          "n": 282110
+        },
+        "Cardiovascular": {
+          "mean_raw": 1.969,
+          "mean_filtered": 0.804,
+          "n": 159139
+        },
+        "Neurological": {
+          "mean_raw": 1.671,
+          "mean_filtered": 0.616,
+          "n": 93506
+        },
+        "Renal": {
+          "mean_raw": 1.877,
+          "mean_filtered": 0.742,
+          "n": 67790
+        },
+        "Ophthalmologic": {
+          "mean_raw": 1.927,
+          "mean_filtered": 0.837,
+          "n": 74969
+        },
+        "Other/Unclassified": {
+          "mean_raw": 1.423,
+          "mean_filtered": 0.362,
+          "n": 1572229
+        }
+      }
+    },
+    "SHERLOC + ACMG 2015 + ACMG-SF": {
+      "excluded": [
+        "24033266",
+        "25741868",
+        "28492532"
+      ],
+      "mean_raw": 1.584,
+      "mean_filtered": 0.487,
+      "median_filtered": 0,
+      "variants_losing_all": 1839749,
+      "pct_losing_all": 81.78,
+      "pct_of_ALL_variants_with_genuine_citation": 11.41,
+      "by_domain": {
+        "Hereditary Cancer": {
+          "mean_raw": 2.074,
+          "mean_filtered": 0.882,
+          "n": 282110
+        },
+        "Cardiovascular": {
+          "mean_raw": 1.969,
+          "mean_filtered": 0.759,
+          "n": 159139
+        },
+        "Neurological": {
+          "mean_raw": 1.671,
+          "mean_filtered": 0.615,
+          "n": 93506
+        },
+        "Renal": {
+          "mean_raw": 1.877,
+          "mean_filtered": 0.734,
+          "n": 67790
+        },
+        "Ophthalmologic": {
+          "mean_raw": 1.927,
+          "mean_filtered": 0.808,
+          "n": 74969
+        },
+        "Other/Unclassified": {
+          "mean_raw": 1.423,
+          "mean_filtered": 0.355,
+          "n": 1572229
+        }
+      }
+    }
+  }
+}

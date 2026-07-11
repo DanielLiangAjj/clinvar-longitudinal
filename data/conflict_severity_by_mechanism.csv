@@ -1,0 +1,6 @@
+severity,batch_event,conflict_emerged,conflict_resolved,likely_knowledge_driven,likely_schema_driven,new_submitter,reinterpretation,transition_ambiguous
+Adjacent (B↔LB),3816.0,0.0,0.0,7108.0,26.0,7382.0,39058.0,0.0
+Adjacent (P↔LP),3939.0,0.0,0.0,189.0,367.0,7757.0,23839.0,2.0
+Involves composite category,66900.0,161722.0,47909.0,9512.0,17040.0,92334.0,52872.0,92.0
+Medically significant,7663.0,0.0,0.0,406.0,390.0,8007.0,32517.0,6.0
+Non-medically significant,6901.0,0.0,0.0,4310.0,84.0,12172.0,83373.0,5.0

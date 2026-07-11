@@ -1,0 +1,2358 @@
+{
+  "generated_at": "2026-02-20T18:15:21.920536",
+  "description": "Reclassification driver classification (v2). Transition window (2020-01 to 2020-06): schema-driven vs knowledge-driven using era boundaries, submission count, and review status signals. Outside transition: classified by observable mechanism (new_submitter, reinterpretation, conflict_emerged, conflict_resolved). Batch events: snapshots with >5% simultaneous reclassification.",
+  "total_reclassification_events": 697698,
+  "all_labels": [
+    "likely_schema_driven",
+    "likely_knowledge_driven",
+    "transition_ambiguous",
+    "new_submitter",
+    "reinterpretation",
+    "conflict_emerged",
+    "conflict_resolved",
+    "batch_event"
+  ],
+  "driver_summary": {
+    "likely_schema_driven": {
+      "count": 17907,
+      "pct": 2.6
+    },
+    "likely_knowledge_driven": {
+      "count": 21525,
+      "pct": 3.1
+    },
+    "transition_ambiguous": {
+      "count": 105,
+      "pct": 0.0
+    },
+    "new_submitter": {
+      "count": 127652,
+      "pct": 18.3
+    },
+    "reinterpretation": {
+      "count": 231659,
+      "pct": 33.2
+    },
+    "conflict_emerged": {
+      "count": 161722,
+      "pct": 23.2
+    },
+    "conflict_resolved": {
+      "count": 47909,
+      "pct": 6.9
+    },
+    "batch_event": {
+      "count": 89219,
+      "pct": 12.8
+    }
+  },
+  "grouped_summary": {
+    "transition_schema_driven": 17907,
+    "transition_knowledge_driven": 21525,
+    "transition_ambiguous": 105,
+    "mechanism_new_submitter": 127652,
+    "mechanism_reinterpretation": 231659,
+    "mechanism_conflict_emerged": 161722,
+    "mechanism_conflict_resolved": 47909,
+    "batch_event": 89219
+  },
+  "era_summary": {
+    "RCV (2012-2019)": {
+      "total_events": 312072,
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 34741,
+      "reinterpretation": 174342,
+      "conflict_emerged": 37301,
+      "conflict_resolved": 27027,
+      "batch_event": 38661,
+      "likely_schema_driven_pct": 0.0,
+      "likely_knowledge_driven_pct": 0.0,
+      "transition_ambiguous_pct": 0.0,
+      "new_submitter_pct": 11.1,
+      "reinterpretation_pct": 55.9,
+      "conflict_emerged_pct": 12.0,
+      "conflict_resolved_pct": 8.7,
+      "batch_event_pct": 12.4,
+      "transition_total": 0,
+      "mechanism_total": 273411
+    },
+    "Transition (2020-01 to 2020-06)": {
+      "total_events": 90095,
+      "likely_schema_driven": 17907,
+      "likely_knowledge_driven": 21525,
+      "transition_ambiguous": 105,
+      "new_submitter": 0,
+      "reinterpretation": 0,
+      "conflict_emerged": 0,
+      "conflict_resolved": 0,
+      "batch_event": 50558,
+      "likely_schema_driven_pct": 19.9,
+      "likely_knowledge_driven_pct": 23.9,
+      "transition_ambiguous_pct": 0.1,
+      "new_submitter_pct": 0.0,
+      "reinterpretation_pct": 0.0,
+      "conflict_emerged_pct": 0.0,
+      "conflict_resolved_pct": 0.0,
+      "batch_event_pct": 56.1,
+      "transition_total": 39537,
+      "mechanism_total": 0
+    },
+    "VCV-stable (2020-07+)": {
+      "total_events": 295531,
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 92911,
+      "reinterpretation": 57317,
+      "conflict_emerged": 124421,
+      "conflict_resolved": 20882,
+      "batch_event": 0,
+      "likely_schema_driven_pct": 0.0,
+      "likely_knowledge_driven_pct": 0.0,
+      "transition_ambiguous_pct": 0.0,
+      "new_submitter_pct": 31.4,
+      "reinterpretation_pct": 19.4,
+      "conflict_emerged_pct": 42.1,
+      "conflict_resolved_pct": 7.1,
+      "batch_event_pct": 0.0,
+      "transition_total": 0,
+      "mechanism_total": 295531
+    }
+  },
+  "signal_frequency": {
+    "outside_transition": 568942,
+    "subs_stable": 228669,
+    "review_status_stable": 173189,
+    "gained_conflicting": 161722,
+    "subs_increased": 127652,
+    "batch_snapshot": 89219,
+    "review_status_changed": 58470,
+    "lost_conflicting": 47909,
+    "in_transition_window": 39537,
+    "subs_stable_at_transition": 24105,
+    "review_status_stable_at_transition": 20101,
+    "subs_changed_at_transition": 15432,
+    "gained_conflicting_at_transition": 12090,
+    "review_status_changed_at_transition": 4225,
+    "resolved_conflict_at_transition": 3121,
+    "subs_decreased": 2990,
+    "to_other_at_transition": 20
+  },
+  "top_changes_by_driver": {
+    "reinterpretation": [
+      {
+        "change_type": "VUS->LB",
+        "count": 45226
+      },
+      {
+        "change_type": "LB->VUS",
+        "count": 22149
+      },
+      {
+        "change_type": "B->LB",
+        "count": 20429
+      },
+      {
+        "change_type": "LB->B",
+        "count": 18629
+      },
+      {
+        "change_type": "LP->P",
+        "count": 13434
+      },
+      {
+        "change_type": "P->LP",
+        "count": 10405
+      },
+      {
+        "change_type": "VUS->LP",
+        "count": 9999
+      },
+      {
+        "change_type": "VUS->B",
+        "count": 9827
+      },
+      {
+        "change_type": "Other->P",
+        "count": 8708
+      },
+      {
+        "change_type": "VUS->P",
+        "count": 7817
+      },
+      {
+        "change_type": "B/LB->B",
+        "count": 7608
+      },
+      {
+        "change_type": "P->Other",
+        "count": 7400
+      },
+      {
+        "change_type": "LP->VUS",
+        "count": 6595
+      },
+      {
+        "change_type": "B->VUS",
+        "count": 6171
+      },
+      {
+        "change_type": "P->VUS",
+        "count": 5091
+      }
+    ],
+    "batch_event": [
+      {
+        "change_type": "VUS->Conflicting",
+        "count": 15756
+      },
+      {
+        "change_type": "B->B/LB",
+        "count": 8075
+      },
+      {
+        "change_type": "LB->B/LB",
+        "count": 7954
+      },
+      {
+        "change_type": "LB->Conflicting",
+        "count": 6659
+      },
+      {
+        "change_type": "Other->VUS",
+        "count": 4947
+      },
+      {
+        "change_type": "Conflicting->B/LB",
+        "count": 3220
+      },
+      {
+        "change_type": "P->LP",
+        "count": 3164
+      },
+      {
+        "change_type": "P->B",
+        "count": 3106
+      },
+      {
+        "change_type": "P->Other",
+        "count": 3059
+      },
+      {
+        "change_type": "LB->VUS",
+        "count": 2703
+      },
+      {
+        "change_type": "VUS->LB",
+        "count": 2677
+      },
+      {
+        "change_type": "Conflicting->B",
+        "count": 2186
+      },
+      {
+        "change_type": "P->LB",
+        "count": 2180
+      },
+      {
+        "change_type": "P->P/LP",
+        "count": 2104
+      },
+      {
+        "change_type": "B->Conflicting",
+        "count": 1941
+      }
+    ],
+    "new_submitter": [
+      {
+        "change_type": "LB->B/LB",
+        "count": 23090
+      },
+      {
+        "change_type": "B->B/LB",
+        "count": 21959
+      },
+      {
+        "change_type": "P->P/LP",
+        "count": 17127
+      },
+      {
+        "change_type": "LP->P/LP",
+        "count": 12063
+      },
+      {
+        "change_type": "VUS->LB",
+        "count": 6288
+      },
+      {
+        "change_type": "P->LP",
+        "count": 5060
+      },
+      {
+        "change_type": "LB->B",
+        "count": 4441
+      },
+      {
+        "change_type": "Other->VUS",
+        "count": 4023
+      },
+      {
+        "change_type": "Other->P",
+        "count": 3724
+      },
+      {
+        "change_type": "LB->VUS",
+        "count": 3723
+      },
+      {
+        "change_type": "P->VUS",
+        "count": 3309
+      },
+      {
+        "change_type": "B->LB",
+        "count": 2941
+      },
+      {
+        "change_type": "LP->P",
+        "count": 2697
+      },
+      {
+        "change_type": "LP->VUS",
+        "count": 2038
+      },
+      {
+        "change_type": "VUS->B",
+        "count": 1490
+      }
+    ],
+    "conflict_emerged": [
+      {
+        "change_type": "VUS->Conflicting",
+        "count": 93272
+      },
+      {
+        "change_type": "LB->Conflicting",
+        "count": 35164
+      },
+      {
+        "change_type": "B->Conflicting",
+        "count": 14188
+      },
+      {
+        "change_type": "LP->Conflicting",
+        "count": 8585
+      },
+      {
+        "change_type": "P->Conflicting",
+        "count": 6310
+      },
+      {
+        "change_type": "B/LB->Conflicting",
+        "count": 2349
+      },
+      {
+        "change_type": "P/LP->Conflicting",
+        "count": 1745
+      },
+      {
+        "change_type": "Other->Conflicting",
+        "count": 109
+      }
+    ],
+    "conflict_resolved": [
+      {
+        "change_type": "Conflicting->LB",
+        "count": 15257
+      },
+      {
+        "change_type": "Conflicting->VUS",
+        "count": 11054
+      },
+      {
+        "change_type": "Conflicting->B",
+        "count": 9127
+      },
+      {
+        "change_type": "Conflicting->P",
+        "count": 3765
+      },
+      {
+        "change_type": "Conflicting->P/LP",
+        "count": 3234
+      },
+      {
+        "change_type": "Conflicting->B/LB",
+        "count": 2834
+      },
+      {
+        "change_type": "Conflicting->LP",
+        "count": 2542
+      },
+      {
+        "change_type": "Conflicting->Other",
+        "count": 96
+      }
+    ],
+    "likely_schema_driven": [
+      {
+        "change_type": "LB->Conflicting",
+        "count": 5231
+      },
+      {
+        "change_type": "VUS->Conflicting",
+        "count": 3642
+      },
+      {
+        "change_type": "B/LB->Conflicting",
+        "count": 1488
+      },
+      {
+        "change_type": "B->B/LB",
+        "count": 1360
+      },
+      {
+        "change_type": "B->Conflicting",
+        "count": 1126
+      },
+      {
+        "change_type": "LP->P/LP",
+        "count": 941
+      },
+      {
+        "change_type": "LB->B/LB",
+        "count": 932
+      },
+      {
+        "change_type": "P->P/LP",
+        "count": 554
+      },
+      {
+        "change_type": "LP->Conflicting",
+        "count": 380
+      },
+      {
+        "change_type": "Other->VUS",
+        "count": 281
+      },
+      {
+        "change_type": "P->Conflicting",
+        "count": 231
+      },
+      {
+        "change_type": "P->LP",
+        "count": 229
+      },
+      {
+        "change_type": "Other->P",
+        "count": 229
+      },
+      {
+        "change_type": "P->VUS",
+        "count": 190
+      },
+      {
+        "change_type": "LP->P",
+        "count": 138
+      }
+    ],
+    "likely_knowledge_driven": [
+      {
+        "change_type": "LB->B",
+        "count": 7106
+      },
+      {
+        "change_type": "B/LB->B",
+        "count": 4762
+      },
+      {
+        "change_type": "VUS->LB",
+        "count": 2463
+      },
+      {
+        "change_type": "Conflicting->B/LB",
+        "count": 1610
+      },
+      {
+        "change_type": "LB->B/LB",
+        "count": 1503
+      },
+      {
+        "change_type": "VUS->B",
+        "count": 1142
+      },
+      {
+        "change_type": "LB->VUS",
+        "count": 702
+      },
+      {
+        "change_type": "Conflicting->B",
+        "count": 632
+      },
+      {
+        "change_type": "Conflicting->LB",
+        "count": 497
+      },
+      {
+        "change_type": "VUS->LP",
+        "count": 165
+      },
+      {
+        "change_type": "LP->P",
+        "count": 150
+      },
+      {
+        "change_type": "VUS->P",
+        "count": 118
+      },
+      {
+        "change_type": "VUS->B/LB",
+        "count": 109
+      },
+      {
+        "change_type": "LP->VUS",
+        "count": 97
+      },
+      {
+        "change_type": "P/LP->P",
+        "count": 95
+      }
+    ],
+    "transition_ambiguous": [
+      {
+        "change_type": "Other->P",
+        "count": 42
+      },
+      {
+        "change_type": "Other->VUS",
+        "count": 28
+      },
+      {
+        "change_type": "B->Other",
+        "count": 7
+      },
+      {
+        "change_type": "Other->LB",
+        "count": 5
+      },
+      {
+        "change_type": "Other->LP",
+        "count": 4
+      },
+      {
+        "change_type": "Other->B",
+        "count": 4
+      },
+      {
+        "change_type": "VUS->B",
+        "count": 4
+      },
+      {
+        "change_type": "VUS->LP",
+        "count": 3
+      },
+      {
+        "change_type": "P->LP",
+        "count": 2
+      },
+      {
+        "change_type": "P->Other",
+        "count": 1
+      },
+      {
+        "change_type": "P->VUS",
+        "count": 1
+      },
+      {
+        "change_type": "VUS->LB",
+        "count": 1
+      },
+      {
+        "change_type": "LP->VUS",
+        "count": 1
+      },
+      {
+        "change_type": "LP->B",
+        "count": 1
+      },
+      {
+        "change_type": "P/LP->P",
+        "count": 1
+      }
+    ]
+  },
+  "batch_snapshots": [
+    "2013-12",
+    "2014-01",
+    "2014-02",
+    "2018-06",
+    "2020-01"
+  ],
+  "timeseries": [
+    {
+      "date": "2013-01",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 26,
+      "reinterpretation": 35,
+      "conflict_emerged": 0,
+      "conflict_resolved": 0,
+      "batch_event": 0,
+      "total_reclassifications": 61
+    },
+    {
+      "date": "2013-04",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 27,
+      "reinterpretation": 399,
+      "conflict_emerged": 0,
+      "conflict_resolved": 0,
+      "batch_event": 0,
+      "total_reclassifications": 426
+    },
+    {
+      "date": "2013-05",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 120,
+      "reinterpretation": 26,
+      "conflict_emerged": 0,
+      "conflict_resolved": 0,
+      "batch_event": 0,
+      "total_reclassifications": 146
+    },
+    {
+      "date": "2013-08",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 34,
+      "reinterpretation": 389,
+      "conflict_emerged": 0,
+      "conflict_resolved": 0,
+      "batch_event": 0,
+      "total_reclassifications": 423
+    },
+    {
+      "date": "2013-09",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 3,
+      "reinterpretation": 273,
+      "conflict_emerged": 0,
+      "conflict_resolved": 0,
+      "batch_event": 0,
+      "total_reclassifications": 276
+    },
+    {
+      "date": "2013-10",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 5,
+      "reinterpretation": 20,
+      "conflict_emerged": 0,
+      "conflict_resolved": 0,
+      "batch_event": 0,
+      "total_reclassifications": 25
+    },
+    {
+      "date": "2013-11",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 411,
+      "reinterpretation": 313,
+      "conflict_emerged": 0,
+      "conflict_resolved": 0,
+      "batch_event": 0,
+      "total_reclassifications": 724
+    },
+    {
+      "date": "2013-12",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 0,
+      "reinterpretation": 0,
+      "conflict_emerged": 0,
+      "conflict_resolved": 0,
+      "batch_event": 8372,
+      "total_reclassifications": 8372
+    },
+    {
+      "date": "2014-01",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 0,
+      "reinterpretation": 0,
+      "conflict_emerged": 0,
+      "conflict_resolved": 0,
+      "batch_event": 4347,
+      "total_reclassifications": 4347
+    },
+    {
+      "date": "2014-02",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 0,
+      "reinterpretation": 0,
+      "conflict_emerged": 0,
+      "conflict_resolved": 0,
+      "batch_event": 3584,
+      "total_reclassifications": 3584
+    },
+    {
+      "date": "2014-03",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 3,
+      "reinterpretation": 547,
+      "conflict_emerged": 0,
+      "conflict_resolved": 0,
+      "batch_event": 0,
+      "total_reclassifications": 550
+    },
+    {
+      "date": "2014-04",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 689,
+      "reinterpretation": 203,
+      "conflict_emerged": 0,
+      "conflict_resolved": 0,
+      "batch_event": 0,
+      "total_reclassifications": 892
+    },
+    {
+      "date": "2014-05",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 13,
+      "reinterpretation": 519,
+      "conflict_emerged": 0,
+      "conflict_resolved": 0,
+      "batch_event": 0,
+      "total_reclassifications": 532
+    },
+    {
+      "date": "2014-06",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 52,
+      "reinterpretation": 608,
+      "conflict_emerged": 0,
+      "conflict_resolved": 0,
+      "batch_event": 0,
+      "total_reclassifications": 660
+    },
+    {
+      "date": "2014-07",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 566,
+      "reinterpretation": 1270,
+      "conflict_emerged": 0,
+      "conflict_resolved": 0,
+      "batch_event": 0,
+      "total_reclassifications": 1836
+    },
+    {
+      "date": "2014-08",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 189,
+      "reinterpretation": 2692,
+      "conflict_emerged": 0,
+      "conflict_resolved": 0,
+      "batch_event": 0,
+      "total_reclassifications": 2881
+    },
+    {
+      "date": "2014-09",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 126,
+      "reinterpretation": 2846,
+      "conflict_emerged": 0,
+      "conflict_resolved": 0,
+      "batch_event": 0,
+      "total_reclassifications": 2972
+    },
+    {
+      "date": "2014-10",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 12,
+      "reinterpretation": 1966,
+      "conflict_emerged": 0,
+      "conflict_resolved": 0,
+      "batch_event": 0,
+      "total_reclassifications": 1978
+    },
+    {
+      "date": "2014-11",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 76,
+      "reinterpretation": 1397,
+      "conflict_emerged": 0,
+      "conflict_resolved": 0,
+      "batch_event": 0,
+      "total_reclassifications": 1473
+    },
+    {
+      "date": "2014-12",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 328,
+      "reinterpretation": 980,
+      "conflict_emerged": 0,
+      "conflict_resolved": 0,
+      "batch_event": 0,
+      "total_reclassifications": 1308
+    },
+    {
+      "date": "2015-01",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 125,
+      "reinterpretation": 1206,
+      "conflict_emerged": 0,
+      "conflict_resolved": 0,
+      "batch_event": 0,
+      "total_reclassifications": 1331
+    },
+    {
+      "date": "2015-02",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 299,
+      "reinterpretation": 1612,
+      "conflict_emerged": 0,
+      "conflict_resolved": 0,
+      "batch_event": 0,
+      "total_reclassifications": 1911
+    },
+    {
+      "date": "2015-03",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 406,
+      "reinterpretation": 988,
+      "conflict_emerged": 0,
+      "conflict_resolved": 0,
+      "batch_event": 0,
+      "total_reclassifications": 1394
+    },
+    {
+      "date": "2015-04",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 559,
+      "reinterpretation": 1971,
+      "conflict_emerged": 0,
+      "conflict_resolved": 0,
+      "batch_event": 0,
+      "total_reclassifications": 2530
+    },
+    {
+      "date": "2015-05",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 604,
+      "reinterpretation": 3041,
+      "conflict_emerged": 0,
+      "conflict_resolved": 0,
+      "batch_event": 0,
+      "total_reclassifications": 3645
+    },
+    {
+      "date": "2015-06",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 75,
+      "reinterpretation": 1291,
+      "conflict_emerged": 0,
+      "conflict_resolved": 0,
+      "batch_event": 0,
+      "total_reclassifications": 1366
+    },
+    {
+      "date": "2015-07",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 741,
+      "reinterpretation": 4268,
+      "conflict_emerged": 410,
+      "conflict_resolved": 0,
+      "batch_event": 0,
+      "total_reclassifications": 5419
+    },
+    {
+      "date": "2015-08",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 336,
+      "reinterpretation": 733,
+      "conflict_emerged": 457,
+      "conflict_resolved": 195,
+      "batch_event": 0,
+      "total_reclassifications": 1721
+    },
+    {
+      "date": "2015-09",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 212,
+      "reinterpretation": 633,
+      "conflict_emerged": 374,
+      "conflict_resolved": 145,
+      "batch_event": 0,
+      "total_reclassifications": 1364
+    },
+    {
+      "date": "2015-10",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 19,
+      "reinterpretation": 1660,
+      "conflict_emerged": 208,
+      "conflict_resolved": 251,
+      "batch_event": 0,
+      "total_reclassifications": 2138
+    },
+    {
+      "date": "2015-11",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 588,
+      "reinterpretation": 1687,
+      "conflict_emerged": 533,
+      "conflict_resolved": 289,
+      "batch_event": 0,
+      "total_reclassifications": 3097
+    },
+    {
+      "date": "2015-12",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 47,
+      "reinterpretation": 1155,
+      "conflict_emerged": 175,
+      "conflict_resolved": 286,
+      "batch_event": 0,
+      "total_reclassifications": 1663
+    },
+    {
+      "date": "2016-01",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 73,
+      "reinterpretation": 1244,
+      "conflict_emerged": 129,
+      "conflict_resolved": 206,
+      "batch_event": 0,
+      "total_reclassifications": 1652
+    },
+    {
+      "date": "2016-02",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 286,
+      "reinterpretation": 1194,
+      "conflict_emerged": 146,
+      "conflict_resolved": 206,
+      "batch_event": 0,
+      "total_reclassifications": 1832
+    },
+    {
+      "date": "2016-03",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 60,
+      "reinterpretation": 1475,
+      "conflict_emerged": 234,
+      "conflict_resolved": 126,
+      "batch_event": 0,
+      "total_reclassifications": 1895
+    },
+    {
+      "date": "2016-04",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 57,
+      "reinterpretation": 1177,
+      "conflict_emerged": 208,
+      "conflict_resolved": 156,
+      "batch_event": 0,
+      "total_reclassifications": 1598
+    },
+    {
+      "date": "2016-05",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 33,
+      "reinterpretation": 1301,
+      "conflict_emerged": 265,
+      "conflict_resolved": 110,
+      "batch_event": 0,
+      "total_reclassifications": 1709
+    },
+    {
+      "date": "2016-06",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 328,
+      "reinterpretation": 1769,
+      "conflict_emerged": 681,
+      "conflict_resolved": 564,
+      "batch_event": 0,
+      "total_reclassifications": 3342
+    },
+    {
+      "date": "2016-07",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 896,
+      "reinterpretation": 698,
+      "conflict_emerged": 271,
+      "conflict_resolved": 236,
+      "batch_event": 0,
+      "total_reclassifications": 2101
+    },
+    {
+      "date": "2016-08",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 248,
+      "reinterpretation": 1392,
+      "conflict_emerged": 421,
+      "conflict_resolved": 248,
+      "batch_event": 0,
+      "total_reclassifications": 2309
+    },
+    {
+      "date": "2016-09",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 7,
+      "reinterpretation": 1973,
+      "conflict_emerged": 281,
+      "conflict_resolved": 335,
+      "batch_event": 0,
+      "total_reclassifications": 2596
+    },
+    {
+      "date": "2016-10",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 501,
+      "reinterpretation": 1061,
+      "conflict_emerged": 1193,
+      "conflict_resolved": 83,
+      "batch_event": 0,
+      "total_reclassifications": 2838
+    },
+    {
+      "date": "2016-11",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 425,
+      "reinterpretation": 2743,
+      "conflict_emerged": 268,
+      "conflict_resolved": 633,
+      "batch_event": 0,
+      "total_reclassifications": 4069
+    },
+    {
+      "date": "2016-12",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 89,
+      "reinterpretation": 1653,
+      "conflict_emerged": 607,
+      "conflict_resolved": 251,
+      "batch_event": 0,
+      "total_reclassifications": 2600
+    },
+    {
+      "date": "2017-01",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 2243,
+      "reinterpretation": 1740,
+      "conflict_emerged": 2076,
+      "conflict_resolved": 734,
+      "batch_event": 0,
+      "total_reclassifications": 6793
+    },
+    {
+      "date": "2017-02",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 485,
+      "reinterpretation": 2840,
+      "conflict_emerged": 916,
+      "conflict_resolved": 532,
+      "batch_event": 0,
+      "total_reclassifications": 4773
+    },
+    {
+      "date": "2017-03",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 24,
+      "reinterpretation": 1337,
+      "conflict_emerged": 257,
+      "conflict_resolved": 344,
+      "batch_event": 0,
+      "total_reclassifications": 1962
+    },
+    {
+      "date": "2017-04",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 2034,
+      "reinterpretation": 2560,
+      "conflict_emerged": 2510,
+      "conflict_resolved": 421,
+      "batch_event": 0,
+      "total_reclassifications": 7525
+    },
+    {
+      "date": "2017-05",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 1364,
+      "reinterpretation": 2709,
+      "conflict_emerged": 802,
+      "conflict_resolved": 664,
+      "batch_event": 0,
+      "total_reclassifications": 5539
+    },
+    {
+      "date": "2017-06",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 229,
+      "reinterpretation": 2711,
+      "conflict_emerged": 316,
+      "conflict_resolved": 574,
+      "batch_event": 0,
+      "total_reclassifications": 3830
+    },
+    {
+      "date": "2017-07",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 210,
+      "reinterpretation": 2244,
+      "conflict_emerged": 505,
+      "conflict_resolved": 360,
+      "batch_event": 0,
+      "total_reclassifications": 3319
+    },
+    {
+      "date": "2017-08",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 169,
+      "reinterpretation": 2477,
+      "conflict_emerged": 433,
+      "conflict_resolved": 540,
+      "batch_event": 0,
+      "total_reclassifications": 3619
+    },
+    {
+      "date": "2017-09",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 509,
+      "reinterpretation": 4727,
+      "conflict_emerged": 1348,
+      "conflict_resolved": 1420,
+      "batch_event": 0,
+      "total_reclassifications": 8004
+    },
+    {
+      "date": "2017-10",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 490,
+      "reinterpretation": 4882,
+      "conflict_emerged": 2051,
+      "conflict_resolved": 1055,
+      "batch_event": 0,
+      "total_reclassifications": 8478
+    },
+    {
+      "date": "2017-11",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 113,
+      "reinterpretation": 2877,
+      "conflict_emerged": 523,
+      "conflict_resolved": 1587,
+      "batch_event": 0,
+      "total_reclassifications": 5100
+    },
+    {
+      "date": "2017-12",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 283,
+      "reinterpretation": 2817,
+      "conflict_emerged": 1500,
+      "conflict_resolved": 906,
+      "batch_event": 0,
+      "total_reclassifications": 5506
+    },
+    {
+      "date": "2018-01",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 4197,
+      "reinterpretation": 3957,
+      "conflict_emerged": 1289,
+      "conflict_resolved": 3002,
+      "batch_event": 0,
+      "total_reclassifications": 12445
+    },
+    {
+      "date": "2018-02",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 125,
+      "reinterpretation": 5085,
+      "conflict_emerged": 2355,
+      "conflict_resolved": 619,
+      "batch_event": 0,
+      "total_reclassifications": 8184
+    },
+    {
+      "date": "2018-03",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 516,
+      "reinterpretation": 4240,
+      "conflict_emerged": 1315,
+      "conflict_resolved": 1026,
+      "batch_event": 0,
+      "total_reclassifications": 7097
+    },
+    {
+      "date": "2018-04",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 798,
+      "reinterpretation": 4042,
+      "conflict_emerged": 1760,
+      "conflict_resolved": 986,
+      "batch_event": 0,
+      "total_reclassifications": 7586
+    },
+    {
+      "date": "2018-05",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 2067,
+      "reinterpretation": 5584,
+      "conflict_emerged": 3509,
+      "conflict_resolved": 912,
+      "batch_event": 0,
+      "total_reclassifications": 12072
+    },
+    {
+      "date": "2018-06",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 0,
+      "reinterpretation": 0,
+      "conflict_emerged": 0,
+      "conflict_resolved": 0,
+      "batch_event": 22358,
+      "total_reclassifications": 22358
+    },
+    {
+      "date": "2018-07",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 20,
+      "reinterpretation": 1461,
+      "conflict_emerged": 111,
+      "conflict_resolved": 190,
+      "batch_event": 0,
+      "total_reclassifications": 1782
+    },
+    {
+      "date": "2018-08",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 800,
+      "reinterpretation": 8404,
+      "conflict_emerged": 1325,
+      "conflict_resolved": 252,
+      "batch_event": 0,
+      "total_reclassifications": 10781
+    },
+    {
+      "date": "2018-09",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 1420,
+      "reinterpretation": 4006,
+      "conflict_emerged": 253,
+      "conflict_resolved": 536,
+      "batch_event": 0,
+      "total_reclassifications": 6215
+    },
+    {
+      "date": "2018-10",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 409,
+      "reinterpretation": 3184,
+      "conflict_emerged": 370,
+      "conflict_resolved": 637,
+      "batch_event": 0,
+      "total_reclassifications": 4600
+    },
+    {
+      "date": "2018-11",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 1671,
+      "reinterpretation": 2289,
+      "conflict_emerged": 690,
+      "conflict_resolved": 319,
+      "batch_event": 0,
+      "total_reclassifications": 4969
+    },
+    {
+      "date": "2018-12",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 624,
+      "reinterpretation": 6160,
+      "conflict_emerged": 444,
+      "conflict_resolved": 1290,
+      "batch_event": 0,
+      "total_reclassifications": 8518
+    },
+    {
+      "date": "2019-01",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 354,
+      "reinterpretation": 9723,
+      "conflict_emerged": 1011,
+      "conflict_resolved": 1532,
+      "batch_event": 0,
+      "total_reclassifications": 12620
+    },
+    {
+      "date": "2019-02",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 100,
+      "reinterpretation": 11048,
+      "conflict_emerged": 559,
+      "conflict_resolved": 595,
+      "batch_event": 0,
+      "total_reclassifications": 12302
+    },
+    {
+      "date": "2019-03",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 539,
+      "reinterpretation": 1165,
+      "conflict_emerged": 150,
+      "conflict_resolved": 129,
+      "batch_event": 0,
+      "total_reclassifications": 1983
+    },
+    {
+      "date": "2019-04",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 533,
+      "reinterpretation": 11771,
+      "conflict_emerged": 681,
+      "conflict_resolved": 606,
+      "batch_event": 0,
+      "total_reclassifications": 13591
+    },
+    {
+      "date": "2019-05",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 129,
+      "reinterpretation": 1220,
+      "conflict_emerged": 111,
+      "conflict_resolved": 387,
+      "batch_event": 0,
+      "total_reclassifications": 1847
+    },
+    {
+      "date": "2019-06",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 1326,
+      "reinterpretation": 1467,
+      "conflict_emerged": 524,
+      "conflict_resolved": 220,
+      "batch_event": 0,
+      "total_reclassifications": 3537
+    },
+    {
+      "date": "2019-07",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 134,
+      "reinterpretation": 1351,
+      "conflict_emerged": 299,
+      "conflict_resolved": 75,
+      "batch_event": 0,
+      "total_reclassifications": 1859
+    },
+    {
+      "date": "2019-08",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 121,
+      "reinterpretation": 195,
+      "conflict_emerged": 36,
+      "conflict_resolved": 17,
+      "batch_event": 0,
+      "total_reclassifications": 369
+    },
+    {
+      "date": "2019-09",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 747,
+      "reinterpretation": 1165,
+      "conflict_emerged": 329,
+      "conflict_resolved": 184,
+      "batch_event": 0,
+      "total_reclassifications": 2425
+    },
+    {
+      "date": "2019-10",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 170,
+      "reinterpretation": 71,
+      "conflict_emerged": 47,
+      "conflict_resolved": 8,
+      "batch_event": 0,
+      "total_reclassifications": 296
+    },
+    {
+      "date": "2019-11",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 67,
+      "reinterpretation": 107,
+      "conflict_emerged": 22,
+      "conflict_resolved": 6,
+      "batch_event": 0,
+      "total_reclassifications": 202
+    },
+    {
+      "date": "2019-12",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 27,
+      "reinterpretation": 318,
+      "conflict_emerged": 13,
+      "conflict_resolved": 42,
+      "batch_event": 0,
+      "total_reclassifications": 400
+    },
+    {
+      "date": "2020-01",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 0,
+      "reinterpretation": 0,
+      "conflict_emerged": 0,
+      "conflict_resolved": 0,
+      "batch_event": 50558,
+      "total_reclassifications": 50558
+    },
+    {
+      "date": "2020-02",
+      "likely_schema_driven": 2535,
+      "likely_knowledge_driven": 179,
+      "transition_ambiguous": 4,
+      "new_submitter": 0,
+      "reinterpretation": 0,
+      "conflict_emerged": 0,
+      "conflict_resolved": 0,
+      "batch_event": 0,
+      "total_reclassifications": 2718
+    },
+    {
+      "date": "2020-03",
+      "likely_schema_driven": 802,
+      "likely_knowledge_driven": 30,
+      "transition_ambiguous": 8,
+      "new_submitter": 0,
+      "reinterpretation": 0,
+      "conflict_emerged": 0,
+      "conflict_resolved": 0,
+      "batch_event": 0,
+      "total_reclassifications": 840
+    },
+    {
+      "date": "2020-04",
+      "likely_schema_driven": 1448,
+      "likely_knowledge_driven": 326,
+      "transition_ambiguous": 40,
+      "new_submitter": 0,
+      "reinterpretation": 0,
+      "conflict_emerged": 0,
+      "conflict_resolved": 0,
+      "batch_event": 0,
+      "total_reclassifications": 1814
+    },
+    {
+      "date": "2020-05",
+      "likely_schema_driven": 2714,
+      "likely_knowledge_driven": 1050,
+      "transition_ambiguous": 19,
+      "new_submitter": 0,
+      "reinterpretation": 0,
+      "conflict_emerged": 0,
+      "conflict_resolved": 0,
+      "batch_event": 0,
+      "total_reclassifications": 3783
+    },
+    {
+      "date": "2020-06",
+      "likely_schema_driven": 10408,
+      "likely_knowledge_driven": 19940,
+      "transition_ambiguous": 34,
+      "new_submitter": 0,
+      "reinterpretation": 0,
+      "conflict_emerged": 0,
+      "conflict_resolved": 0,
+      "batch_event": 0,
+      "total_reclassifications": 30382
+    },
+    {
+      "date": "2020-07",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 688,
+      "reinterpretation": 258,
+      "conflict_emerged": 897,
+      "conflict_resolved": 211,
+      "batch_event": 0,
+      "total_reclassifications": 2054
+    },
+    {
+      "date": "2020-08",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 1625,
+      "reinterpretation": 1348,
+      "conflict_emerged": 1261,
+      "conflict_resolved": 856,
+      "batch_event": 0,
+      "total_reclassifications": 5090
+    },
+    {
+      "date": "2020-09",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 219,
+      "reinterpretation": 59,
+      "conflict_emerged": 175,
+      "conflict_resolved": 25,
+      "batch_event": 0,
+      "total_reclassifications": 478
+    },
+    {
+      "date": "2020-10",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 111,
+      "reinterpretation": 64,
+      "conflict_emerged": 72,
+      "conflict_resolved": 37,
+      "batch_event": 0,
+      "total_reclassifications": 284
+    },
+    {
+      "date": "2020-11",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 294,
+      "reinterpretation": 72,
+      "conflict_emerged": 163,
+      "conflict_resolved": 13,
+      "batch_event": 0,
+      "total_reclassifications": 542
+    },
+    {
+      "date": "2020-12",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 371,
+      "reinterpretation": 203,
+      "conflict_emerged": 157,
+      "conflict_resolved": 58,
+      "batch_event": 0,
+      "total_reclassifications": 789
+    },
+    {
+      "date": "2021-01",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 185,
+      "reinterpretation": 149,
+      "conflict_emerged": 365,
+      "conflict_resolved": 108,
+      "batch_event": 0,
+      "total_reclassifications": 807
+    },
+    {
+      "date": "2021-02",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 419,
+      "reinterpretation": 1216,
+      "conflict_emerged": 774,
+      "conflict_resolved": 327,
+      "batch_event": 0,
+      "total_reclassifications": 2736
+    },
+    {
+      "date": "2021-03",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 348,
+      "reinterpretation": 196,
+      "conflict_emerged": 120,
+      "conflict_resolved": 10,
+      "batch_event": 0,
+      "total_reclassifications": 674
+    },
+    {
+      "date": "2021-04",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 890,
+      "reinterpretation": 202,
+      "conflict_emerged": 1448,
+      "conflict_resolved": 46,
+      "batch_event": 0,
+      "total_reclassifications": 2586
+    },
+    {
+      "date": "2021-05",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 288,
+      "reinterpretation": 82,
+      "conflict_emerged": 336,
+      "conflict_resolved": 49,
+      "batch_event": 0,
+      "total_reclassifications": 755
+    },
+    {
+      "date": "2021-06",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 1765,
+      "reinterpretation": 221,
+      "conflict_emerged": 2261,
+      "conflict_resolved": 204,
+      "batch_event": 0,
+      "total_reclassifications": 4451
+    },
+    {
+      "date": "2021-07",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 1644,
+      "reinterpretation": 129,
+      "conflict_emerged": 2883,
+      "conflict_resolved": 77,
+      "batch_event": 0,
+      "total_reclassifications": 4733
+    },
+    {
+      "date": "2021-08",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 748,
+      "reinterpretation": 227,
+      "conflict_emerged": 352,
+      "conflict_resolved": 123,
+      "batch_event": 0,
+      "total_reclassifications": 1450
+    },
+    {
+      "date": "2021-09",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 1520,
+      "reinterpretation": 73,
+      "conflict_emerged": 969,
+      "conflict_resolved": 29,
+      "batch_event": 0,
+      "total_reclassifications": 2591
+    },
+    {
+      "date": "2021-10",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 3989,
+      "reinterpretation": 2235,
+      "conflict_emerged": 2646,
+      "conflict_resolved": 541,
+      "batch_event": 0,
+      "total_reclassifications": 9411
+    },
+    {
+      "date": "2021-11",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 664,
+      "reinterpretation": 174,
+      "conflict_emerged": 280,
+      "conflict_resolved": 90,
+      "batch_event": 0,
+      "total_reclassifications": 1208
+    },
+    {
+      "date": "2021-12",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 953,
+      "reinterpretation": 211,
+      "conflict_emerged": 989,
+      "conflict_resolved": 154,
+      "batch_event": 0,
+      "total_reclassifications": 2307
+    },
+    {
+      "date": "2022-01",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 745,
+      "reinterpretation": 170,
+      "conflict_emerged": 236,
+      "conflict_resolved": 77,
+      "batch_event": 0,
+      "total_reclassifications": 1228
+    },
+    {
+      "date": "2022-02",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 1182,
+      "reinterpretation": 129,
+      "conflict_emerged": 826,
+      "conflict_resolved": 99,
+      "batch_event": 0,
+      "total_reclassifications": 2236
+    },
+    {
+      "date": "2022-03",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 190,
+      "reinterpretation": 207,
+      "conflict_emerged": 232,
+      "conflict_resolved": 16,
+      "batch_event": 0,
+      "total_reclassifications": 645
+    },
+    {
+      "date": "2022-04",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 3428,
+      "reinterpretation": 116,
+      "conflict_emerged": 3394,
+      "conflict_resolved": 14,
+      "batch_event": 0,
+      "total_reclassifications": 6952
+    },
+    {
+      "date": "2022-05",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 3861,
+      "reinterpretation": 95,
+      "conflict_emerged": 5204,
+      "conflict_resolved": 59,
+      "batch_event": 0,
+      "total_reclassifications": 9219
+    },
+    {
+      "date": "2022-06",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 780,
+      "reinterpretation": 2659,
+      "conflict_emerged": 1885,
+      "conflict_resolved": 631,
+      "batch_event": 0,
+      "total_reclassifications": 5955
+    },
+    {
+      "date": "2022-07",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 598,
+      "reinterpretation": 67,
+      "conflict_emerged": 822,
+      "conflict_resolved": 26,
+      "batch_event": 0,
+      "total_reclassifications": 1513
+    },
+    {
+      "date": "2022-08",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 581,
+      "reinterpretation": 166,
+      "conflict_emerged": 589,
+      "conflict_resolved": 353,
+      "batch_event": 0,
+      "total_reclassifications": 1689
+    },
+    {
+      "date": "2022-09",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 469,
+      "reinterpretation": 88,
+      "conflict_emerged": 525,
+      "conflict_resolved": 41,
+      "batch_event": 0,
+      "total_reclassifications": 1123
+    },
+    {
+      "date": "2022-10",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 496,
+      "reinterpretation": 1462,
+      "conflict_emerged": 287,
+      "conflict_resolved": 59,
+      "batch_event": 0,
+      "total_reclassifications": 2304
+    },
+    {
+      "date": "2022-11",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 535,
+      "reinterpretation": 129,
+      "conflict_emerged": 347,
+      "conflict_resolved": 61,
+      "batch_event": 0,
+      "total_reclassifications": 1072
+    },
+    {
+      "date": "2022-12",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 2664,
+      "reinterpretation": 256,
+      "conflict_emerged": 6844,
+      "conflict_resolved": 299,
+      "batch_event": 0,
+      "total_reclassifications": 10063
+    },
+    {
+      "date": "2023-01",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 4840,
+      "reinterpretation": 171,
+      "conflict_emerged": 760,
+      "conflict_resolved": 115,
+      "batch_event": 0,
+      "total_reclassifications": 5886
+    },
+    {
+      "date": "2023-02",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 4732,
+      "reinterpretation": 12251,
+      "conflict_emerged": 16991,
+      "conflict_resolved": 2156,
+      "batch_event": 0,
+      "total_reclassifications": 36130
+    },
+    {
+      "date": "2023-03",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 322,
+      "reinterpretation": 735,
+      "conflict_emerged": 1068,
+      "conflict_resolved": 136,
+      "batch_event": 0,
+      "total_reclassifications": 2261
+    },
+    {
+      "date": "2023-04",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 1078,
+      "reinterpretation": 1056,
+      "conflict_emerged": 8570,
+      "conflict_resolved": 186,
+      "batch_event": 0,
+      "total_reclassifications": 10890
+    },
+    {
+      "date": "2023-05",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 514,
+      "reinterpretation": 221,
+      "conflict_emerged": 1820,
+      "conflict_resolved": 217,
+      "batch_event": 0,
+      "total_reclassifications": 2772
+    },
+    {
+      "date": "2023-06",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 238,
+      "reinterpretation": 71,
+      "conflict_emerged": 266,
+      "conflict_resolved": 53,
+      "batch_event": 0,
+      "total_reclassifications": 628
+    },
+    {
+      "date": "2023-07",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 383,
+      "reinterpretation": 80,
+      "conflict_emerged": 438,
+      "conflict_resolved": 83,
+      "batch_event": 0,
+      "total_reclassifications": 984
+    },
+    {
+      "date": "2023-08",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 758,
+      "reinterpretation": 298,
+      "conflict_emerged": 1724,
+      "conflict_resolved": 172,
+      "batch_event": 0,
+      "total_reclassifications": 2952
+    },
+    {
+      "date": "2023-09",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 344,
+      "reinterpretation": 99,
+      "conflict_emerged": 383,
+      "conflict_resolved": 134,
+      "batch_event": 0,
+      "total_reclassifications": 960
+    },
+    {
+      "date": "2023-10",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 239,
+      "reinterpretation": 129,
+      "conflict_emerged": 275,
+      "conflict_resolved": 87,
+      "batch_event": 0,
+      "total_reclassifications": 730
+    },
+    {
+      "date": "2023-11",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 632,
+      "reinterpretation": 117,
+      "conflict_emerged": 1244,
+      "conflict_resolved": 171,
+      "batch_event": 0,
+      "total_reclassifications": 2164
+    },
+    {
+      "date": "2023-12",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 3861,
+      "reinterpretation": 410,
+      "conflict_emerged": 2810,
+      "conflict_resolved": 376,
+      "batch_event": 0,
+      "total_reclassifications": 7457
+    },
+    {
+      "date": "2024-01",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 3015,
+      "reinterpretation": 242,
+      "conflict_emerged": 847,
+      "conflict_resolved": 148,
+      "batch_event": 0,
+      "total_reclassifications": 4252
+    },
+    {
+      "date": "2024-02",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 351,
+      "reinterpretation": 139,
+      "conflict_emerged": 613,
+      "conflict_resolved": 73,
+      "batch_event": 0,
+      "total_reclassifications": 1176
+    },
+    {
+      "date": "2024-03",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 4537,
+      "reinterpretation": 8612,
+      "conflict_emerged": 10917,
+      "conflict_resolved": 1699,
+      "batch_event": 0,
+      "total_reclassifications": 25765
+    },
+    {
+      "date": "2024-04",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 6261,
+      "reinterpretation": 325,
+      "conflict_emerged": 3473,
+      "conflict_resolved": 123,
+      "batch_event": 0,
+      "total_reclassifications": 10182
+    },
+    {
+      "date": "2024-05",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 2092,
+      "reinterpretation": 319,
+      "conflict_emerged": 5831,
+      "conflict_resolved": 372,
+      "batch_event": 0,
+      "total_reclassifications": 8614
+    },
+    {
+      "date": "2024-06",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 316,
+      "reinterpretation": 110,
+      "conflict_emerged": 315,
+      "conflict_resolved": 185,
+      "batch_event": 0,
+      "total_reclassifications": 926
+    },
+    {
+      "date": "2024-07",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 924,
+      "reinterpretation": 261,
+      "conflict_emerged": 356,
+      "conflict_resolved": 229,
+      "batch_event": 0,
+      "total_reclassifications": 1770
+    },
+    {
+      "date": "2024-08",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 2466,
+      "reinterpretation": 334,
+      "conflict_emerged": 606,
+      "conflict_resolved": 256,
+      "batch_event": 0,
+      "total_reclassifications": 3662
+    },
+    {
+      "date": "2024-09",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 661,
+      "reinterpretation": 295,
+      "conflict_emerged": 2817,
+      "conflict_resolved": 347,
+      "batch_event": 0,
+      "total_reclassifications": 4120
+    },
+    {
+      "date": "2024-10",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 756,
+      "reinterpretation": 163,
+      "conflict_emerged": 530,
+      "conflict_resolved": 662,
+      "batch_event": 0,
+      "total_reclassifications": 2111
+    },
+    {
+      "date": "2024-11",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 950,
+      "reinterpretation": 5707,
+      "conflict_emerged": 1798,
+      "conflict_resolved": 3141,
+      "batch_event": 0,
+      "total_reclassifications": 11596
+    },
+    {
+      "date": "2024-12",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 3019,
+      "reinterpretation": 95,
+      "conflict_emerged": 1248,
+      "conflict_resolved": 190,
+      "batch_event": 0,
+      "total_reclassifications": 4552
+    },
+    {
+      "date": "2025-01",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 878,
+      "reinterpretation": 498,
+      "conflict_emerged": 935,
+      "conflict_resolved": 270,
+      "batch_event": 0,
+      "total_reclassifications": 2581
+    },
+    {
+      "date": "2025-02",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 3730,
+      "reinterpretation": 504,
+      "conflict_emerged": 7067,
+      "conflict_resolved": 419,
+      "batch_event": 0,
+      "total_reclassifications": 11720
+    },
+    {
+      "date": "2025-03",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 2284,
+      "reinterpretation": 8665,
+      "conflict_emerged": 5981,
+      "conflict_resolved": 1390,
+      "batch_event": 0,
+      "total_reclassifications": 18320
+    },
+    {
+      "date": "2025-04",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 3730,
+      "reinterpretation": 326,
+      "conflict_emerged": 1093,
+      "conflict_resolved": 515,
+      "batch_event": 0,
+      "total_reclassifications": 5664
+    },
+    {
+      "date": "2025-05",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 1498,
+      "reinterpretation": 414,
+      "conflict_emerged": 4602,
+      "conflict_resolved": 771,
+      "batch_event": 0,
+      "total_reclassifications": 7285
+    },
+    {
+      "date": "2025-06",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 691,
+      "reinterpretation": 179,
+      "conflict_emerged": 1091,
+      "conflict_resolved": 518,
+      "batch_event": 0,
+      "total_reclassifications": 2479
+    },
+    {
+      "date": "2025-07",
+      "likely_schema_driven": 0,
+      "likely_knowledge_driven": 0,
+      "transition_ambiguous": 0,
+      "new_submitter": 4561,
+      "reinterpretation": 1828,
+      "conflict_emerged": 613,
+      "conflict_resolved": 995,
+      "batch_event": 0,
+      "total_reclassifications": 7997
+    }
+  ]
+}

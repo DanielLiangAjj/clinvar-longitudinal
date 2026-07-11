@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ClinVar Longitudinal Reclassification — Interactive Analysis</title>
+<script src="lib/plotly.min.js" charset="utf-8"></script>
+<style>
+  :root{
+    --bg:#f7f8fa; --panel:#ffffff; --ink:#1c2536; --muted:#5b6675; --line:#e4e8ef;
+    --primary:#2b3a67; --accent:#2166ac; --red:#b2182b; --amber:#e08214; --green:#1b7837;
+    --sidebar:260px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+       color:var(--ink);background:var(--bg);line-height:1.55}
+  a{color:var(--accent);text-decoration:none} a:hover{text-decoration:underline}
+  .layout{display:flex;min-height:100vh}
+  nav{width:var(--sidebar);position:fixed;top:0;bottom:0;left:0;overflow-y:auto;
+      background:var(--primary);color:#dfe6f5;padding:22px 16px}
+  nav h1{font-size:15px;margin:0 0 4px;color:#fff;line-height:1.3}
+  nav .sub{font-size:11px;color:#a9b6d6;margin-bottom:18px}
+  nav a{display:block;color:#c7d2ea;padding:6px 10px;border-radius:6px;font-size:13px;margin:1px 0}
+  nav a:hover{background:rgba(255,255,255,.08);text-decoration:none;color:#fff}
+  main{margin-left:var(--sidebar);flex:1;padding:0 34px 80px;max-width:1100px}
+  header.hero{padding:38px 0 20px;border-bottom:1px solid var(--line)}
+  header.hero h2{margin:0 0 6px;font-size:26px;color:var(--primary)}
+  header.hero p{margin:4px 0;color:var(--muted);max-width:760px}
+  .tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:22px 0}
+  .tile{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+  .tile .v{font-size:23px;font-weight:700;color:var(--primary)}
+  .tile .l{font-size:12px;color:var(--muted);margin-top:2px}
+  section{padding:30px 0;border-bottom:1px solid var(--line)}
+  section h3{font-size:20px;color:var(--primary);margin:0 0 4px}
+  section .lead{color:var(--muted);margin:0 0 16px;max-width:820px}
+  .chart{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:8px;margin:12px 0}
+  .cap{font-size:12.5px;color:var(--muted);margin:6px 4px 0}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  @media(max-width:900px){.grid2{grid-template-columns:1fr}
+    nav{position:static;width:100%;height:auto} main{margin-left:0;padding:0 16px 60px}}
+  .badge{display:inline-block;background:#eef2f9;color:var(--accent);border:1px solid #d6e0f0;
+         border-radius:20px;padding:2px 10px;font-size:11px;margin-right:6px}
+  footer{padding:26px 0;color:var(--muted);font-size:13px}
+  .note{background:#fff8ec;border:1px solid #f0e0be;border-radius:8px;padding:12px 14px;font-size:13px;color:#6b5a2e;margin:14px 0}
+  .err{color:var(--red);font-size:13px;padding:10px}
+</style>
+</head>
+<body>
+<div class="layout">
+<nav>
+  <h1>ClinVar Longitudinal Analysis</h1>
+  <div class="sub">Temporal Analysis of Clinical Variant Reclassification (2012–2025)</div>
+  <a href="#overview">Overview</a>
+  <a href="#growth">1 · Database growth</a>
+  <a href="#landscape">2 · Classification landscape</a>
+  <a href="#tiered">3 · Reclassification, by severity</a>
+  <a href="#survival">4 · Time-to-event (survival)</a>
+  <a href="#mechanisms">5 · Reclassification mechanisms</a>
+  <a href="#stats">6 · Effect sizes &amp; adjustment</a>
+  <a href="#its">7 · Interrupted time-series</a>
+  <a href="#domains">8 · Disease domains</a>
+  <a href="#concordance">9 · Inter-submitter concordance</a>
+  <a href="#citations">10 · Citation evidence</a>
+  <a href="#schema">11 · Schema evolution</a>
+  <a href="#submitters">12 · Submitter landscape</a>
+  <a href="#about">Data &amp; methods</a>
+</nav>
+<main>
+  <header class="hero" id="overview">
+    <h2>Interactive analysis of ClinVar reclassification, 2012–2025</h2>
+    <p>A longitudinal reprocessing of <b>3,678,303 variants</b> across <b>148 monthly ClinVar snapshots</b>,
+       distinguishing genuine clinical reinterpretation from database/schema evolution. Every panel below is
+       interactive — hover for values, drag to zoom, click legend entries to toggle series.</p>
+    <p><span class="badge">peer-review companion</span><span class="badge">reproducible</span>
+       <span class="badge">laboratory identities anonymized</span></p>
+    <div class="tiles" id="tiles"></div>
+  </header>
+
+  <section id="growth"><h3>1 · Database growth</h3>
+    <p class="lead">Total unique variants in ClinVar over time, by record format era.</p>
+    <div class="chart"><div id="c_growth" style="height:380px"></div></div>
+    <div class="cap">Growth accelerated sharply after the 2020 transition to variant-centric (VCV) records.</div>
+  </section>
+
+  <section id="landscape"><h3>2 · Classification landscape</h3>
+    <p class="lead">Proportional distribution of the nine normalized classification categories across snapshots.</p>
+    <div class="chart"><div id="c_landscape" style="height:400px"></div></div>
+    <div class="cap">VUS is the dominant and growing category; toggle series in the legend to isolate trends.</div>
+  </section>
+
+  <section id="tiered"><h3>3 · Reclassification, stratified by clinical significance</h3>
+    <p class="lead">The headline "9.3% of variants reclassified" decomposed by the most clinically significant
+      change each variant underwent. Only a small fraction crosses the clinical actionability boundary.</p>
+    <div class="grid2">
+      <div class="chart"><div id="c_tiered" style="height:380px"></div></div>
+      <div class="chart"><div id="c_severity" style="height:380px"></div></div>
+    </div>
+    <div class="cap">Left: variants by most-severe change (% of all 3.68M). Right: all reclassification events by
+      conflict severity. Adjacent within-tier moves (P↔LP, B↔LB) are treated as concordant by ClinVar.</div>
+  </section>
+
+  <section id="survival"><h3>4 · Time-to-event (censored survival)</h3>
+    <p class="lead">Cumulative incidence of a variant's first reclassification, estimated by Kaplan–Meier over
+      <i>all</i> variants with right-censoring — not only among those that were reclassified.</p>
+    <div class="grid2">
+      <div class="chart"><div id="c_km" style="height:380px"></div></div>
+      <div class="chart"><div id="c_km_domain" style="height:380px"></div></div>
+    </div>
+    <div class="cap">Left: overall cumulative incidence with 95% CI (median never reached — under half of variants
+      are ever reclassified). Right: 5- and 10-year cumulative incidence by disease domain.</div>
+  </section>
+
+  <section id="mechanisms"><h3>5 · Reclassification mechanisms</h3>
+    <p class="lead">Attribution of 697,698 reclassification events to observable mechanisms, and their shift across
+      schema eras.</p>
+    <div class="grid2">
+      <div class="chart"><div id="c_driver" style="height:380px"></div></div>
+      <div class="chart"><div id="c_era" style="height:380px"></div></div>
+    </div>
+    <div class="cap">Reinterpretation dominated the RCV era; inter-submitter conflict emergence dominates the
+      multi-submitter VCV era.</div>
+  </section>
+
+  <section id="stats"><h3>6 · Effect sizes &amp; confounder-adjusted odds</h3>
+    <p class="lead">Group comparisons with risk ratios (95% CI), and a multivariable logistic regression adjusting
+      for baseline submissions, review status, follow-up, era, variant class and gene size.</p>
+    <div class="grid2">
+      <div class="chart"><div id="c_rr" style="height:380px"></div></div>
+      <div class="chart"><div id="c_or" style="height:420px"></div></div>
+    </div>
+    <div class="cap">Left: unadjusted risk ratios (log axis). Right: adjusted odds ratios — the disease-domain and
+      cancer effects are attenuated but survive adjustment.</div>
+  </section>
+
+  <section id="its"><h3>7 · Interrupted time-series</h3>
+    <p class="lead">Monthly trends around two interventions: the 2015 ACMG/AMP guidelines and the 2020 VCV
+      transition. Segmented regressions detect level/slope changes.</p>
+    <div class="chart"><div id="c_its" style="height:420px"></div></div>
+    <div class="cap" id="its_cap"></div>
+  </section>
+
+  <section id="domains"><h3>8 · Disease-domain variability</h3>
+    <p class="lead">Reclassification rate and evidence depth across curated clinical domains.</p>
+    <div class="grid2">
+      <div class="chart"><div id="c_domrate" style="height:380px"></div></div>
+      <div class="chart"><div id="c_domevidence" style="height:380px"></div></div>
+    </div>
+    <div class="cap">Hereditary-cancer genes reclassify roughly twice as often as the database average.</div>
+  </section>
+
+  <section id="concordance"><h3>9 · Inter-submitter concordance</h3>
+    <p class="lead">Among multi-submitter variants in the VCV era (the period in which ClinVar's conflict
+      vocabulary is interpretable).</p>
+    <div class="chart"><div id="c_concord" style="height:400px"></div></div>
+    <div class="cap">Concordance among multi-submitter variants rose from ~60% to ~72%; the multi-submitter share of
+      all variants is shown for context.</div>
+  </section>
+
+  <section id="citations"><h3>10 · Citation evidence, filtered</h3>
+    <p class="lead">PubMed "evidence depth" is dominated by two assertion-method papers. Filtering them reveals how
+      few variants carry genuine variant-specific literature.</p>
+    <div class="grid2">
+      <div class="chart"><div id="c_pmids" style="height:380px"></div></div>
+      <div class="chart"><div id="c_citefilter" style="height:380px"></div></div>
+    </div>
+    <div class="cap">Left: most-cited PMIDs (share of cited variants) — SHERLOC and the 2015 ACMG/AMP guideline
+      dwarf all variant-specific references. Right: mean references per variant, raw vs. method-filtered.</div>
+  </section>
+
+  <section id="schema"><h3>11 · Schema evolution</h3>
+    <p class="lead">Growth in XML schema complexity across the three structural eras.</p>
+    <div class="chart"><div id="c_schema" style="height:400px"></div></div>
+    <div class="cap">Element and attribute counts, showing the RCV era, the 2020 transition window, and the
+      VCV-stable era.</div>
+  </section>
+
+  <section id="submitters"><h3>12 · Submitter landscape <span class="badge">anonymized</span></h3>
+    <p class="lead">Submission volume is highly concentrated. Laboratory identities are anonymized (Laboratory A,
+      B, C…) to match the manuscript.</p>
+    <div class="grid2">
+      <div class="chart"><div id="c_toplabs" style="height:400px"></div></div>
+      <div class="chart"><div id="c_conflictpairs" style="height:400px"></div></div>
+    </div>
+    <div class="cap">Left: top laboratories by submission count. Right: laboratory pairs with the most conflicting
+      variant classifications.</div>
+  </section>
+
+  <section id="about"><h3>Data &amp; methods</h3>
+    <div class="note"><b>Laboratory anonymization.</b> All submitter identities are replaced with coded labels
+      (Laboratory A, B, C…) by submission rank, consistent with the manuscript. No real laboratory name appears
+      in this site or the published data.</div>
+    <p class="lead">Source data are the publicly available NCBI ClinVar monthly XML releases. The multi-GB raw
+      snapshots and per-variant tables are not redistributed here (regenerable via the pipeline); this repository
+      contains the analysis code, aggregate result files, figures, and this interactive companion. See the
+      repository README for full reproduction instructions and the Zenodo archive DOI.</p>
+    <p class="lead">Analyses: era-stratified reclassification detection, clinical-severity stratification,
+      right-censored Kaplan–Meier time-to-event, χ²/risk-ratio comparisons, multivariable logistic regression with
+      baseline covariates, segmented interrupted time-series, and guideline-citation filtering.</p>
+  </section>
+
+  <footer>
+    ClinVar Longitudinal Reclassification Analysis · companion to the manuscript submitted to <i>Genome Medicine</i>.
+    Data derived from NCBI ClinVar (public domain). Laboratory identities anonymized.
+  </footer>
+</main>
+</div>
+
+<script>
+const CO = {P:"#67000d",LP:"#cb181d","P/LP":"#ef3b2c",VUS:"#feb24c",Conflicting:"#807dba",
+  "B/LB":"#4292c6",LB:"#2171b5",B:"#08306b",Other:"#bdbdbd"};
+const ORDER=["P","LP","P/LP","VUS","Conflicting","B/LB","LB","B","Other"];
+const DCOL={"Hereditary Cancer":"#b2182b",Cardiovascular:"#ef8a62",Neurological:"#2166ac",
+  Renal:"#67a9cf",Ophthalmologic:"#1b7837","Other/Unclassified":"#bdbdbd"};
+const LAY={font:{family:"-apple-system,Segoe UI,Roboto,sans-serif",size:12,color:"#1c2536"},
+  margin:{l:60,r:20,t:30,b:50},paper_bgcolor:"rgba(0,0,0,0)",plot_bgcolor:"rgba(0,0,0,0)",
+  xaxis:{gridcolor:"#eef1f6",zeroline:false},yaxis:{gridcolor:"#eef1f6",zeroline:false}};
+const CFG={responsive:true,displayModeBar:"hover",displaylogo:false,
+  modeBarButtonsToRemove:["lasso2d","select2d","autoScale2d"]};
+const $=id=>document.getElementById(id);
+const dyear=m=>{const[y,mo]=m.split("-").map(Number);return y+(mo-1)/12};
+const jload=async n=>{const r=await fetch("data/"+n);if(!r.ok)throw new Error(n);return r.json()};
+function fail(id,e){const el=$(id);if(el)el.innerHTML='<div class="err">Could not load chart ('+e.message+').</div>';}
+const P=(id,traces,extra={})=>Plotly.newPlot(id,traces,Object.assign(JSON.parse(JSON.stringify(LAY)),extra),CFG);
+
+(async function(){
+  // ---- overview tiles
+  try{
+    const tiered=await jload("tiered_reclassification.json");
+    const med=tiered.partition_by_most_severe_change;
+    const medsig=tiered.variants_with_any_medically_significant_change;
+    const tiles=[["3,678,303","variants analyzed"],["148","monthly snapshots"],
+      ["9.3%","≥1 category change"],[medsig.pct_of_all+"%","medically significant change"],
+      ["697,698","reclassification events"],["13 yr","2012–2025"]];
+    $("tiles").innerHTML=tiles.map(t=>`<div class="tile"><div class="v">${t[0]}</div><div class="l">${t[1]}</div></div>`).join("");
+  }catch(e){}
+
+  // ---- 1 growth
+  try{const h=await jload("history_agg.json");const d=Object.keys(h).sort();
+    const x=d.map(dyear),y=d.map(k=>h[k].total);
+    const fmt=d.map(k=>h[k].format);
+    P("c_growth",[{x,y,type:"scatter",mode:"lines",fill:"tozeroy",line:{color:"#2b3a67",width:2},
+      hovertemplate:"%{x:.0f}: %{y:,} variants<extra></extra>"}],
+      {yaxis:{title:"Unique variants",gridcolor:"#eef1f6"},xaxis:{title:"Year",gridcolor:"#eef1f6"},
+       shapes:[{type:"line",x0:2020,x1:2020,y0:0,y1:1,yref:"paper",line:{color:"#b2182b",dash:"dot",width:1}}],
+       annotations:[{x:2020,y:1,yref:"paper",text:"VCV transition",showarrow:false,font:{size:10,color:"#b2182b"},xanchor:"left"}]});
+  }catch(e){fail("c_growth",e)}
+
+  // ---- 2 classification landscape (proportional stacked area)
+  try{const h=await jload("history_agg.json");const d=Object.keys(h).sort();const x=d.map(dyear);
+    const traces=ORDER.map(cat=>({x,y:d.map(k=>{const c=h[k].categories||{};const t=h[k].total||1;
+      return 100*(c[cat]||0)/t;}),stackgroup:"one",name:cat,mode:"none",fillcolor:CO[cat],
+      hovertemplate:cat+": %{y:.1f}%<extra></extra>"}));
+    P("c_landscape",traces,{yaxis:{title:"% of variants",range:[0,100],gridcolor:"#eef1f6"},
+      xaxis:{title:"Year",gridcolor:"#eef1f6"},legend:{orientation:"h",y:-0.18,font:{size:10}}});
+  }catch(e){fail("c_landscape",e)}
+
+  // ---- 3 tiered + severity
+  try{const t=await jload("tiered_reclassification.json");const p=t.partition_by_most_severe_change;
+    const labels=Object.keys(p);const short={"Medically significant (crosses actionability: P/LP↔VUS, P/LP↔B/LB)":"Medically significant",
+      "Involves composite/uncertain category (VUS↔Conflicting, ↔P/LP, ↔B/LB)":"Composite / uncertain",
+      "Non-medically significant (VUS↔LB, VUS↔B)":"Non-medically significant",
+      "Within-tier adjacent only (P↔LP or B↔LB) — ClinVar-concordant":"Within-tier adjacent"};
+    const xs=labels.map(l=>short[l]||l),ys=labels.map(l=>p[l].pct_of_all),
+      ns=labels.map(l=>p[l].n),cols=["#b2182b","#e08214","#4292c6","#bdbdbd"];
+    P("c_tiered",[{x:xs,y:ys,type:"bar",marker:{color:cols},text:ns.map(n=>n.toLocaleString()),
+      textposition:"outside",hovertemplate:"%{x}: %{y}% (%{text} variants)<extra></extra>"}],
+      {yaxis:{title:"% of all 3.68M variants",gridcolor:"#eef1f6"},xaxis:{tickangle:-20}});
+  }catch(e){fail("c_tiered",e)}
+  try{const s=await jload("conflict_severity.json");s.sort((a,b)=>b.variants-a.variants);
+    P("c_severity",[{y:s.map(r=>r.sev),x:s.map(r=>r.variants),type:"bar",orientation:"h",
+      marker:{color:"#807dba"},hovertemplate:"%{y}: %{x:,} variants<extra></extra>"}],
+      {xaxis:{title:"Unique variants",gridcolor:"#eef1f6"},margin:{l:200,r:20,t:30,b:50}});
+  }catch(e){fail("c_severity",e)}
+
+  // ---- 4 survival
+  try{const k=await jload("km_curve.json");
+    const x=k.map(r=>r.yr);
+    P("c_km",[
+      {x:x.concat(x.slice().reverse()),y:k.map(r=>r.hi*100).concat(k.map(r=>r.lo*100).reverse()),
+        fill:"toself",fillcolor:"rgba(43,58,103,.15)",line:{color:"transparent"},showlegend:false,hoverinfo:"skip",type:"scatter"},
+      {x,y:k.map(r=>r.ci*100),type:"scatter",mode:"lines",line:{color:"#2b3a67",width:2},
+        hovertemplate:"%{x:.1f} yr: %{y:.1f}%<extra></extra>",name:"cumulative incidence"}],
+      {yaxis:{title:"Cumulative incidence (%)",gridcolor:"#eef1f6"},xaxis:{title:"Years since first appearance",gridcolor:"#eef1f6"}});
+  }catch(e){fail("c_km",e)}
+  try{const s=await jload("survival_overall.json");
+    const doms=Object.keys(s).filter(k=>k.startsWith("domain::")).map(k=>k.replace("domain::",""));
+    const y5=doms.map(d=>s["domain::"+d].cuminc_5yr.est*100);
+    const y10=doms.map(d=>s["domain::"+d].cuminc_10yr.est*100);
+    P("c_km_domain",[
+      {x:doms,y:y5,type:"bar",name:"5-year",marker:{color:"#67a9cf"}},
+      {x:doms,y:y10,type:"bar",name:"10-year",marker:{color:"#b2182b"}}],
+      {barmode:"group",yaxis:{title:"Cumulative incidence (%)",gridcolor:"#eef1f6"},xaxis:{tickangle:-20},
+       legend:{orientation:"h",y:-0.25}});
+  }catch(e){fail("c_km_domain",e)}
+
+  // ---- 5 mechanisms
+  try{const d=await jload("reclassification_drivers.json");const ds=d.driver_summary;
+    const labels=Object.keys(ds).sort((a,b)=>ds[b]-ds[a]);
+    P("c_driver",[{y:labels,x:labels.map(l=>ds[l]),type:"bar",orientation:"h",marker:{color:"#2166ac"},
+      hovertemplate:"%{y}: %{x:,}<extra></extra>"}],
+      {xaxis:{title:"Events",gridcolor:"#eef1f6"},margin:{l:170,r:20,t:30,b:50}});
+  }catch(e){fail("c_driver",e)}
+  try{const d=await jload("reclassification_drivers.json");const es=d.era_summary;
+    const eras=Object.keys(es);const cats={};
+    eras.forEach(er=>{const o=es[er];Object.keys(o).forEach(k=>{if(typeof o[k]==="number"&&k!=="total_events")cats[k]=1;});});
+    const catList=Object.keys(cats);
+    const traces=catList.map((c,i)=>({x:eras,y:eras.map(er=>es[er][c]||0),type:"bar",name:c}));
+    P("c_era",traces,{barmode:"stack",yaxis:{title:"Events",gridcolor:"#eef1f6"},
+      xaxis:{tickangle:-10,gridcolor:"#eef1f6"},legend:{orientation:"h",y:-0.3,font:{size:9}}});
+  }catch(e){fail("c_era",e)}
+
+  // ---- 6 stats
+  try{const u=await jload("stats_univariate.json");
+    const keys=Object.keys(u);const labels=keys.map(k=>u[k].group1+" vs "+u[k].group2);
+    const rr=keys.map(k=>u[k].risk_ratio),lo=keys.map(k=>u[k].rr_95ci[0]),hi=keys.map(k=>u[k].rr_95ci[1]);
+    P("c_rr",[{x:rr,y:labels,type:"scatter",mode:"markers",marker:{color:"#b2182b",size:9},
+      error_x:{type:"data",symmetric:false,array:hi.map((h,i)=>h-rr[i]),arrayminus:rr.map((r,i)=>r-lo[i]),color:"#b2182b"},
+      hovertemplate:"%{y}<br>RR %{x:.2f}<extra></extra>"}],
+      {xaxis:{title:"Risk ratio (log)",type:"log",gridcolor:"#eef1f6"},margin:{l:230,r:20,t:30,b:50},
+       shapes:[{type:"line",x0:1,x1:1,y0:-0.5,y1:labels.length-0.5,line:{color:"#999",dash:"dot",width:1}}]});
+  }catch(e){fail("c_rr",e)}
+  try{const m=await jload("stats_multivariable.json");
+    const m1=m.filter(r=>r.model==="M1_cancer_adjusted_baseline");
+    const clean=t=>t.replace(/C\([^,]+, ?Treatment\('[^']*'\)\)\[T\.([^\]]+)\]/,"$1")
+                     .replace("log_base_subs","log10 baseline submissions").replace("follow_up_yr","follow-up (per yr)")
+                     .replace("log_gene_span","log10 gene span").replace("is_cancer","cancer gene");
+    const rows=m1.slice().sort((a,b)=>a.OR-b.OR);
+    P("c_or",[{x:rows.map(r=>r.OR),y:rows.map(r=>clean(r.term)),type:"scatter",mode:"markers",
+      marker:{color:"#2166ac",size:8},
+      error_x:{type:"data",symmetric:false,array:rows.map(r=>r.hi-r.OR),arrayminus:rows.map(r=>r.OR-r.lo),color:"#2166ac"},
+      hovertemplate:"%{y}<br>aOR %{x:.2f}<extra></extra>"}],
+      {xaxis:{title:"Adjusted odds ratio (log)",type:"log",gridcolor:"#eef1f6"},margin:{l:230,r:20,t:30,b:50},
+       shapes:[{type:"line",x0:1,x1:1,y0:-0.5,y1:rows.length-0.5,line:{color:"#999",dash:"dot",width:1}}]});
+  }catch(e){fail("c_or",e)}
+
+  // ---- 7 ITS
+  try{const ts=await jload("monthly_timeseries.json");const its=await jload("its_results.json");
+    const x=ts.map(r=>dyear(r.m));
+    P("c_its",[
+      {x,y:ts.map(r=>r.vus),type:"scatter",mode:"markers",name:"VUS proportion (%)",marker:{color:"#e08214",size:4}},
+      {x,y:ts.map(r=>r.conc),type:"scatter",mode:"markers",name:"Concordance, multi-submitter (%)",marker:{color:"#1b7837",size:4}}],
+      {yaxis:{title:"Percentage (%)",gridcolor:"#eef1f6"},xaxis:{title:"Year",gridcolor:"#eef1f6"},
+       legend:{orientation:"h",y:-0.2},
+       shapes:[{type:"line",x0:2015.42,x1:2015.42,y0:0,y1:1,yref:"paper",line:{color:"#b2182b",dash:"dot",width:1}},
+               {type:"line",x0:2020,x1:2020,y0:0,y1:1,yref:"paper",line:{color:"#2166ac",dash:"dot",width:1}}],
+       annotations:[{x:2015.42,y:1,yref:"paper",text:"ACMG/AMP 2015",showarrow:false,font:{size:10,color:"#b2182b"},xanchor:"left"},
+                    {x:2020,y:1,yref:"paper",text:"VCV 2020",showarrow:false,font:{size:10,color:"#2166ac"},xanchor:"left"}]});
+    const v=its.vus_pct,c=its.concordance_vcv;
+    $("its_cap").innerHTML=`Segmented regression: VUS proportion shows significant breaks at both interventions `
+      +`(model R²=${v.r2}); VCV-era concordance rises at `
+      +`${(c.terms.time.coef*12).toFixed(2)} %/year (R²=${c.r2}). Vocabulary for conflicts is only interpretable from 2020, so concordance is shown VCV-era only.`;
+  }catch(e){fail("c_its",e)}
+
+  // ---- 8 domains
+  try{const d=await jload("domain_summary.json");const bd=d.by_domain;
+    const doms=Object.keys(bd).sort((a,b)=>bd[b].change_rate_pct-bd[a].change_rate_pct);
+    P("c_domrate",[{x:doms,y:doms.map(k=>bd[k].change_rate_pct),type:"bar",
+      marker:{color:doms.map(k=>DCOL[k]||"#888")},hovertemplate:"%{x}: %{y:.1f}%<extra></extra>"}],
+      {yaxis:{title:"Reclassification rate (%)",gridcolor:"#eef1f6"},xaxis:{tickangle:-20}});
+    P("c_domevidence",[
+      {x:doms,y:doms.map(k=>bd[k].mean_submissions),type:"bar",name:"mean submissions",marker:{color:"#4292c6"}},
+      {x:doms,y:doms.map(k=>bd[k].mean_pmids),type:"bar",name:"mean PubMed refs",marker:{color:"#b2182b"}}],
+      {barmode:"group",yaxis:{title:"Per variant",gridcolor:"#eef1f6"},xaxis:{tickangle:-20},legend:{orientation:"h",y:-0.28}});
+  }catch(e){fail("c_domrate",e)}
+
+  // ---- 9 concordance
+  try{const ts=await jload("monthly_timeseries.json").then(a=>a.filter(r=>dyear(r.m)>=2020));
+    const x=ts.map(r=>dyear(r.m));
+    P("c_concord",[
+      {x,y:ts.map(r=>r.conc),type:"scatter",mode:"lines",name:"Concordant (% of multi-submitter)",line:{color:"#1b7837",width:2}},
+      {x,y:ts.map(r=>100*r.multi/r.n),type:"scatter",mode:"lines",name:"Multi-submitter (% of all)",line:{color:"#2166ac",width:1.5,dash:"dash"}}],
+      {yaxis:{title:"Percentage (%)",range:[0,80],gridcolor:"#eef1f6"},xaxis:{title:"Year",gridcolor:"#eef1f6"},legend:{orientation:"h",y:-0.2}});
+  }catch(e){fail("c_concord",e)}
+
+  // ---- 10 citations
+  try{const c=await jload("citation_filtering.json");const top=c.top_pmids_for_manual_vetting.slice(0,10);
+    P("c_pmids",[{y:top.map(t=>"PMID "+t.pmid).reverse(),x:top.map(t=>t.pct).reverse(),type:"bar",orientation:"h",
+      marker:{color:top.map(t=>t.pct>10?"#b2182b":"#bdbdbd").reverse()},
+      text:top.map(t=>(t.note||"").slice(0,26)).reverse(),
+      hovertemplate:"%{y}: %{x}% of cited variants<br>%{text}<extra></extra>"}],
+      {xaxis:{title:"% of cited variants",gridcolor:"#eef1f6"},margin:{l:110,r:20,t:30,b:50}});
+    const sc=c.scenarios;const names=Object.keys(sc);
+    P("c_citefilter",[
+      {x:names,y:names.map(n=>sc[n].mean_raw),type:"bar",name:"raw mean refs",marker:{color:"#bdbdbd"}},
+      {x:names,y:names.map(n=>sc[n].mean_filtered),type:"bar",name:"filtered mean refs",marker:{color:"#b2182b"}}],
+      {barmode:"group",yaxis:{title:"Mean references / variant",gridcolor:"#eef1f6"},xaxis:{tickangle:-12,font:{size:9}},
+       legend:{orientation:"h",y:-0.3}});
+  }catch(e){fail("c_pmids",e)}
+
+  // ---- 11 schema
+  try{const s=await jload("schema_evolution.json");const x=s.map(r=>dyear(r.date));
+    P("c_schema",[
+      {x,y:s.map(r=>r.elements),type:"scatter",mode:"lines",name:"unique elements",line:{color:"#2166ac",width:2}},
+      {x,y:s.map(r=>r.attributes),type:"scatter",mode:"lines",name:"unique attributes",line:{color:"#1b7837",width:2}}],
+      {yaxis:{title:"Count",gridcolor:"#eef1f6"},xaxis:{title:"Year",gridcolor:"#eef1f6"},legend:{orientation:"h",y:-0.2},
+       shapes:[{type:"rect",x0:2020,x1:2020.5,y0:0,y1:1,yref:"paper",fillcolor:"rgba(178,24,43,.08)",line:{width:0}}],
+       annotations:[{x:2020.25,y:1,yref:"paper",text:"transition",showarrow:false,font:{size:9,color:"#b2182b"}}]});
+  }catch(e){fail("c_schema",e)}
+
+  // ---- 12 submitters
+  try{const s=await jload("submitter_overall.json");const top=s.slice(0,15);
+    P("c_toplabs",[{y:top.map(r=>r.submitter).reverse(),x:top.map(r=>r.total_submissions).reverse(),type:"bar",orientation:"h",
+      marker:{color:"#2b3a67"},hovertemplate:"%{y}: %{x:,} submissions<extra></extra>"}],
+      {xaxis:{title:"Submissions",gridcolor:"#eef1f6"},margin:{l:110,r:20,t:30,b:50}});
+  }catch(e){fail("c_toplabs",e)}
+  try{const c=await jload("submitter_conflict_pairs.json");const top=(c.top_50_conflict_pairs||[]).slice(0,10);
+    P("c_conflictpairs",[{y:top.map(p=>p.submitter_a+" ↔ "+p.submitter_b).reverse(),
+      x:top.map(p=>p.variant_count).reverse(),type:"bar",orientation:"h",marker:{color:"#807dba"},
+      hovertemplate:"%{y}<br>%{x:,} conflicting variants<extra></extra>"}],
+      {xaxis:{title:"Conflicting variants",gridcolor:"#eef1f6"},margin:{l:170,r:20,t:30,b:50}});
+  }catch(e){fail("c_conflictpairs",e)}
+})();
+</script>
+</body>
+</html>

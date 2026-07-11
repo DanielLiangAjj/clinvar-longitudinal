@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+.DS_Store
+# Large regenerable intermediates (not redistributed)
+summary_*.csv
+classification_history_*.csv
+changed_variants_*.csv
+*.checkpoint.pkl.gz
+data/acmg_criteria_detailed.csv
+data/reclassification_events_detail.csv
+data/submission_summary.txt.gz
+data/organization_summary.txt
+revision_analyses/outputs/variant_pmids_latest.csv
+revision_analyses/outputs/baseline_covariates.csv

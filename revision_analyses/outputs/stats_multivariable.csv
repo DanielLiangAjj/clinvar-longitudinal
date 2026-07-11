@@ -1,0 +1,18 @@
+term,OR,OR_lo,OR_hi,p
+Intercept,0.003,0.003,0.003,0.00e+00
+"C(era, Treatment('RCV_2015_2019'))[T.pre2015]",1.242,1.207,1.278,3.83e-51
+"C(era, Treatment('RCV_2015_2019'))[T.VCV_2020plus]",1.495,1.462,1.528,1.65e-278
+"C(vclass, Treatment('missense'))[T.frameshift]",3.037,2.967,3.108,0.00e+00
+"C(vclass, Treatment('missense'))[T.inframe]",1.931,1.834,2.033,2.18e-137
+"C(vclass, Treatment('missense'))[T.nonsense]",3.019,2.941,3.1,0.00e+00
+"C(vclass, Treatment('missense'))[T.other]",1.597,1.573,1.62,0.00e+00
+"C(vclass, Treatment('missense'))[T.splice]",3.946,3.824,4.072,0.00e+00
+"C(vclass, Treatment('missense'))[T.synonymous]",2.175,2.144,2.207,0.00e+00
+"C(rtier, Treatment('single'))[T.conflicting]",681.541,648.906,715.817,0.00e+00
+"C(rtier, Treatment('single'))[T.expert_guideline]",0.733,0.702,0.765,6.18e-46
+"C(rtier, Treatment('single'))[T.multi_no_conflict]",1.153,1.133,1.174,5.90e-54
+"C(rtier, Treatment('single'))[T.no_criteria]",0.544,0.528,0.56,0.00e+00
+log_subs,37.108,35.857,38.403,0.00e+00
+follow_up_yr,1.402,1.396,1.408,0.00e+00
+log_gene_span,0.994,0.988,1.0,3.86e-02
+is_cancer,0.978,0.964,0.992,1.66e-03

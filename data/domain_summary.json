@@ -1,0 +1,1910 @@
+{
+  "generated_at": "2026-02-20T08:37:06.518678+00:00",
+  "source_csv": "summary_20260219_024805.csv",
+  "total_variants_analyzed": 3678303,
+  "cancer_vs_noncancer": {
+    "cancer": {
+      "total": 483822,
+      "changed": 80408,
+      "change_rate_pct": 16.6193,
+      "oscillating": 14520,
+      "classification_dist": {
+        "P": 51549,
+        "P/LP": 6569,
+        "LP": 14026,
+        "B/LB": 19009,
+        "VUS": 205296,
+        "Conflicting": 35368,
+        "B": 19368,
+        "Other": 5260,
+        "LB": 127377
+      },
+      "top_change_types": [
+        {
+          "type": "VUS->Conflicting",
+          "count": 22882
+        },
+        {
+          "type": "LB->B/LB",
+          "count": 13380
+        },
+        {
+          "type": "LB->Conflicting",
+          "count": 4151
+        },
+        {
+          "type": "VUS->LB",
+          "count": 3682
+        },
+        {
+          "type": "P->P/LP",
+          "count": 2774
+        },
+        {
+          "type": "B->B/LB",
+          "count": 1812
+        },
+        {
+          "type": "LP->P/LP",
+          "count": 1757
+        },
+        {
+          "type": "P->Other->P",
+          "count": 1088
+        },
+        {
+          "type": "Other->VUS",
+          "count": 1067
+        },
+        {
+          "type": "VUS->Conflicting->LB",
+          "count": 721
+        }
+      ],
+      "p_to_b": 708,
+      "b_to_p": 82,
+      "mean_submissions": 2.0296,
+      "mean_pmids": 1.4876,
+      "mean_acmg": 0.1012,
+      "review_status_dist": {
+        "criteria provided, multiple submitters, no conflicts": 135904,
+        "no assertion criteria provided": 12673,
+        "criteria provided, single submitter": 283435,
+        "criteria provided, conflicting interpretations": 35320,
+        "reviewed by expert panel": 12323,
+        "no assertion provided": 4094,
+        "no classifications from unflagged records": 1,
+        "no interpretation for the single variant": 72
+      }
+    },
+    "noncancer": {
+      "total": 3194481,
+      "changed": 261649,
+      "change_rate_pct": 8.1907,
+      "oscillating": 48975,
+      "classification_dist": {
+        "P": 164194,
+        "Other": 27893,
+        "B": 213952,
+        "LB": 865989,
+        "Conflicting": 110163,
+        "P/LP": 26978,
+        "VUS": 1650459,
+        "LP": 95760,
+        "B/LB": 39093
+      },
+      "top_change_types": [
+        {
+          "type": "VUS->Conflicting",
+          "count": 58191
+        },
+        {
+          "type": "VUS->LB",
+          "count": 19319
+        },
+        {
+          "type": "LB->Conflicting",
+          "count": 17829
+        },
+        {
+          "type": "B->B/LB",
+          "count": 14418
+        },
+        {
+          "type": "P->P/LP",
+          "count": 10980
+        },
+        {
+          "type": "LB->B/LB",
+          "count": 10888
+        },
+        {
+          "type": "LP->P/LP",
+          "count": 7690
+        },
+        {
+          "type": "LB->B",
+          "count": 6344
+        },
+        {
+          "type": "Other->VUS",
+          "count": 4292
+        },
+        {
+          "type": "B->B/LB->B",
+          "count": 4284
+        }
+      ],
+      "p_to_b": 5490,
+      "b_to_p": 625,
+      "mean_submissions": 1.4202,
+      "mean_pmids": 0.8969,
+      "mean_acmg": 0.0955,
+      "review_status_dist": {
+        "criteria provided, single submitter": 2441590,
+        "no classifications from unflagged records": 145,
+        "no assertion criteria provided": 169677,
+        "criteria provided, multiple submitters, no conflicts": 438941,
+        "criteria provided, conflicting interpretations": 109392,
+        "reviewed by expert panel": 7823,
+        "classified by single submitter": 4031,
+        "classified by multiple submitters": 60,
+        "no assertion provided": 21288,
+        "practice guideline": 665,
+        "no interpretation for the single variant": 719,
+        "not classified by submitter": 149,
+        "reviewed by professional society": 1
+      }
+    }
+  },
+  "rare_vs_common": {
+    "common": {
+      "total": 28487,
+      "changed": 5599,
+      "change_rate_pct": 19.6546,
+      "oscillating": 1684,
+      "classification_dist": {
+        "P": 3424,
+        "Conflicting": 2195,
+        "VUS": 9206,
+        "B": 926,
+        "P/LP": 861,
+        "Other": 1637,
+        "LP": 1657,
+        "LB": 8189,
+        "B/LB": 392
+      },
+      "top_change_types": [
+        {
+          "type": "VUS->Conflicting",
+          "count": 1012
+        },
+        {
+          "type": "LB->Conflicting",
+          "count": 250
+        },
+        {
+          "type": "LP->P/LP",
+          "count": 197
+        },
+        {
+          "type": "Other->VUS",
+          "count": 195
+        },
+        {
+          "type": "P->P/LP",
+          "count": 184
+        },
+        {
+          "type": "P->Other->P",
+          "count": 184
+        },
+        {
+          "type": "LP->Conflicting",
+          "count": 136
+        },
+        {
+          "type": "LP->Conflicting->P/LP",
+          "count": 122
+        },
+        {
+          "type": "LB->B/LB",
+          "count": 107
+        },
+        {
+          "type": "VUS->LB",
+          "count": 104
+        }
+      ],
+      "p_to_b": 102,
+      "b_to_p": 34,
+      "mean_submissions": 2.3508,
+      "mean_pmids": 2.3172,
+      "mean_acmg": 0.2651,
+      "review_status_dist": {
+        "criteria provided, multiple submitters, no conflicts": 5977,
+        "criteria provided, conflicting interpretations": 2169,
+        "criteria provided, single submitter": 16635,
+        "no assertion criteria provided": 1825,
+        "reviewed by expert panel": 908,
+        "practice guideline": 652,
+        "no interpretation for the single variant": 143,
+        "no assertion provided": 177,
+        "no classifications from unflagged records": 1
+      },
+      "top_genes": [
+        {
+          "gene": "CFTR",
+          "count": 5389
+        },
+        {
+          "gene": "APOB",
+          "count": 4988
+        },
+        {
+          "gene": "LDLR",
+          "count": 4556
+        },
+        {
+          "gene": "HBB",
+          "count": 1717
+        },
+        {
+          "gene": "PCSK9",
+          "count": 1413
+        },
+        {
+          "gene": "F5",
+          "count": 1285
+        },
+        {
+          "gene": "MTHFR",
+          "count": 978
+        },
+        {
+          "gene": "G6PD",
+          "count": 803
+        },
+        {
+          "gene": "CYP2C19",
+          "count": 735
+        },
+        {
+          "gene": "LDLRAP1",
+          "count": 610
+        },
+        {
+          "gene": "GJB2",
+          "count": 610
+        },
+        {
+          "gene": "DPYD",
+          "count": 571
+        },
+        {
+          "gene": "PROS1",
+          "count": 570
+        },
+        {
+          "gene": "SERPINA1",
+          "count": 515
+        },
+        {
+          "gene": "F2",
+          "count": 428
+        },
+        {
+          "gene": "PROC",
+          "count": 424
+        },
+        {
+          "gene": "CYP2D6",
+          "count": 324
+        },
+        {
+          "gene": "CETP",
+          "count": 316
+        },
+        {
+          "gene": "HBA1",
+          "count": 308
+        },
+        {
+          "gene": "HFE",
+          "count": 307
+        }
+      ]
+    },
+    "rare": {
+      "total": 3649816,
+      "changed": 336458,
+      "change_rate_pct": 9.2185,
+      "oscillating": 61811,
+      "classification_dist": {
+        "P": 212319,
+        "Other": 31516,
+        "B": 232394,
+        "LB": 985177,
+        "Conflicting": 143336,
+        "P/LP": 32686,
+        "VUS": 1846549,
+        "LP": 108129,
+        "B/LB": 57710
+      },
+      "top_change_types": [
+        {
+          "type": "VUS->Conflicting",
+          "count": 80061
+        },
+        {
+          "type": "LB->B/LB",
+          "count": 24161
+        },
+        {
+          "type": "VUS->LB",
+          "count": 22897
+        },
+        {
+          "type": "LB->Conflicting",
+          "count": 21730
+        },
+        {
+          "type": "B->B/LB",
+          "count": 16139
+        },
+        {
+          "type": "P->P/LP",
+          "count": 13570
+        },
+        {
+          "type": "LP->P/LP",
+          "count": 9250
+        },
+        {
+          "type": "LB->B",
+          "count": 6952
+        },
+        {
+          "type": "Other->VUS",
+          "count": 5164
+        },
+        {
+          "type": "LP->Conflicting",
+          "count": 4803
+        }
+      ],
+      "p_to_b": 6096,
+      "b_to_p": 673,
+      "mean_submissions": 1.4937,
+      "mean_pmids": 0.9641,
+      "mean_acmg": 0.095,
+      "review_status_dist": {
+        "criteria provided, single submitter": 2708390,
+        "no classifications from unflagged records": 145,
+        "no assertion criteria provided": 180525,
+        "criteria provided, multiple submitters, no conflicts": 568868,
+        "criteria provided, conflicting interpretations": 142543,
+        "reviewed by expert panel": 19238,
+        "classified by single submitter": 4031,
+        "classified by multiple submitters": 60,
+        "no assertion provided": 25205,
+        "no interpretation for the single variant": 648,
+        "not classified by submitter": 149,
+        "reviewed by professional society": 1,
+        "practice guideline": 13
+      },
+      "top_genes": [
+        {
+          "gene": "TTN",
+          "count": 30528
+        },
+        {
+          "gene": "BRCA2",
+          "count": 20552
+        },
+        {
+          "gene": "ATM",
+          "count": 17673
+        },
+        {
+          "gene": "APC",
+          "count": 16044
+        },
+        {
+          "gene": "NF1",
+          "count": 15699
+        },
+        {
+          "gene": "BRCA1",
+          "count": 15489
+        },
+        {
+          "gene": "TSC2",
+          "count": 11522
+        },
+        {
+          "gene": "NEB",
+          "count": 11229
+        },
+        {
+          "gene": "DMD",
+          "count": 10837
+        },
+        {
+          "gene": "POLE",
+          "count": 10095
+        },
+        {
+          "gene": "MSH6",
+          "count": 9873
+        },
+        {
+          "gene": "RYR1",
+          "count": 9838
+        },
+        {
+          "gene": "USH2A",
+          "count": 8716
+        },
+        {
+          "gene": "FBN1",
+          "count": 8689
+        },
+        {
+          "gene": "RYR2",
+          "count": 8399
+        },
+        {
+          "gene": "MSH2",
+          "count": 8060
+        },
+        {
+          "gene": "DICER1",
+          "count": 7080
+        },
+        {
+          "gene": "ALMS1",
+          "count": 6865
+        },
+        {
+          "gene": "ADGRV1",
+          "count": 6823
+        },
+        {
+          "gene": "KMT2D",
+          "count": 6698
+        }
+      ]
+    }
+  },
+  "by_domain": {
+    "Cardiovascular": {
+      "total": 198676,
+      "changed": 32095,
+      "change_rate_pct": 16.1544,
+      "oscillating": 8990,
+      "classification_dist": {
+        "P": 13105,
+        "P/LP": 2717,
+        "Conflicting": 15490,
+        "VUS": 81667,
+        "LP": 9785,
+        "B/LB": 4391,
+        "LB": 62700,
+        "Other": 1577,
+        "B": 7244
+      },
+      "top_change_types": [
+        {
+          "type": "VUS->Conflicting",
+          "count": 7631
+        },
+        {
+          "type": "LB->Conflicting",
+          "count": 1948
+        },
+        {
+          "type": "LB->B/LB",
+          "count": 1297
+        },
+        {
+          "type": "VUS->LB",
+          "count": 1147
+        },
+        {
+          "type": "Other->VUS",
+          "count": 1004
+        },
+        {
+          "type": "B->B/LB",
+          "count": 970
+        },
+        {
+          "type": "VUS->LP",
+          "count": 819
+        },
+        {
+          "type": "P->P/LP",
+          "count": 710
+        },
+        {
+          "type": "LP->P/LP",
+          "count": 682
+        },
+        {
+          "type": "LP->Conflicting",
+          "count": 530
+        }
+      ],
+      "p_to_b": 1794,
+      "b_to_p": 105,
+      "mean_submissions": 2.099,
+      "mean_pmids": 1.5821,
+      "mean_acmg": 0.1395,
+      "review_status_dist": {
+        "criteria provided, multiple submitters, no conflicts": 54024,
+        "criteria provided, conflicting interpretations": 15474,
+        "no assertion criteria provided": 4256,
+        "criteria provided, single submitter": 122655,
+        "reviewed by expert panel": 707,
+        "no classifications from unflagged records": 11,
+        "no assertion provided": 1525,
+        "no interpretation for the single variant": 24
+      },
+      "top_genes": [
+        {
+          "gene": "TTN",
+          "count": 30528
+        },
+        {
+          "gene": "DMD",
+          "count": 10837
+        },
+        {
+          "gene": "FBN1",
+          "count": 8689
+        },
+        {
+          "gene": "RYR2",
+          "count": 8399
+        },
+        {
+          "gene": "DSP",
+          "count": 5500
+        },
+        {
+          "gene": "FLNC",
+          "count": 5472
+        },
+        {
+          "gene": "LDLR",
+          "count": 4556
+        },
+        {
+          "gene": "MYBPC3",
+          "count": 4346
+        },
+        {
+          "gene": "SCN5A",
+          "count": 4208
+        },
+        {
+          "gene": "MYH7",
+          "count": 4046
+        },
+        {
+          "gene": "NOTCH1",
+          "count": 3955
+        },
+        {
+          "gene": "MYH11",
+          "count": 3865
+        },
+        {
+          "gene": "ANK2",
+          "count": 3699
+        },
+        {
+          "gene": "FLNA",
+          "count": 3691
+        },
+        {
+          "gene": "FBN2",
+          "count": 3689
+        },
+        {
+          "gene": "KCNH2",
+          "count": 3547
+        },
+        {
+          "gene": "COL3A1",
+          "count": 3541
+        },
+        {
+          "gene": "CACNA1C",
+          "count": 3489
+        },
+        {
+          "gene": "AKAP9",
+          "count": 3248
+        },
+        {
+          "gene": "KCNQ1",
+          "count": 2838
+        }
+      ]
+    },
+    "Hereditary Cancer": {
+      "total": 359743,
+      "changed": 65410,
+      "change_rate_pct": 18.1824,
+      "oscillating": 12129,
+      "classification_dist": {
+        "P": 43718,
+        "P/LP": 5675,
+        "LP": 9710,
+        "B/LB": 16194,
+        "VUS": 151653,
+        "Conflicting": 29413,
+        "B": 10191,
+        "Other": 4535,
+        "LB": 88654
+      },
+      "top_change_types": [
+        {
+          "type": "VUS->Conflicting",
+          "count": 19583
+        },
+        {
+          "type": "LB->B/LB",
+          "count": 12483
+        },
+        {
+          "type": "LB->Conflicting",
+          "count": 3203
+        },
+        {
+          "type": "VUS->LB",
+          "count": 2459
+        },
+        {
+          "type": "P->P/LP",
+          "count": 2432
+        },
+        {
+          "type": "LP->P/LP",
+          "count": 1540
+        },
+        {
+          "type": "P->Other->P",
+          "count": 1077
+        },
+        {
+          "type": "B->B/LB",
+          "count": 837
+        },
+        {
+          "type": "Other->VUS",
+          "count": 794
+        },
+        {
+          "type": "VUS->Conflicting->LB",
+          "count": 586
+        }
+      ],
+      "p_to_b": 492,
+      "b_to_p": 61,
+      "mean_submissions": 2.1962,
+      "mean_pmids": 1.6374,
+      "mean_acmg": 0.081,
+      "review_status_dist": {
+        "criteria provided, multiple submitters, no conflicts": 114576,
+        "no assertion criteria provided": 6752,
+        "criteria provided, single submitter": 195401,
+        "criteria provided, conflicting interpretations": 29379,
+        "reviewed by expert panel": 10105,
+        "no assertion provided": 3466,
+        "no classifications from unflagged records": 1,
+        "no interpretation for the single variant": 63
+      },
+      "top_genes": [
+        {
+          "gene": "BRCA2",
+          "count": 20552
+        },
+        {
+          "gene": "ATM",
+          "count": 17673
+        },
+        {
+          "gene": "APC",
+          "count": 16044
+        },
+        {
+          "gene": "NF1",
+          "count": 15699
+        },
+        {
+          "gene": "BRCA1",
+          "count": 15489
+        },
+        {
+          "gene": "TSC2",
+          "count": 11522
+        },
+        {
+          "gene": "POLE",
+          "count": 10095
+        },
+        {
+          "gene": "MSH6",
+          "count": 9873
+        },
+        {
+          "gene": "MSH2",
+          "count": 8060
+        },
+        {
+          "gene": "DICER1",
+          "count": 7080
+        },
+        {
+          "gene": "PALB2",
+          "count": 6478
+        },
+        {
+          "gene": "BRIP1",
+          "count": 6176
+        },
+        {
+          "gene": "MLH1",
+          "count": 6151
+        },
+        {
+          "gene": "SMARCA4",
+          "count": 6128
+        },
+        {
+          "gene": "FANCA",
+          "count": 5891
+        },
+        {
+          "gene": "PMS2",
+          "count": 5780
+        },
+        {
+          "gene": "POLD1",
+          "count": 5434
+        },
+        {
+          "gene": "TSC1",
+          "count": 5258
+        },
+        {
+          "gene": "CDH1",
+          "count": 4950
+        },
+        {
+          "gene": "BLM",
+          "count": 4806
+        }
+      ]
+    },
+    "Neurological": {
+      "total": 118581,
+      "changed": 16951,
+      "change_rate_pct": 14.2949,
+      "oscillating": 3557,
+      "classification_dist": {
+        "B": 6871,
+        "P": 10147,
+        "P/LP": 2018,
+        "VUS": 43659,
+        "Conflicting": 6823,
+        "LP": 6067,
+        "Other": 682,
+        "B/LB": 2235,
+        "LB": 40079
+      },
+      "top_change_types": [
+        {
+          "type": "VUS->Conflicting",
+          "count": 3702
+        },
+        {
+          "type": "VUS->LB",
+          "count": 1181
+        },
+        {
+          "type": "LB->Conflicting",
+          "count": 879
+        },
+        {
+          "type": "LB->B/LB",
+          "count": 681
+        },
+        {
+          "type": "P->P/LP",
+          "count": 663
+        },
+        {
+          "type": "LP->P/LP",
+          "count": 577
+        },
+        {
+          "type": "B->B/LB",
+          "count": 537
+        },
+        {
+          "type": "Other->P",
+          "count": 333
+        },
+        {
+          "type": "VUS->LP",
+          "count": 331
+        },
+        {
+          "type": "LP->Conflicting",
+          "count": 300
+        }
+      ],
+      "p_to_b": 88,
+      "b_to_p": 35,
+      "mean_submissions": 1.6655,
+      "mean_pmids": 1.323,
+      "mean_acmg": 0.1476,
+      "review_status_dist": {
+        "no assertion criteria provided": 3554,
+        "criteria provided, multiple submitters, no conflicts": 21258,
+        "criteria provided, single submitter": 85962,
+        "criteria provided, conflicting interpretations": 6770,
+        "reviewed by expert panel": 383,
+        "no assertion provided": 621,
+        "practice guideline": 4,
+        "no interpretation for the single variant": 27,
+        "no classifications from unflagged records": 2
+      },
+      "top_genes": [
+        {
+          "gene": "SYNE1",
+          "count": 6331
+        },
+        {
+          "gene": "DYNC1H1",
+          "count": 5182
+        },
+        {
+          "gene": "SACS",
+          "count": 4377
+        },
+        {
+          "gene": "CACNA1A",
+          "count": 4151
+        },
+        {
+          "gene": "LRRK2",
+          "count": 3936
+        },
+        {
+          "gene": "RELN",
+          "count": 3619
+        },
+        {
+          "gene": "SPG11",
+          "count": 3515
+        },
+        {
+          "gene": "VPS13A",
+          "count": 3448
+        },
+        {
+          "gene": "SCN2A",
+          "count": 2842
+        },
+        {
+          "gene": "NPC1",
+          "count": 2584
+        },
+        {
+          "gene": "SCN1A",
+          "count": 2492
+        },
+        {
+          "gene": "KCNT1",
+          "count": 2432
+        },
+        {
+          "gene": "KCNQ2",
+          "count": 2334
+        },
+        {
+          "gene": "SCN8A",
+          "count": 2302
+        },
+        {
+          "gene": "ITPR1",
+          "count": 2073
+        },
+        {
+          "gene": "MECP2",
+          "count": 2058
+        },
+        {
+          "gene": "CDKL5",
+          "count": 2036
+        },
+        {
+          "gene": "CNTNAP2",
+          "count": 2033
+        },
+        {
+          "gene": "SETX",
+          "count": 1967
+        },
+        {
+          "gene": "CCDC88C",
+          "count": 1688
+        }
+      ]
+    },
+    "Ophthalmologic": {
+      "total": 87681,
+      "changed": 11815,
+      "change_rate_pct": 13.475,
+      "oscillating": 1803,
+      "classification_dist": {
+        "P": 9620,
+        "P/LP": 2393,
+        "Conflicting": 4597,
+        "LP": 5222,
+        "VUS": 31890,
+        "B": 3825,
+        "B/LB": 1054,
+        "Other": 451,
+        "LB": 28629
+      },
+      "top_change_types": [
+        {
+          "type": "VUS->Conflicting",
+          "count": 2415
+        },
+        {
+          "type": "P->P/LP",
+          "count": 938
+        },
+        {
+          "type": "VUS->LB",
+          "count": 785
+        },
+        {
+          "type": "LP->P/LP",
+          "count": 726
+        },
+        {
+          "type": "LB->Conflicting",
+          "count": 615
+        },
+        {
+          "type": "LB->B/LB",
+          "count": 360
+        },
+        {
+          "type": "LP->P",
+          "count": 271
+        },
+        {
+          "type": "Other->P",
+          "count": 240
+        },
+        {
+          "type": "B->B/LB",
+          "count": 233
+        },
+        {
+          "type": "LB->B",
+          "count": 228
+        }
+      ],
+      "p_to_b": 591,
+      "b_to_p": 38,
+      "mean_submissions": 1.7274,
+      "mean_pmids": 1.6559,
+      "mean_acmg": 0.1135,
+      "review_status_dist": {
+        "no assertion criteria provided": 3473,
+        "criteria provided, multiple submitters, no conflicts": 14362,
+        "criteria provided, conflicting interpretations": 4577,
+        "criteria provided, single submitter": 64440,
+        "reviewed by expert panel": 390,
+        "no classifications from unflagged records": 51,
+        "no assertion provided": 375,
+        "no interpretation for the single variant": 13
+      },
+      "top_genes": [
+        {
+          "gene": "USH2A",
+          "count": 8716
+        },
+        {
+          "gene": "CDH23",
+          "count": 5309
+        },
+        {
+          "gene": "EYS",
+          "count": 5121
+        },
+        {
+          "gene": "MYO7A",
+          "count": 4684
+        },
+        {
+          "gene": "ABCA4",
+          "count": 4415
+        },
+        {
+          "gene": "CEP290",
+          "count": 4138
+        },
+        {
+          "gene": "PCDH15",
+          "count": 3597
+        },
+        {
+          "gene": "CRB1",
+          "count": 2061
+        },
+        {
+          "gene": "WFS1",
+          "count": 2001
+        },
+        {
+          "gene": "RPGR",
+          "count": 1743
+        },
+        {
+          "gene": "GUCY2D",
+          "count": 1596
+        },
+        {
+          "gene": "OPA1",
+          "count": 1573
+        },
+        {
+          "gene": "PRPF8",
+          "count": 1538
+        },
+        {
+          "gene": "LTBP2",
+          "count": 1486
+        },
+        {
+          "gene": "RP1",
+          "count": 1455
+        },
+        {
+          "gene": "USH1C",
+          "count": 1453
+        },
+        {
+          "gene": "CNGB1",
+          "count": 1378
+        },
+        {
+          "gene": "CNGB3",
+          "count": 1310
+        },
+        {
+          "gene": "TRPM1",
+          "count": 1262
+        },
+        {
+          "gene": "SNRNP200",
+          "count": 1259
+        }
+      ]
+    },
+    "Other/Unclassified": {
+      "total": 2828407,
+      "changed": 204540,
+      "change_rate_pct": 7.2316,
+      "oscillating": 35059,
+      "classification_dist": {
+        "P": 130072,
+        "Other": 25619,
+        "B": 200732,
+        "LB": 747189,
+        "Conflicting": 84324,
+        "P/LP": 18835,
+        "VUS": 1515841,
+        "LP": 72940,
+        "B/LB": 32855
+      },
+      "top_change_types": [
+        {
+          "type": "VUS->Conflicting",
+          "count": 45083
+        },
+        {
+          "type": "VUS->LB",
+          "count": 16986
+        },
+        {
+          "type": "LB->Conflicting",
+          "count": 14621
+        },
+        {
+          "type": "B->B/LB",
+          "count": 13075
+        },
+        {
+          "type": "LB->B/LB",
+          "count": 9143
+        },
+        {
+          "type": "P->P/LP",
+          "count": 8143
+        },
+        {
+          "type": "LB->B",
+          "count": 5697
+        },
+        {
+          "type": "LP->P/LP",
+          "count": 5384
+        },
+        {
+          "type": "B->B/LB->B",
+          "count": 4205
+        },
+        {
+          "type": "LP->Conflicting",
+          "count": 3146
+        }
+      ],
+      "p_to_b": 3102,
+      "b_to_p": 453,
+      "mean_submissions": 1.3481,
+      "mean_pmids": 0.7959,
+      "mean_acmg": 0.0911,
+      "review_status_dist": {
+        "criteria provided, single submitter": 2199034,
+        "no classifications from unflagged records": 80,
+        "no assertion criteria provided": 159440,
+        "criteria provided, multiple submitters, no conflicts": 353256,
+        "criteria provided, conflicting interpretations": 83663,
+        "reviewed by expert panel": 8189,
+        "classified by single submitter": 4031,
+        "classified by multiple submitters": 60,
+        "no assertion provided": 19243,
+        "no interpretation for the single variant": 623,
+        "practice guideline": 638,
+        "not classified by submitter": 149,
+        "reviewed by professional society": 1
+      },
+      "top_genes": [
+        {
+          "gene": "NEB",
+          "count": 11229
+        },
+        {
+          "gene": "RYR1",
+          "count": 9838
+        },
+        {
+          "gene": "ALMS1",
+          "count": 6865
+        },
+        {
+          "gene": "ADGRV1",
+          "count": 6823
+        },
+        {
+          "gene": "KMT2D",
+          "count": 6698
+        },
+        {
+          "gene": "VPS13B",
+          "count": 6314
+        },
+        {
+          "gene": "DNAH5",
+          "count": 6126
+        },
+        {
+          "gene": "PLEC",
+          "count": 6096
+        },
+        {
+          "gene": "DNAH11",
+          "count": 6084
+        },
+        {
+          "gene": "ALK",
+          "count": 5771
+        },
+        {
+          "gene": "COL7A1",
+          "count": 5689
+        },
+        {
+          "gene": "LAMA2",
+          "count": 5277
+        },
+        {
+          "gene": "APOB",
+          "count": 4988
+        },
+        {
+          "gene": "ZNF469",
+          "count": 4796
+        },
+        {
+          "gene": "LRP2",
+          "count": 4792
+        },
+        {
+          "gene": "OBSCN",
+          "count": 4768
+        },
+        {
+          "gene": "PRKDC",
+          "count": 4597
+        },
+        {
+          "gene": "DYSF",
+          "count": 4293
+        },
+        {
+          "gene": "SYNE2",
+          "count": 4220
+        },
+        {
+          "gene": "CHD7",
+          "count": 4039
+        }
+      ]
+    },
+    "Renal": {
+      "total": 85215,
+      "changed": 11246,
+      "change_rate_pct": 13.1972,
+      "oscillating": 1957,
+      "classification_dist": {
+        "P/LP": 1909,
+        "P": 9081,
+        "VUS": 31045,
+        "B": 4457,
+        "LP": 6062,
+        "Conflicting": 4884,
+        "B/LB": 1373,
+        "Other": 289,
+        "LB": 26115
+      },
+      "top_change_types": [
+        {
+          "type": "VUS->Conflicting",
+          "count": 2659
+        },
+        {
+          "type": "P->P/LP",
+          "count": 868
+        },
+        {
+          "type": "LB->Conflicting",
+          "count": 714
+        },
+        {
+          "type": "B->B/LB",
+          "count": 578
+        },
+        {
+          "type": "LP->P/LP",
+          "count": 538
+        },
+        {
+          "type": "VUS->LB",
+          "count": 443
+        },
+        {
+          "type": "LB->B/LB",
+          "count": 304
+        },
+        {
+          "type": "LP->Conflicting",
+          "count": 286
+        },
+        {
+          "type": "LB->B",
+          "count": 216
+        },
+        {
+          "type": "P->LP",
+          "count": 198
+        }
+      ],
+      "p_to_b": 131,
+      "b_to_p": 15,
+      "mean_submissions": 1.7555,
+      "mean_pmids": 1.5051,
+      "mean_acmg": 0.1421,
+      "review_status_dist": {
+        "criteria provided, multiple submitters, no conflicts": 17369,
+        "no assertion criteria provided": 4875,
+        "criteria provided, single submitter": 57533,
+        "criteria provided, conflicting interpretations": 4849,
+        "practice guideline": 23,
+        "reviewed by expert panel": 372,
+        "no assertion provided": 152,
+        "no interpretation for the single variant": 41,
+        "no classifications from unflagged records": 1
+      },
+      "top_genes": [
+        {
+          "gene": "PKD1",
+          "count": 6168
+        },
+        {
+          "gene": "PKHD1",
+          "count": 5569
+        },
+        {
+          "gene": "CFTR",
+          "count": 5389
+        },
+        {
+          "gene": "COL4A5",
+          "count": 3601
+        },
+        {
+          "gene": "COL4A4",
+          "count": 3415
+        },
+        {
+          "gene": "CASR",
+          "count": 2914
+        },
+        {
+          "gene": "COL4A3",
+          "count": 2826
+        },
+        {
+          "gene": "WNK1",
+          "count": 2257
+        },
+        {
+          "gene": "IFT140",
+          "count": 2037
+        },
+        {
+          "gene": "RPGRIP1L",
+          "count": 1997
+        },
+        {
+          "gene": "SLC12A3",
+          "count": 1836
+        },
+        {
+          "gene": "NPHP4",
+          "count": 1831
+        },
+        {
+          "gene": "NPHS1",
+          "count": 1822
+        },
+        {
+          "gene": "INF2",
+          "count": 1701
+        },
+        {
+          "gene": "MYH9",
+          "count": 1669
+        },
+        {
+          "gene": "TMEM67",
+          "count": 1325
+        },
+        {
+          "gene": "BBS9",
+          "count": 1266
+        },
+        {
+          "gene": "WDR19",
+          "count": 1264
+        },
+        {
+          "gene": "LAMB2",
+          "count": 1253
+        },
+        {
+          "gene": "BBS2",
+          "count": 1233
+        }
+      ]
+    }
+  },
+  "gene_domain_map_used": {
+    "ABCA4": "Ophthalmologic",
+    "ABCC9": "Cardiovascular",
+    "ACE": "Renal",
+    "ACTC1": "Cardiovascular",
+    "ACTN2": "Cardiovascular",
+    "ACTN4": "Renal",
+    "AFG3L2": "Neurological",
+    "AGXT": "Renal",
+    "AGXT2": "Renal",
+    "AIPL1": "Ophthalmologic",
+    "AKAP9": "Cardiovascular",
+    "ALS2": "Neurological",
+    "AMACR": "Neurological",
+    "ANK2": "Cardiovascular",
+    "ANKRD1": "Cardiovascular",
+    "ANLN": "Renal",
+    "ANO10": "Neurological",
+    "APC": "Hereditary Cancer",
+    "APOL1": "Renal",
+    "APP": "Neurological",
+    "APRT": "Renal",
+    "APTX": "Neurological",
+    "AQP2": "Renal",
+    "ARL6": "Ophthalmologic",
+    "ARSA": "Neurological",
+    "ATCAY": "Neurological",
+    "ATM": "Hereditary Cancer",
+    "ATN1": "Neurological",
+    "ATP13A2": "Neurological",
+    "ATP1A3": "Neurological",
+    "ATR": "Hereditary Cancer",
+    "ATXN1": "Neurological",
+    "ATXN10": "Neurological",
+    "ATXN2": "Neurological",
+    "ATXN3": "Neurological",
+    "ATXN7": "Neurological",
+    "AVPR2": "Renal",
+    "AXIN2": "Hereditary Cancer",
+    "BAG3": "Cardiovascular",
+    "BAP1": "Hereditary Cancer",
+    "BARD1": "Hereditary Cancer",
+    "BBS1": "Renal",
+    "BBS10": "Renal",
+    "BBS12": "Renal",
+    "BBS2": "Renal",
+    "BBS4": "Renal",
+    "BBS5": "Renal",
+    "BBS7": "Renal",
+    "BBS9": "Renal",
+    "BEST1": "Ophthalmologic",
+    "BLM": "Hereditary Cancer",
+    "BMPR1A": "Hereditary Cancer",
+    "BRCA1": "Hereditary Cancer",
+    "BRCA2": "Hereditary Cancer",
+    "BRIP1": "Hereditary Cancer",
+    "BSND": "Renal",
+    "BUB1B": "Hereditary Cancer",
+    "C1QTNF5": "Ophthalmologic",
+    "CABP4": "Ophthalmologic",
+    "CACNA1A": "Neurological",
+    "CACNA1C": "Cardiovascular",
+    "CACNB2": "Cardiovascular",
+    "CACNB4": "Neurological",
+    "CALM1": "Cardiovascular",
+    "CALM2": "Cardiovascular",
+    "CALM3": "Cardiovascular",
+    "CALR3": "Cardiovascular",
+    "CASQ2": "Cardiovascular",
+    "CASR": "Renal",
+    "CAV3": "Cardiovascular",
+    "CCDC88C": "Neurological",
+    "CDC73": "Hereditary Cancer",
+    "CDH1": "Hereditary Cancer",
+    "CDH23": "Ophthalmologic",
+    "CDK4": "Hereditary Cancer",
+    "CDKL5": "Neurological",
+    "CDKN1B": "Hereditary Cancer",
+    "CDKN2A": "Hereditary Cancer",
+    "CEP290": "Ophthalmologic",
+    "CFTR": "Renal",
+    "CHEK2": "Hereditary Cancer",
+    "CHM": "Ophthalmologic",
+    "CLCN5": "Renal",
+    "CLCNKA": "Renal",
+    "CLCNKB": "Renal",
+    "CLN3": "Neurological",
+    "CLN5": "Neurological",
+    "CLN6": "Neurological",
+    "CLN8": "Neurological",
+    "CLRN1": "Ophthalmologic",
+    "CNGA1": "Ophthalmologic",
+    "CNGA3": "Ophthalmologic",
+    "CNGB1": "Ophthalmologic",
+    "CNGB3": "Ophthalmologic",
+    "CNTNAP2": "Neurological",
+    "COL3A1": "Cardiovascular",
+    "COL4A3": "Renal",
+    "COL4A4": "Renal",
+    "COL4A5": "Renal",
+    "COQ8A": "Neurological",
+    "CRB1": "Ophthalmologic",
+    "CRX": "Ophthalmologic",
+    "CRYAB": "Cardiovascular",
+    "CSRP3": "Cardiovascular",
+    "CTNNA1": "Hereditary Cancer",
+    "CTNS": "Renal",
+    "CYLD": "Hereditary Cancer",
+    "CYP1B1": "Ophthalmologic",
+    "CYP4V2": "Ophthalmologic",
+    "DCTN1": "Neurological",
+    "DDB2": "Hereditary Cancer",
+    "DES": "Cardiovascular",
+    "DGKE": "Renal",
+    "DICER1": "Hereditary Cancer",
+    "DIS3L2": "Hereditary Cancer",
+    "DJ1": "Neurological",
+    "DMD": "Cardiovascular",
+    "DSC2": "Cardiovascular",
+    "DSG2": "Cardiovascular",
+    "DSP": "Cardiovascular",
+    "DTNA": "Cardiovascular",
+    "DYNC1H1": "Neurological",
+    "DYRK1A": "Neurological",
+    "EGFR": "Hereditary Cancer",
+    "EIF2B1": "Neurological",
+    "EIF2B2": "Neurological",
+    "EIF2B3": "Neurological",
+    "EIF2B4": "Neurological",
+    "EIF2B5": "Neurological",
+    "EMD": "Cardiovascular",
+    "EPCAM": "Hereditary Cancer",
+    "ERCC2": "Hereditary Cancer",
+    "ERCC3": "Hereditary Cancer",
+    "ERCC4": "Hereditary Cancer",
+    "ERCC5": "Hereditary Cancer",
+    "EXT1": "Hereditary Cancer",
+    "EXT2": "Hereditary Cancer",
+    "EYA1": "Renal",
+    "EYA4": "Cardiovascular",
+    "EYS": "Ophthalmologic",
+    "FAH": "Renal",
+    "FAN1": "Renal",
+    "FANCA": "Hereditary Cancer",
+    "FANCB": "Hereditary Cancer",
+    "FANCC": "Hereditary Cancer",
+    "FANCD2": "Hereditary Cancer",
+    "FANCE": "Hereditary Cancer",
+    "FANCF": "Hereditary Cancer",
+    "FANCG": "Hereditary Cancer",
+    "FANCI": "Hereditary Cancer",
+    "FANCL": "Hereditary Cancer",
+    "FANCM": "Hereditary Cancer",
+    "FBN1": "Cardiovascular",
+    "FBN2": "Cardiovascular",
+    "FH": "Hereditary Cancer",
+    "FIG4": "Neurological",
+    "FKRP": "Cardiovascular",
+    "FKTN": "Cardiovascular",
+    "FLCN": "Hereditary Cancer",
+    "FLNA": "Cardiovascular",
+    "FLNC": "Cardiovascular",
+    "FOXC1": "Ophthalmologic",
+    "FOXE3": "Ophthalmologic",
+    "FOXG1": "Neurological",
+    "FTL": "Neurological",
+    "FUS": "Neurological",
+    "FXN": "Neurological",
+    "GABRA1": "Neurological",
+    "GABRG2": "Neurological",
+    "GALC": "Neurological",
+    "GATA2": "Hereditary Cancer",
+    "GATA3": "Renal",
+    "GATA4": "Cardiovascular",
+    "GATA5": "Cardiovascular",
+    "GATA6": "Cardiovascular",
+    "GBA": "Neurological",
+    "GCDH": "Neurological",
+    "GCH1": "Neurological",
+    "GFAP": "Neurological",
+    "GJA1": "Cardiovascular",
+    "GJA5": "Cardiovascular",
+    "GJB1": "Neurological",
+    "GLA": "Cardiovascular",
+    "GPC3": "Hereditary Cancer",
+    "GPR143": "Ophthalmologic",
+    "GREM1": "Hereditary Cancer",
+    "GRHPR": "Renal",
+    "GRN": "Neurological",
+    "GUCA1A": "Ophthalmologic",
+    "GUCY2D": "Ophthalmologic",
+    "HCN4": "Cardiovascular",
+    "HEXA": "Neurological",
+    "HEXB": "Neurological",
+    "HNF1B": "Renal",
+    "HOGA1": "Renal",
+    "HRAS": "Hereditary Cancer",
+    "HTT": "Neurological",
+    "IFT140": "Renal",
+    "IGHMBP2": "Neurological",
+    "IMPDH1": "Ophthalmologic",
+    "IMPG2": "Ophthalmologic",
+    "INF2": "Renal",
+    "INVS": "Renal",
+    "IQCB1": "Renal",
+    "ITPR1": "Neurological",
+    "JPH2": "Cardiovascular",
+    "JUP": "Cardiovascular",
+    "KCNA1": "Neurological",
+    "KCNA5": "Cardiovascular",
+    "KCND3": "Cardiovascular",
+    "KCNE1": "Cardiovascular",
+    "KCNE2": "Cardiovascular",
+    "KCNE3": "Cardiovascular",
+    "KCNH2": "Cardiovascular",
+    "KCNJ2": "Cardiovascular",
+    "KCNJ5": "Cardiovascular",
+    "KCNJ8": "Cardiovascular",
+    "KCNMA1": "Neurological",
+    "KCNQ1": "Cardiovascular",
+    "KCNQ2": "Neurological",
+    "KCNQ3": "Neurological",
+    "KCNT1": "Neurological",
+    "KCNV2": "Ophthalmologic",
+    "KIT": "Hereditary Cancer",
+    "LAMB2": "Renal",
+    "LAMP2": "Cardiovascular",
+    "LDB3": "Cardiovascular",
+    "LDLR": "Cardiovascular",
+    "LMNA": "Cardiovascular",
+    "LMX1B": "Renal",
+    "LRAT": "Ophthalmologic",
+    "LRRK2": "Neurological",
+    "LTBP2": "Ophthalmologic",
+    "MAK": "Ophthalmologic",
+    "MAPT": "Neurological",
+    "MAX": "Hereditary Cancer",
+    "MECP2": "Neurological",
+    "MEN1": "Hereditary Cancer",
+    "MERTK": "Ophthalmologic",
+    "MET": "Hereditary Cancer",
+    "MFN2": "Neurological",
+    "MITF": "Hereditary Cancer",
+    "MKS1": "Renal",
+    "MLH1": "Hereditary Cancer",
+    "MLH3": "Hereditary Cancer",
+    "MPZ": "Neurological",
+    "MSH2": "Hereditary Cancer",
+    "MSH3": "Hereditary Cancer",
+    "MSH6": "Hereditary Cancer",
+    "MUTYH": "Hereditary Cancer",
+    "MYBPC3": "Cardiovascular",
+    "MYH11": "Cardiovascular",
+    "MYH6": "Cardiovascular",
+    "MYH7": "Cardiovascular",
+    "MYH9": "Renal",
+    "MYL2": "Cardiovascular",
+    "MYL3": "Cardiovascular",
+    "MYLK": "Cardiovascular",
+    "MYO7A": "Ophthalmologic",
+    "MYOM1": "Cardiovascular",
+    "MYOZ2": "Cardiovascular",
+    "MYPN": "Cardiovascular",
+    "NBN": "Hereditary Cancer",
+    "NDP": "Ophthalmologic",
+    "NDRG1": "Neurological",
+    "NEK8": "Renal",
+    "NEXN": "Cardiovascular",
+    "NF1": "Hereditary Cancer",
+    "NF2": "Hereditary Cancer",
+    "NKX2-5": "Cardiovascular",
+    "NOTCH1": "Cardiovascular",
+    "NPC1": "Neurological",
+    "NPC2": "Neurological",
+    "NPHP1": "Renal",
+    "NPHP3": "Renal",
+    "NPHP4": "Renal",
+    "NPHS1": "Renal",
+    "NPHS2": "Renal",
+    "NR2E3": "Ophthalmologic",
+    "NRL": "Ophthalmologic",
+    "NTHL1": "Hereditary Cancer",
+    "NYX": "Ophthalmologic",
+    "OFD1": "Renal",
+    "OPA1": "Ophthalmologic",
+    "OPA3": "Ophthalmologic",
+    "OPN1LW": "Ophthalmologic",
+    "OPN1MW": "Ophthalmologic",
+    "OPTN": "Ophthalmologic",
+    "OTX2": "Ophthalmologic",
+    "PALB2": "Hereditary Cancer",
+    "PANK2": "Neurological",
+    "PARK2": "Neurological",
+    "PARK7": "Neurological",
+    "PAX2": "Renal",
+    "PAX6": "Ophthalmologic",
+    "PCDH15": "Ophthalmologic",
+    "PCSK9": "Cardiovascular",
+    "PDE6A": "Ophthalmologic",
+    "PDE6B": "Ophthalmologic",
+    "PDE6C": "Ophthalmologic",
+    "PFN1": "Neurological",
+    "PHOX2B": "Hereditary Cancer",
+    "PIK3CA": "Hereditary Cancer",
+    "PINK1": "Neurological",
+    "PITX2": "Ophthalmologic",
+    "PITX3": "Ophthalmologic",
+    "PKD1": "Renal",
+    "PKD2": "Renal",
+    "PKHD1": "Renal",
+    "PKP2": "Cardiovascular",
+    "PLCE1": "Renal",
+    "PLN": "Cardiovascular",
+    "PLP1": "Neurological",
+    "PMM2": "Neurological",
+    "PMP22": "Neurological",
+    "PMS1": "Hereditary Cancer",
+    "PMS2": "Hereditary Cancer",
+    "PODXL": "Renal",
+    "POLD1": "Hereditary Cancer",
+    "POLE": "Hereditary Cancer",
+    "POLH": "Hereditary Cancer",
+    "POT1": "Hereditary Cancer",
+    "PPT1": "Neurological",
+    "PRCD": "Ophthalmologic",
+    "PRKAG2": "Cardiovascular",
+    "PRKAR1A": "Hereditary Cancer",
+    "PRKCG": "Neurological",
+    "PRNP": "Neurological",
+    "PROM1": "Ophthalmologic",
+    "PRPF3": "Ophthalmologic",
+    "PRPF31": "Ophthalmologic",
+    "PRPF8": "Ophthalmologic",
+    "PRPH2": "Ophthalmologic",
+    "PRRT2": "Neurological",
+    "PSEN1": "Neurological",
+    "PSEN2": "Neurological",
+    "PTCH1": "Hereditary Cancer",
+    "PTCH2": "Hereditary Cancer",
+    "PTEN": "Hereditary Cancer",
+    "RAD50": "Hereditary Cancer",
+    "RAD51B": "Hereditary Cancer",
+    "RAD51C": "Hereditary Cancer",
+    "RAD51D": "Hereditary Cancer",
+    "RANGRF": "Cardiovascular",
+    "RB1": "Hereditary Cancer",
+    "RBM20": "Cardiovascular",
+    "RDH12": "Ophthalmologic",
+    "RECQL4": "Hereditary Cancer",
+    "RELN": "Neurological",
+    "REN": "Renal",
+    "RET": "Hereditary Cancer",
+    "RHO": "Ophthalmologic",
+    "RLBP1": "Ophthalmologic",
+    "ROM1": "Ophthalmologic",
+    "RP1": "Ophthalmologic",
+    "RP2": "Ophthalmologic",
+    "RP9": "Ophthalmologic",
+    "RPE65": "Ophthalmologic",
+    "RPGR": "Ophthalmologic",
+    "RPGRIP1": "Ophthalmologic",
+    "RPGRIP1L": "Renal",
+    "RS1": "Ophthalmologic",
+    "RYR2": "Cardiovascular",
+    "SACS": "Neurological",
+    "SAG": "Ophthalmologic",
+    "SALL1": "Renal",
+    "SCN10A": "Cardiovascular",
+    "SCN1A": "Neurological",
+    "SCN1B": "Cardiovascular",
+    "SCN2A": "Neurological",
+    "SCN2B": "Cardiovascular",
+    "SCN3B": "Cardiovascular",
+    "SCN4B": "Cardiovascular",
+    "SCN5A": "Cardiovascular",
+    "SCN8A": "Neurological",
+    "SDHA": "Hereditary Cancer",
+    "SDHAF2": "Hereditary Cancer",
+    "SDHB": "Hereditary Cancer",
+    "SDHC": "Hereditary Cancer",
+    "SDHD": "Hereditary Cancer",
+    "SETX": "Neurological",
+    "SGCD": "Cardiovascular",
+    "SIX2": "Renal",
+    "SIX6": "Ophthalmologic",
+    "SLC12A1": "Renal",
+    "SLC12A3": "Renal",
+    "SLC1A3": "Neurological",
+    "SLC22A5": "Cardiovascular",
+    "SLC24A1": "Ophthalmologic",
+    "SLC2A1": "Neurological",
+    "SLC34A3": "Renal",
+    "SLC3A1": "Renal",
+    "SLC6A3": "Neurological",
+    "SLC7A9": "Renal",
+    "SLC9A6": "Neurological",
+    "SLMAP": "Cardiovascular",
+    "SLX4": "Hereditary Cancer",
+    "SMAD3": "Cardiovascular",
+    "SMAD4": "Hereditary Cancer",
+    "SMARCA4": "Hereditary Cancer",
+    "SMARCAL1": "Renal",
+    "SMARCB1": "Hereditary Cancer",
+    "SMN1": "Neurological",
+    "SMN2": "Neurological",
+    "SNCA": "Neurological",
+    "SNRNP200": "Ophthalmologic",
+    "SNTA1": "Cardiovascular",
+    "SOD1": "Neurological",
+    "SOX10": "Neurological",
+    "SPART": "Neurological",
+    "SPG11": "Neurological",
+    "SPG20": "Neurological",
+    "SPG4": "Neurological",
+    "SPG7": "Neurological",
+    "SPRED1": "Hereditary Cancer",
+    "STK11": "Hereditary Cancer",
+    "STUB1": "Neurological",
+    "STXBP1": "Neurological",
+    "SUFU": "Hereditary Cancer",
+    "SYNE1": "Neurological",
+    "SYNGAP1": "Neurological",
+    "TARDBP": "Neurological",
+    "TAZ": "Cardiovascular",
+    "TBC1D4": "Renal",
+    "TBCE": "Neurological",
+    "TBP": "Neurological",
+    "TBX5": "Cardiovascular",
+    "TCAP": "Cardiovascular",
+    "TEAD1": "Ophthalmologic",
+    "TEK": "Ophthalmologic",
+    "TERT": "Hereditary Cancer",
+    "TGFB2": "Cardiovascular",
+    "TGFB3": "Cardiovascular",
+    "TGFBR1": "Cardiovascular",
+    "TGFBR2": "Hereditary Cancer",
+    "TH": "Neurological",
+    "TIMP3": "Ophthalmologic",
+    "TMEM106B": "Neurological",
+    "TMEM127": "Hereditary Cancer",
+    "TMEM43": "Cardiovascular",
+    "TMEM67": "Renal",
+    "TNNC1": "Cardiovascular",
+    "TNNI3": "Cardiovascular",
+    "TNNT2": "Cardiovascular",
+    "TOPORS": "Ophthalmologic",
+    "TP53": "Hereditary Cancer",
+    "TP63": "Hereditary Cancer",
+    "TPM1": "Cardiovascular",
+    "TPP1": "Neurological",
+    "TRDN": "Cardiovascular",
+    "TREM2": "Neurological",
+    "TRPC6": "Renal",
+    "TRPM1": "Ophthalmologic",
+    "TRPM4": "Cardiovascular",
+    "TSC1": "Hereditary Cancer",
+    "TSC2": "Hereditary Cancer",
+    "TTN": "Cardiovascular",
+    "TTR": "Cardiovascular",
+    "TUBA1A": "Neurological",
+    "TUBB3": "Neurological",
+    "TULP1": "Ophthalmologic",
+    "UBE3A": "Neurological",
+    "UBQLN2": "Neurological",
+    "UMOD": "Renal",
+    "UPK3A": "Renal",
+    "USH1C": "Ophthalmologic",
+    "USH2A": "Ophthalmologic",
+    "VAPB": "Neurological",
+    "VCL": "Cardiovascular",
+    "VCP": "Neurological",
+    "VHL": "Hereditary Cancer",
+    "VPS13A": "Neurological",
+    "VPS35": "Neurological",
+    "WDR19": "Renal",
+    "WDR45": "Neurological",
+    "WFS1": "Ophthalmologic",
+    "WNK1": "Renal",
+    "WNK4": "Renal",
+    "WRN": "Hereditary Cancer",
+    "WT1": "Hereditary Cancer",
+    "XPA": "Hereditary Cancer",
+    "XPC": "Hereditary Cancer",
+    "XPNPEP3": "Renal"
+  }
+}

@@ -1,0 +1,502 @@
+{
+  "2013-12": {
+    "date": "2013-12",
+    "total_events": 8372,
+    "subs_stable": 8363,
+    "subs_stable_pct": 99.9,
+    "subs_increased": 6,
+    "subs_increased_pct": 0.1,
+    "subs_decreased": 3,
+    "subs_decreased_pct": 0.0,
+    "unique_genes": 1538,
+    "gene_concentration_hhi": 0.0111,
+    "top_10_genes": [
+      {
+        "gene": "TTN",
+        "count": 650
+      },
+      {
+        "gene": "BRCA2",
+        "count": 294
+      },
+      {
+        "gene": "USH2A",
+        "count": 147
+      },
+      {
+        "gene": "MYBPC3",
+        "count": 138
+      },
+      {
+        "gene": "BRCA1",
+        "count": 137
+      },
+      {
+        "gene": "CDH23",
+        "count": 126
+      },
+      {
+        "gene": "ADGRV1",
+        "count": 121
+      },
+      {
+        "gene": "LRRK2",
+        "count": 114
+      },
+      {
+        "gene": "MYH7",
+        "count": 111
+      },
+      {
+        "gene": "RYR2",
+        "count": 111
+      }
+    ],
+    "top_10_changes": [
+      {
+        "pattern": "Other\u2192VUS",
+        "count": 4706
+      },
+      {
+        "pattern": "P\u2192B",
+        "count": 2926
+      },
+      {
+        "pattern": "Other\u2192P",
+        "count": 499
+      },
+      {
+        "pattern": "P\u2192LP",
+        "count": 111
+      },
+      {
+        "pattern": "P\u2192LB",
+        "count": 45
+      },
+      {
+        "pattern": "Other\u2192B",
+        "count": 41
+      },
+      {
+        "pattern": "P\u2192VUS",
+        "count": 31
+      },
+      {
+        "pattern": "P\u2192Other",
+        "count": 8
+      },
+      {
+        "pattern": "P\u2192Conflicting",
+        "count": 4
+      },
+      {
+        "pattern": "Other\u2192LB",
+        "count": 1
+      }
+    ],
+    "signals": {
+      "batch_snapshot": 8372
+    },
+    "likely_source": "ClinVar-wide re-processing (submissions unchanged)"
+  },
+  "2014-01": {
+    "date": "2014-01",
+    "total_events": 4347,
+    "subs_stable": 4279,
+    "subs_stable_pct": 98.4,
+    "subs_increased": 65,
+    "subs_increased_pct": 1.5,
+    "subs_decreased": 3,
+    "subs_decreased_pct": 0.1,
+    "unique_genes": 341,
+    "gene_concentration_hhi": 0.0167,
+    "top_10_genes": [
+      {
+        "gene": "TTN",
+        "count": 306
+      },
+      {
+        "gene": "BRCA2",
+        "count": 208
+      },
+      {
+        "gene": "FBN1",
+        "count": 162
+      },
+      {
+        "gene": "MYH7",
+        "count": 120
+      },
+      {
+        "gene": "MYBPC3",
+        "count": 112
+      },
+      {
+        "gene": "BRCA1",
+        "count": 108
+      },
+      {
+        "gene": "NPHS1",
+        "count": 103
+      },
+      {
+        "gene": "USH2A",
+        "count": 101
+      },
+      {
+        "gene": "GCK",
+        "count": 91
+      },
+      {
+        "gene": "GLDC",
+        "count": 76
+      }
+    ],
+    "top_10_changes": [
+      {
+        "pattern": "P\u2192LB",
+        "count": 2021
+      },
+      {
+        "pattern": "P\u2192LP",
+        "count": 1875
+      },
+      {
+        "pattern": "Other\u2192VUS",
+        "count": 84
+      },
+      {
+        "pattern": "Other\u2192LB",
+        "count": 58
+      },
+      {
+        "pattern": "B\u2192LB",
+        "count": 54
+      },
+      {
+        "pattern": "Other\u2192P",
+        "count": 41
+      },
+      {
+        "pattern": "VUS\u2192LB",
+        "count": 35
+      },
+      {
+        "pattern": "P\u2192VUS",
+        "count": 32
+      },
+      {
+        "pattern": "VUS\u2192B",
+        "count": 30
+      },
+      {
+        "pattern": "Other\u2192B",
+        "count": 26
+      }
+    ],
+    "signals": {
+      "batch_snapshot": 4347
+    },
+    "likely_source": "ClinVar-wide re-processing (submissions unchanged)"
+  },
+  "2014-02": {
+    "date": "2014-02",
+    "total_events": 3584,
+    "subs_stable": 2671,
+    "subs_stable_pct": 74.5,
+    "subs_increased": 912,
+    "subs_increased_pct": 25.4,
+    "subs_decreased": 1,
+    "subs_decreased_pct": 0.0,
+    "unique_genes": 181,
+    "gene_concentration_hhi": 0.279,
+    "top_10_genes": [
+      {
+        "gene": "BRCA2",
+        "count": 1389
+      },
+      {
+        "gene": "BRCA1",
+        "count": 1245
+      },
+      {
+        "gene": "CFTR",
+        "count": 311
+      },
+      {
+        "gene": "KCNQ1",
+        "count": 60
+      },
+      {
+        "gene": "TTN",
+        "count": 32
+      },
+      {
+        "gene": "HBB",
+        "count": 20
+      },
+      {
+        "gene": "LMNA",
+        "count": 20
+      },
+      {
+        "gene": "TSC2",
+        "count": 17
+      },
+      {
+        "gene": "SCN5A",
+        "count": 15
+      },
+      {
+        "gene": "LOC126862571",
+        "count": 15
+      }
+    ],
+    "top_10_changes": [
+      {
+        "pattern": "P\u2192Other",
+        "count": 2856
+      },
+      {
+        "pattern": "VUS\u2192Other",
+        "count": 206
+      },
+      {
+        "pattern": "B\u2192Other",
+        "count": 123
+      },
+      {
+        "pattern": "LB\u2192Other",
+        "count": 115
+      },
+      {
+        "pattern": "LB\u2192VUS",
+        "count": 52
+      },
+      {
+        "pattern": "LP\u2192P",
+        "count": 33
+      },
+      {
+        "pattern": "B\u2192VUS",
+        "count": 30
+      },
+      {
+        "pattern": "LP\u2192Other",
+        "count": 30
+      },
+      {
+        "pattern": "P\u2192B",
+        "count": 17
+      },
+      {
+        "pattern": "LB\u2192Conflicting",
+        "count": 17
+      }
+    ],
+    "signals": {
+      "batch_snapshot": 3584
+    },
+    "likely_source": "Mixed (combination of factors)"
+  },
+  "2018-06": {
+    "date": "2018-06",
+    "total_events": 22358,
+    "subs_stable": 19192,
+    "subs_stable_pct": 85.8,
+    "subs_increased": 3126,
+    "subs_increased_pct": 14.0,
+    "subs_decreased": 40,
+    "subs_decreased_pct": 0.2,
+    "unique_genes": 2356,
+    "gene_concentration_hhi": 0.0038,
+    "top_10_genes": [
+      {
+        "gene": "TTN",
+        "count": 744
+      },
+      {
+        "gene": "LDLR",
+        "count": 507
+      },
+      {
+        "gene": "BRCA2",
+        "count": 349
+      },
+      {
+        "gene": "TSC2",
+        "count": 283
+      },
+      {
+        "gene": "ATM",
+        "count": 275
+      },
+      {
+        "gene": "BRCA1",
+        "count": 237
+      },
+      {
+        "gene": "PLEC",
+        "count": 216
+      },
+      {
+        "gene": "SYNE1",
+        "count": 209
+      },
+      {
+        "gene": "NEB",
+        "count": 174
+      },
+      {
+        "gene": "MYBPC3",
+        "count": 150
+      }
+    ],
+    "top_10_changes": [
+      {
+        "pattern": "Conflicting\u2192B/LB",
+        "count": 3217
+      },
+      {
+        "pattern": "LB\u2192VUS",
+        "count": 2611
+      },
+      {
+        "pattern": "Conflicting\u2192B",
+        "count": 2178
+      },
+      {
+        "pattern": "B\u2192LB",
+        "count": 1808
+      },
+      {
+        "pattern": "VUS\u2192LB",
+        "count": 1655
+      },
+      {
+        "pattern": "LB\u2192B",
+        "count": 1506
+      },
+      {
+        "pattern": "Conflicting\u2192LB",
+        "count": 1067
+      },
+      {
+        "pattern": "Conflicting\u2192VUS",
+        "count": 991
+      },
+      {
+        "pattern": "Conflicting\u2192P/LP",
+        "count": 816
+      },
+      {
+        "pattern": "B\u2192VUS",
+        "count": 727
+      }
+    ],
+    "signals": {
+      "batch_snapshot": 22358
+    },
+    "likely_source": "ClinVar-wide re-processing (submissions unchanged)"
+  },
+  "2020-01": {
+    "date": "2020-01",
+    "total_events": 50558,
+    "subs_stable": 33677,
+    "subs_stable_pct": 66.6,
+    "subs_increased": 16876,
+    "subs_increased_pct": 33.4,
+    "subs_decreased": 5,
+    "subs_decreased_pct": 0.0,
+    "unique_genes": 3614,
+    "gene_concentration_hhi": 0.0026,
+    "top_10_genes": [
+      {
+        "gene": "TTN",
+        "count": 1376
+      },
+      {
+        "gene": "BRCA2",
+        "count": 770
+      },
+      {
+        "gene": "TSC2",
+        "count": 752
+      },
+      {
+        "gene": "BRCA1",
+        "count": 491
+      },
+      {
+        "gene": "ATM",
+        "count": 427
+      },
+      {
+        "gene": "PLEC",
+        "count": 370
+      },
+      {
+        "gene": "SYNE1",
+        "count": 298
+      },
+      {
+        "gene": "APC",
+        "count": 294
+      },
+      {
+        "gene": "NEB",
+        "count": 288
+      },
+      {
+        "gene": "DMD",
+        "count": 279
+      }
+    ],
+    "top_10_changes": [
+      {
+        "pattern": "VUS\u2192Conflicting",
+        "count": 15520
+      },
+      {
+        "pattern": "LB\u2192B/LB",
+        "count": 7637
+      },
+      {
+        "pattern": "B\u2192B/LB",
+        "count": 7454
+      },
+      {
+        "pattern": "LB\u2192Conflicting",
+        "count": 6471
+      },
+      {
+        "pattern": "B\u2192Conflicting",
+        "count": 1842
+      },
+      {
+        "pattern": "P\u2192P/LP",
+        "count": 1797
+      },
+      {
+        "pattern": "LP\u2192P/LP",
+        "count": 1442
+      },
+      {
+        "pattern": "B/LB\u2192Conflicting",
+        "count": 1186
+      },
+      {
+        "pattern": "LP\u2192Conflicting",
+        "count": 1120
+      },
+      {
+        "pattern": "VUS\u2192LB",
+        "count": 985
+      }
+    ],
+    "signals": {
+      "batch_snapshot": 50558
+    },
+    "likely_source": "Mixed (combination of factors)"
+  }
+}
