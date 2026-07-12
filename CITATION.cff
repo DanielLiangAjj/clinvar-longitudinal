@@ -1,0 +1,52 @@
+cff-version: 1.2.0
+message: "If you use this software or data, please cite the associated article and this archived release."
+title: "Temporal Analysis of Clinical Variant Reclassification (2012-2025): analysis pipeline, processed data, and interactive companion"
+type: software
+version: v1.0.0
+license: MIT
+repository-code: "https://github.com/DanielLiangAjj/clinvar-longitudinal"
+url: "https://danielliangajj.github.io/clinvar-longitudinal/"
+keywords:
+  - ClinVar
+  - variant reclassification
+  - clinical genomics
+  - longitudinal analysis
+  - ACMG/AMP
+  - variant of uncertain significance
+authors:
+  - family-names: Liang
+    given-names: Yilun
+    affiliation: "Department of Biomedical Informatics, Columbia University"
+  - family-names: Zhang
+    given-names: Gongbo
+    affiliation: "Department of Biomedical Informatics, Columbia University"
+  - family-names: Babb
+    given-names: Larry
+    affiliation: "Broad Institute of MIT and Harvard"
+  - family-names: Rehm
+    given-names: Heidi L.
+    affiliation: "Broad Institute of MIT and Harvard; Massachusetts General Hospital; Harvard Medical School"
+  - family-names: Nestor
+    given-names: Jordan G.
+    affiliation: "Columbia University"
+  - family-names: Kneifati-Hayek
+    given-names: Jerard Z.
+    affiliation: "Columbia University"
+  - family-names: Luo
+    given-names: Yiming
+    affiliation: "Columbia University"
+  - family-names: Krishna Murthy
+    given-names: Sarath B.
+    affiliation: "Columbia University"
+  - family-names: Shen
+    given-names: Yufeng
+    affiliation: "Department of Systems Biology, Columbia University"
+  - family-names: Wang
+    given-names: Kai
+    affiliation: "University of Pennsylvania; Children's Hospital of Philadelphia"
+  - family-names: Chung
+    given-names: Wendy K.
+    affiliation: "Harvard Medical School; Boston Children's Hospital"
+  - family-names: Weng
+    given-names: Chunhua
+    affiliation: "Department of Biomedical Informatics, Columbia University"
