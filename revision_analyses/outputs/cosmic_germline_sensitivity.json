@@ -1,0 +1,544 @@
+{
+  "generated_for": "ClinVar revision \u2014 CGC's OWN germline annotation as the cancer exposure",
+  "cgc_tsv": "/Users/danielliang/Downloads/Cosmic_CancerGeneCensus_Tsv_v101_GRCh37/Cosmic_CancerGeneCensus_v101_GRCh37.tsv",
+  "cgc_tsv_version": "Cosmic_CancerGeneCensus_v101_GRCh37",
+  "T1_germline_set_and_overlap": {
+    "germline_cgc_n": 114,
+    "germline_cgc_genes": [
+      "ALK",
+      "APC",
+      "APOBEC3B",
+      "AR",
+      "ASPM",
+      "ATM",
+      "ATR",
+      "AXIN2",
+      "BAP1",
+      "BARD1",
+      "BLM",
+      "BMPR1A",
+      "BRCA1",
+      "BRCA2",
+      "BRIP1",
+      "BUB1B",
+      "CDC73",
+      "CDH1",
+      "CDH10",
+      "CDK4",
+      "CDKN1B",
+      "CDKN2A",
+      "CHEK2",
+      "CTNNA1",
+      "CXCR4",
+      "CYLD",
+      "DDB2",
+      "DICER1",
+      "EGFR",
+      "ERBB4",
+      "ERCC2",
+      "ERCC3",
+      "ERCC4",
+      "ERCC5",
+      "EXT1",
+      "EXT2",
+      "FADD",
+      "FANCA",
+      "FANCC",
+      "FANCD2",
+      "FANCE",
+      "FANCF",
+      "FANCG",
+      "FAT1",
+      "FEN1",
+      "FH",
+      "FLCN",
+      "GPC3",
+      "HGF",
+      "HNF1A",
+      "HRAS",
+      "KDR",
+      "KIT",
+      "LMO1",
+      "LZTR1",
+      "MAX",
+      "MEN1",
+      "MLH1",
+      "MPL",
+      "MSH2",
+      "MSH6",
+      "MUC6",
+      "MUTYH",
+      "NBN",
+      "NF1",
+      "NF2",
+      "NTHL1",
+      "PALB2",
+      "PDGFRA",
+      "PHOX2B",
+      "PMS1",
+      "PMS2",
+      "POLD1",
+      "POLE",
+      "POLQ",
+      "PRF1",
+      "PRKAR1A",
+      "PTCH1",
+      "PTEN",
+      "PTPN13",
+      "RAD50",
+      "RAD51C",
+      "RB1",
+      "RECQL4",
+      "RET",
+      "RFWD3",
+      "SBDS",
+      "SDHA",
+      "SDHAF2",
+      "SDHB",
+      "SDHC",
+      "SDHD",
+      "SETBP1",
+      "SMAD4",
+      "SMARCB1",
+      "SMARCE1",
+      "SPOP",
+      "STAT3",
+      "STK11",
+      "SUFU",
+      "TERT",
+      "TGFBR2",
+      "TMEM127",
+      "TP53",
+      "TP63",
+      "TSC1",
+      "TSC2",
+      "USP9X",
+      "VHL",
+      "WAS",
+      "WRN",
+      "WT1",
+      "XPA",
+      "XPC"
+    ],
+    "matched_direct_n": 114,
+    "matched_via_synonym_n": 0,
+    "matched_via_synonym": {},
+    "unmatched_n": 0,
+    "unmatched_genes": [],
+    "n_effective_flag_symbols": 114,
+    "overlap_with_paper_304_cgc": 96,
+    "germline_cgc_not_in_paper_304": [
+      "APOBEC3B",
+      "ASPM",
+      "CDH10",
+      "CXCR4",
+      "FADD",
+      "FAT1",
+      "FEN1",
+      "HGF",
+      "LMO1",
+      "LZTR1",
+      "MUC6",
+      "POLQ",
+      "PRF1",
+      "PTPN13",
+      "RFWD3",
+      "SBDS",
+      "STAT3",
+      "USP9X"
+    ],
+    "overlap_with_106_hereditary_cancer": 85,
+    "germline_cgc_not_in_106_hc": [
+      "ALK",
+      "APOBEC3B",
+      "AR",
+      "ASPM",
+      "CDH10",
+      "CXCR4",
+      "ERBB4",
+      "FADD",
+      "FAT1",
+      "FEN1",
+      "HGF",
+      "HNF1A",
+      "KDR",
+      "LMO1",
+      "LZTR1",
+      "MPL",
+      "MUC6",
+      "PDGFRA",
+      "POLQ",
+      "PRF1",
+      "PTPN13",
+      "RFWD3",
+      "SBDS",
+      "SETBP1",
+      "SMARCE1",
+      "SPOP",
+      "STAT3",
+      "USP9X",
+      "WAS"
+    ],
+    "n_106_hc_not_germline_cgc": 21
+  },
+  "T2_crude": {
+    "all_variants": {
+      "group1": "Germline-CGC (COSMIC GERMLINE=='y')",
+      "n1": 349547,
+      "changed1": 64070,
+      "rate1_pct": 18.329,
+      "group2": "All other genes",
+      "n2": 3328756,
+      "changed2": 277987,
+      "rate2_pct": 8.351,
+      "risk_ratio": 2.195,
+      "rr_95ci": [
+        2.178,
+        2.212
+      ],
+      "odds_ratio": 2.463,
+      "or_95ci": [
+        2.44,
+        2.486
+      ],
+      "chi2": 37341.9,
+      "p_value": "<1e-300"
+    },
+    "exclude_somatic": {
+      "group1": "Germline-CGC, somatic-origin excluded",
+      "n1": 347705,
+      "changed1": 63293,
+      "rate1_pct": 18.203,
+      "group2": "All other genes, somatic-origin excluded",
+      "n2": 3322640,
+      "changed2": 276878,
+      "rate2_pct": 8.333,
+      "risk_ratio": 2.184,
+      "rr_95ci": [
+        2.167,
+        2.202
+      ],
+      "odds_ratio": 2.448,
+      "or_95ci": [
+        2.425,
+        2.471
+      ],
+      "chi2": 36464.6,
+      "p_value": "<1e-300"
+    }
+  },
+  "T2_adjusted": {
+    "all_variants": {
+      "model": "gcgc_all_variants",
+      "term": "is_germline_cgc",
+      "n": 3678303,
+      "n_exposed": 349547,
+      "pseudo_r2": 0.2513,
+      "OR": 1.474,
+      "OR_lo": 1.458,
+      "OR_hi": 1.49,
+      "p": "0.00e+00"
+    },
+    "exclude_somatic": {
+      "model": "gcgc_exclude_somatic",
+      "term": "is_germline_cgc",
+      "n": 3670345,
+      "n_exposed": 347705,
+      "pseudo_r2": 0.2512,
+      "OR": 1.468,
+      "OR_lo": 1.452,
+      "OR_hi": 1.485,
+      "p": "0.00e+00"
+    }
+  },
+  "sanity_gates": {
+    "crude_published_304_rate1_pct": 16.619,
+    "crude_published_304_rate2_pct": 8.191,
+    "crude_published_304_RR": 2.029,
+    "crude_published_304_OR": 2.234,
+    "adjusted_published_304_OR": 1.484,
+    "adjusted_published_304_OR_95CI": [
+      1.47,
+      1.499
+    ],
+    "adjusted_304_reproduced_OR": 1.484,
+    "adjusted_304_reproduced_OR_95CI": [
+      1.47,
+      1.499
+    ],
+    "adjusted_baseline_match": true
+  },
+  "T3_side_by_side": [
+    {
+      "gene_set": "COSMIC CGC (304) [baseline]",
+      "origin_filter": "none (baseline)",
+      "n_exposed": 483822,
+      "crude_rate_pct": 16.619,
+      "comparator_rate_pct": 8.191,
+      "RR": 2.029,
+      "RR_95CI": [
+        2.014,
+        2.044
+      ],
+      "OR_crude": 2.234,
+      "OR_crude_95CI": [
+        2.215,
+        2.253
+      ],
+      "OR_adjusted": 1.484,
+      "OR_adjusted_95CI": [
+        1.47,
+        1.499
+      ],
+      "adjusted_model_n": 3678303
+    },
+    {
+      "gene_set": "COSMIC CGC (304) [baseline]",
+      "origin_filter": "exclude has_somatic",
+      "n_exposed": 481063,
+      "crude_rate_pct": 16.488,
+      "comparator_rate_pct": 8.179,
+      "RR": 2.016,
+      "RR_95CI": [
+        2.001,
+        2.031
+      ],
+      "OR_crude": 2.217,
+      "OR_crude_95CI": [
+        2.198,
+        2.236
+      ],
+      "OR_adjusted": 1.479,
+      "OR_adjusted_95CI": [
+        1.464,
+        1.494
+      ],
+      "adjusted_model_n": 3670345
+    },
+    {
+      "gene_set": "Hereditary Cancer (106)",
+      "origin_filter": "none",
+      "n_exposed": 359743,
+      "crude_rate_pct": 18.182,
+      "comparator_rate_pct": 8.336,
+      "RR": 2.181,
+      "RR_95CI": [
+        2.164,
+        2.198
+      ],
+      "OR_crude": 2.444,
+      "OR_crude_95CI": [
+        2.421,
+        2.466
+      ],
+      "OR_adjusted": 1.458,
+      "OR_adjusted_95CI": [
+        1.443,
+        1.474
+      ],
+      "adjusted_model_n": 3678303
+    },
+    {
+      "gene_set": "Hereditary Cancer (106)",
+      "origin_filter": "exclude has_somatic",
+      "n_exposed": 358054,
+      "crude_rate_pct": 18.046,
+      "comparator_rate_pct": 8.319,
+      "RR": 2.169,
+      "RR_95CI": [
+        2.152,
+        2.186
+      ],
+      "OR_crude": 2.427,
+      "OR_crude_95CI": [
+        2.404,
+        2.45
+      ],
+      "OR_adjusted": 1.45,
+      "OR_adjusted_95CI": [
+        1.435,
+        1.466
+      ],
+      "adjusted_model_n": 3670345
+    },
+    {
+      "gene_set": "Germline-CGC (114)",
+      "origin_filter": "none",
+      "n_exposed": 349547,
+      "crude_rate_pct": 18.329,
+      "comparator_rate_pct": 8.351,
+      "RR": 2.195,
+      "RR_95CI": [
+        2.178,
+        2.212
+      ],
+      "OR_crude": 2.463,
+      "OR_crude_95CI": [
+        2.44,
+        2.486
+      ],
+      "OR_adjusted": 1.474,
+      "OR_adjusted_95CI": [
+        1.458,
+        1.49
+      ],
+      "adjusted_model_n": 3678303
+    },
+    {
+      "gene_set": "Germline-CGC (114)",
+      "origin_filter": "exclude has_somatic",
+      "n_exposed": 347705,
+      "crude_rate_pct": 18.203,
+      "comparator_rate_pct": 8.333,
+      "RR": 2.184,
+      "RR_95CI": [
+        2.167,
+        2.202
+      ],
+      "OR_crude": 2.448,
+      "OR_crude_95CI": [
+        2.425,
+        2.471
+      ],
+      "OR_adjusted": 1.468,
+      "OR_adjusted_95CI": [
+        1.452,
+        1.485
+      ],
+      "adjusted_model_n": 3670345
+    }
+  ],
+  "T4_vs_true_noncancer": {
+    "definition": "exposure = germline-CGC (114, GERMLINE=='y'); comparator = genes NOT in paper's 304 cancer_genes AND not in germline-CGC (all Census/cancer genes dropped). Adjusted fit drops the in-304-but-not-germline genes (is_cgc_not_gcgc==1); mirrors the 106-HC 'vs true non-cancer' contrast in 13_cgc_sensitivity.py.",
+    "crude": {
+      "all_variants": {
+        "group1": "Germline-CGC (114)",
+        "n1": 349547,
+        "changed1": 64070,
+        "rate1_pct": 18.329,
+        "group2": "True non-cancer (no CGC/Census gene)",
+        "n2": 3179185,
+        "changed2": 260361,
+        "rate2_pct": 8.19,
+        "risk_ratio": 2.238,
+        "rr_95ci": [
+          2.221,
+          2.256
+        ],
+        "odds_ratio": 2.516,
+        "or_95ci": [
+          2.492,
+          2.54
+        ],
+        "chi2": 38783.8,
+        "p_value": "<1e-300"
+      },
+      "exclude_somatic": {
+        "group1": "Germline-CGC (114), somatic excl.",
+        "n1": 347705,
+        "changed1": 63293,
+        "rate1_pct": 18.203,
+        "group2": "True non-cancer, somatic excl.",
+        "n2": 3174002,
+        "changed2": 259565,
+        "rate2_pct": 8.178,
+        "risk_ratio": 2.226,
+        "rr_95ci": [
+          2.208,
+          2.244
+        ],
+        "odds_ratio": 2.499,
+        "or_95ci": [
+          2.475,
+          2.523
+        ],
+        "chi2": 37822.9,
+        "p_value": "<1e-300"
+      }
+    },
+    "adjusted": {
+      "all_variants": {
+        "model": "gcgc_vs_true_noncancer_all",
+        "term": "is_germline_cgc",
+        "n": 3528732,
+        "n_exposed": 349547,
+        "pseudo_r2": 0.2555,
+        "OR": 1.496,
+        "OR_lo": 1.48,
+        "OR_hi": 1.513,
+        "p": "0.00e+00"
+      },
+      "exclude_somatic": {
+        "model": "gcgc_vs_true_noncancer_excl_somatic",
+        "term": "is_germline_cgc",
+        "n": 3521707,
+        "n_exposed": 347705,
+        "pseudo_r2": 0.2556,
+        "OR": 1.491,
+        "OR_lo": 1.474,
+        "OR_hi": 1.507,
+        "p": "0.00e+00"
+      }
+    },
+    "table": [
+      {
+        "gene_set": "Germline-CGC (114)",
+        "comparator": "True non-cancer (no CGC/Census gene)",
+        "origin_filter": "none",
+        "n_exposed": 349547,
+        "n_comparator": 3179185,
+        "crude_rate_pct": 18.329,
+        "comparator_rate_pct": 8.19,
+        "RR": 2.238,
+        "RR_95CI": [
+          2.221,
+          2.256
+        ],
+        "OR_crude": 2.516,
+        "OR_crude_95CI": [
+          2.492,
+          2.54
+        ],
+        "OR_adjusted": 1.496,
+        "OR_adjusted_95CI": [
+          1.48,
+          1.513
+        ],
+        "adjusted_model_n": 3528732
+      },
+      {
+        "gene_set": "Germline-CGC (114)",
+        "comparator": "True non-cancer (no CGC/Census gene)",
+        "origin_filter": "exclude has_somatic",
+        "n_exposed": 347705,
+        "n_comparator": 3174002,
+        "crude_rate_pct": 18.203,
+        "comparator_rate_pct": 8.178,
+        "RR": 2.226,
+        "RR_95CI": [
+          2.208,
+          2.244
+        ],
+        "OR_crude": 2.499,
+        "OR_crude_95CI": [
+          2.475,
+          2.523
+        ],
+        "OR_adjusted": 1.491,
+        "OR_adjusted_95CI": [
+          1.474,
+          1.507
+        ],
+        "adjusted_model_n": 3521707
+      }
+    ]
+  },
+  "notes": {
+    "germline_set_definition": "CGC v101 genes with GERMLINE=='y' (COSMIC's own flag)",
+    "comparator": "all genes NOT in the germline-CGC set (straight substitution, matching the 'vs all others' contrast used for HC in 13_cgc_sensitivity.py)",
+    "exposure_flag_symbols": "GENE_SYMBOL if present in dataset, else COSMIC SYNONYM present in dataset",
+    "adjusted_model_formula": "05_multivariable_baseline.py:82-84 (M1), exposure swapped",
+    "baseline_covariates_source": "/Users/danielliang/Downloads/revision_analyses/outputs/baseline_covariates.csv",
+    "origin_source": "/Users/danielliang/Downloads/revision_analyses/outputs/variant_origin_map.csv.gz"
+  }
+}

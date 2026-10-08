@@ -66,6 +66,27 @@ python revision_analyses/06_its.py                            # interrupted time
 python revision_analyses/11_citation_filtering.py             # guideline-citation filtering
 ```
 
+### Added in v1.1.0 (second and third revision rounds)
+
+```bash
+python revision_analyses/12_origin_sensitivity.py             # allele-origin sensitivity (somatic exclusion)
+python revision_analyses/13_cgc_sensitivity.py                # hereditary-cancer gene-set sensitivity
+python revision_analyses/19_cosmic_germline_sensitivity.py    # COSMIC germline gene-set sensitivity
+python revision_analyses/26_two_reviewer_analysis.py          # two-reviewer validation of mechanism attribution
+python revision_analyses/28_citation_filtered_r3.py           # variant-specific citation counts + figures
+python revision_analyses/29_km_r3.py                          # competing-risks cumulative incidence + sensitivities
+python revision_analyses/30_cox_r3.py                         # era-stratified Cox models (replaces logistic)
+python revision_analyses/31_its_r3.py                         # flow-based interrupted time-series outcomes
+python revision_analyses/17_rebuild_figure5_native.py         # Figure 5
+python revision_analyses/r4_figures.py                        # Figures 6, 8, 9, 11-15 and Additional file 1 Fig. S3 (final)
+python revision_analyses/r4_suppfig_review_status.py         # Additional file 1 Fig. S4
+```
+
+`revision_analyses/outputs/mechanism_validation_labels_two_reviewers.csv` holds the per-event labels
+from the blinded two-reviewer validation (48 events; heuristic label, each reviewer's label and
+confidence). Reviewer free-text notes and record-level submitter details are not redistributed.
+Final figures are in `figures/revision_2026_10/`.
+
 ## Data availability & anonymization
 
 - **Source data:** public NCBI ClinVar (public domain).

@@ -1,0 +1,193 @@
+{
+  "ties": "efron",
+  "strata": "entry era (pre2015 / 2015-2019 / 2020+)",
+  "results": [
+    {
+      "model": "M1_cox_cgc304",
+      "term": "is_cancer",
+      "n": 3678303,
+      "n_events": 342057,
+      "n_exposed": 483822,
+      "HR": 1.276,
+      "HR_lo": 1.266,
+      "HR_hi": 1.287,
+      "p": "0.00e+00"
+    },
+    {
+      "model": "M2_cox_domains",
+      "term": "dm_Hereditary",
+      "n": 3678303,
+      "n_events": 342057,
+      "n_exposed": 359743,
+      "HR": 1.352,
+      "HR_lo": 1.34,
+      "HR_hi": 1.365,
+      "p": "0.00e+00"
+    },
+    {
+      "model": "M2_cox_domains",
+      "term": "dm_Cardiovascular",
+      "n": 3678303,
+      "n_events": 342057,
+      "n_exposed": 198676,
+      "HR": 1.272,
+      "HR_lo": 1.257,
+      "HR_hi": 1.287,
+      "p": "0.00e+00"
+    },
+    {
+      "model": "M2_cox_domains",
+      "term": "dm_Neurological",
+      "n": 3678303,
+      "n_events": 342057,
+      "n_exposed": 118581,
+      "HR": 1.267,
+      "HR_lo": 1.247,
+      "HR_hi": 1.287,
+      "p": "6.41e-190"
+    },
+    {
+      "model": "M2_cox_domains",
+      "term": "dm_Renal",
+      "n": 3678303,
+      "n_events": 342057,
+      "n_exposed": 85215,
+      "HR": 1.408,
+      "HR_lo": 1.382,
+      "HR_hi": 1.435,
+      "p": "5.47e-272"
+    },
+    {
+      "model": "M2_cox_domains",
+      "term": "dm_Ophthalmologic",
+      "n": 3678303,
+      "n_events": 342057,
+      "n_exposed": 87681,
+      "HR": 1.368,
+      "HR_lo": 1.343,
+      "HR_hi": 1.394,
+      "p": "7.06e-238"
+    },
+    {
+      "model": "S1_cox_cgc304_excl_somatic",
+      "term": "is_cancer",
+      "n": 3670345,
+      "n_events": 340171,
+      "n_exposed": 481063,
+      "HR": 1.271,
+      "HR_lo": 1.26,
+      "HR_hi": 1.281,
+      "p": "0.00e+00"
+    },
+    {
+      "model": "S2a_cox_hc106_vs_all",
+      "term": "is_hc",
+      "n": 3678303,
+      "n_events": 342057,
+      "n_exposed": 359743,
+      "HR": 1.259,
+      "HR_lo": 1.248,
+      "HR_hi": 1.27,
+      "p": "0.00e+00"
+    },
+    {
+      "model": "S2b_cox_hc106_vs_true_noncancer",
+      "term": "is_hc",
+      "n": 3554224,
+      "n_events": 327059,
+      "n_exposed": 359743,
+      "HR": 1.268,
+      "HR_lo": 1.257,
+      "HR_hi": 1.279,
+      "p": "0.00e+00"
+    },
+    {
+      "model": "S2c_cox_sdonly_vs_noncancer",
+      "term": "is_sd_only",
+      "n": 3318560,
+      "n_events": 276647,
+      "n_exposed": 124079,
+      "HR": 1.271,
+      "HR_lo": 1.25,
+      "HR_hi": 1.292,
+      "p": "4.77e-178"
+    },
+    {
+      "model": "S3a_cox_gcgc114_vs_true_noncancer",
+      "term": "is_gcgc",
+      "n": 3528732,
+      "n_events": 324431,
+      "n_exposed": 349547,
+      "HR": 1.277,
+      "HR_lo": 1.266,
+      "HR_hi": 1.289,
+      "p": "0.00e+00"
+    },
+    {
+      "model": "S3b_cox_gcgc114_excl_somatic",
+      "term": "is_gcgc",
+      "n": 3521707,
+      "n_events": 322858,
+      "n_exposed": 347705,
+      "HR": 1.272,
+      "HR_lo": 1.26,
+      "HR_hi": 1.283,
+      "p": "0.00e+00"
+    },
+    {
+      "model": "FW_logit5yr_cgc304",
+      "term": "is_cancer",
+      "n": 848811,
+      "n_exposed": 168266,
+      "OR": 0.869,
+      "OR_lo": 0.858,
+      "OR_hi": 0.881,
+      "p": "4.30e-90"
+    },
+    {
+      "model": "FW_logit5yr_domains",
+      "term": "C(domain, Treatment('Other/Unclassified'))[T.Cardiovascular]",
+      "n": 848811,
+      "OR": 1.249,
+      "OR_lo": 1.227,
+      "OR_hi": 1.272,
+      "p": "4.20e-126"
+    },
+    {
+      "model": "FW_logit5yr_domains",
+      "term": "C(domain, Treatment('Other/Unclassified'))[T.Hereditary Cancer]",
+      "n": 848811,
+      "OR": 0.932,
+      "OR_lo": 0.918,
+      "OR_hi": 0.946,
+      "p": "5.78e-20"
+    },
+    {
+      "model": "FW_logit5yr_domains",
+      "term": "C(domain, Treatment('Other/Unclassified'))[T.Neurological]",
+      "n": 848811,
+      "OR": 1.272,
+      "OR_lo": 1.241,
+      "OR_hi": 1.304,
+      "p": "8.58e-81"
+    },
+    {
+      "model": "FW_logit5yr_domains",
+      "term": "C(domain, Treatment('Other/Unclassified'))[T.Ophthalmologic]",
+      "n": 848811,
+      "OR": 1.628,
+      "OR_lo": 1.578,
+      "OR_hi": 1.68,
+      "p": "9.52e-205"
+    },
+    {
+      "model": "FW_logit5yr_domains",
+      "term": "C(domain, Treatment('Other/Unclassified'))[T.Renal]",
+      "n": 848811,
+      "OR": 1.436,
+      "OR_lo": 1.392,
+      "OR_hi": 1.482,
+      "p": "4.11e-112"
+    }
+  ]
+}

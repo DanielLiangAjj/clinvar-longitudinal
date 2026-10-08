@@ -1,0 +1,456 @@
+{
+  "generated_for": "ClinVar manuscript revision \u2014 co-author objection on CGC/somatic origin",
+  "T1_snapshot_vintage": {
+    "verdict": "Genuine July-2025 ClinVar CONTENT, delivered in NCBI's LEGACY (pre-2024) XML format.",
+    "checkpoint_wrapper": {
+      "snapshot_date": "2025-07",
+      "snapshot_name": "ClinVarVariationRelease_2025-07.xml.gz",
+      "num_variants": 3594583
+    },
+    "n_variants_checkpoint": 3594583,
+    "n_scv": 5432536,
+    "content_dates": {
+      "date_created_min": "2013-04",
+      "date_created_max": "2025-06",
+      "date_updated_min": "2022-04",
+      "date_updated_max": "2025-06",
+      "sub_date_submitted_max": "2025-06",
+      "sub_date_updated_max": "2025-06"
+    },
+    "schema_markers_in_checkpoint": {
+      "any_germline_classification_field": false,
+      "any_somatic_clinical_impact_field": false,
+      "any_oncogenicity_field": false,
+      "per_scv_classification_field": true
+    },
+    "legacy_vocabulary_evidence": {
+      "Conflicting interpretations of pathogenicity (record classification)": 145203,
+      "criteria provided, conflicting interpretations (review status)": 144703,
+      "note": "post-2024 ClinVar renames these to 'classifications'; the checkpoint uses the pre-2024 wording"
+    },
+    "external_evidence": {
+      "ncbi_naming_convention": "ClinVarVariationRelease_* = OLD format (dir VCV_xml_old_format/); ClinVarVCVRelease_* = NEW format",
+      "ftp_old_format_dir": "https://ftp.ncbi.nlm.nih.gov/pub/clinvar/xml/VCV_xml_old_format/",
+      "file_confirmed_on_ftp": "ClinVarVariationRelease_2025-07.xml.gz, 4,773,207,813 bytes, released 2025-07-03",
+      "last_dated_legacy_monthly": "2025-07 (no 2025-08+ dated legacy monthlies exist)",
+      "ncbi_announced_legacy_eol": "'Support for both the old XML formats has been extended through the end of December 2024' \u2014 but NCBI in fact continued publishing the legacy stream; old-format 00-latest last modified 2026-03-27",
+      "why_series_ends_2025_07": "The legacy dated monthly series itself stops at 2025-07; this, not an arbitrary cutoff, bounds the study period."
+    },
+    "coauthor_premise_correct": true,
+    "coauthor_inference_correct": false,
+    "real_consequence": "Because the legacy format was used, the germline/somatic-clinical-impact/oncogenicity split introduced in 2024 is NOT represented: each record carries a single flat legacy classification. Somatic/oncogenicity classification TYPES cannot be analysed; allele ORIGIN (ObservedIn/Sample/Origin, present in both schemas) is the only somatic handle available."
+  },
+  "T2_origin": {
+    "n_variants_checkpoint": 3594583,
+    "n_scv": 5432536,
+    "n_scv_with_populated_origin": 5432536,
+    "pct_scv_with_populated_origin": 100.0,
+    "origin_value_counts_per_scv": {
+      "germline": 5076109,
+      "unknown": 281752,
+      "de novo": 19022,
+      "inherited": 13195,
+      "maternal": 10879,
+      "somatic": 8867,
+      "paternal": 7439,
+      "not provided": 7226,
+      "not applicable": 6501,
+      "biparental": 1540,
+      "uniparental": 5,
+      "not-reported": 1
+    },
+    "origin_value_counts_per_variant": {
+      "germline": 3468893,
+      "unknown": 237114,
+      "de novo": 16782,
+      "inherited": 12466,
+      "maternal": 10636,
+      "somatic": 7958,
+      "paternal": 7330,
+      "not provided": 7203,
+      "not applicable": 6499,
+      "biparental": 1524,
+      "uniparental": 5,
+      "not-reported": 1
+    },
+    "definitions": {
+      "has_somatic": "any submission whose origin string contains 'somatic' (case-insensitive)",
+      "germline_only": "has >=1 populated origin AND no somatic-ish origin (per spec)",
+      "strict_germline": "supplementary: >=1 origin in {germline, de novo, maternal, paternal, inherited, biparental, uniparental} AND no somatic"
+    }
+  },
+  "T3_coverage": {
+    "summary_rows": 3678303,
+    "origin_map_rows": 3594583,
+    "matched_in_checkpoint": 3594583,
+    "matched_pct": 97.724,
+    "not_in_checkpoint": 83720,
+    "with_populated_origin": 3593870,
+    "with_populated_origin_pct": 97.705,
+    "no_origin_data": 84433,
+    "has_somatic": 7958,
+    "has_somatic_pct": 0.216,
+    "germline_only_spec": 3585912,
+    "strict_germline": 3493264,
+    "reclass_rate_in_checkpoint_pct": 9.489,
+    "reclass_rate_not_in_checkpoint_pct": 1.167,
+    "has_somatic_pct_among_cancer": 0.57,
+    "has_somatic_pct_among_noncancer": 0.163
+  },
+  "T4_cgc_composition": {
+    "n_cgc": 304,
+    "n_hereditary_cancer": 106,
+    "n_cgc_and_hc": 106,
+    "n_cgc_not_hc": 198,
+    "n_hc_not_cgc": 0,
+    "pct_of_cgc_outside_hereditary_cancer": 65.1,
+    "hereditary_cancer_is_subset_of_cgc": true,
+    "examples_cgc_not_hc": [
+      "ABL1",
+      "ABL2",
+      "ACKR3",
+      "AKT1",
+      "AKT2",
+      "AKT3",
+      "ALK",
+      "AMER1",
+      "AR",
+      "ARAF",
+      "ARID1A",
+      "ARID1B",
+      "ARID2",
+      "ASXL1",
+      "ASXL2",
+      "ATRX",
+      "AXIN1",
+      "B2M",
+      "BCL10",
+      "BCL2",
+      "BCL6",
+      "BCOR",
+      "BCORL1",
+      "BCR",
+      "BIRC3"
+    ]
+  },
+  "grid": [
+    {
+      "contrast": "CGC (304) vs non-cancer",
+      "gene_set": "COSMIC CGC (304)",
+      "origin_filter": "none (baseline)",
+      "n_exposed": 483822,
+      "rate_exposed_pct": 16.619,
+      "n_comparator": 3194481,
+      "rate_comparator_pct": 8.191,
+      "RR": 2.029,
+      "RR_95CI": [
+        2.014,
+        2.044
+      ],
+      "OR_crude": 2.234,
+      "OR_crude_95CI": [
+        2.215,
+        2.253
+      ],
+      "OR_adjusted": 1.484,
+      "OR_adjusted_95CI": [
+        1.47,
+        1.499
+      ],
+      "adjusted_model_n": 3678303
+    },
+    {
+      "contrast": "CGC (304) vs non-cancer",
+      "gene_set": "COSMIC CGC (304)",
+      "origin_filter": "exclude has_somatic",
+      "n_exposed": 481063,
+      "rate_exposed_pct": 16.488,
+      "n_comparator": 3189282,
+      "rate_comparator_pct": 8.179,
+      "RR": 2.016,
+      "RR_95CI": [
+        2.001,
+        2.031
+      ],
+      "OR_crude": 2.217,
+      "OR_crude_95CI": [
+        2.198,
+        2.236
+      ],
+      "OR_adjusted": 1.479,
+      "OR_adjusted_95CI": [
+        1.464,
+        1.494
+      ],
+      "adjusted_model_n": 3670345
+    },
+    {
+      "contrast": "CGC (304) vs non-cancer",
+      "gene_set": "COSMIC CGC (304)",
+      "origin_filter": "germline_only (has_origin & !somatic)",
+      "n_exposed": 477164,
+      "rate_exposed_pct": 16.605,
+      "n_comparator": 3108748,
+      "rate_comparator_pct": 8.362,
+      "RR": 1.986,
+      "RR_95CI": [
+        1.971,
+        2.0
+      ],
+      "OR_crude": 2.182,
+      "OR_crude_95CI": [
+        2.163,
+        2.201
+      ],
+      "OR_adjusted": null,
+      "OR_adjusted_95CI": null,
+      "adjusted_model_n": null
+    },
+    {
+      "contrast": "CGC (304) vs non-cancer",
+      "gene_set": "COSMIC CGC (304)",
+      "origin_filter": "strict germline origin",
+      "n_exposed": 460015,
+      "rate_exposed_pct": 17.168,
+      "n_comparator": 3033249,
+      "rate_comparator_pct": 8.473,
+      "RR": 2.026,
+      "RR_95CI": [
+        2.011,
+        2.041
+      ],
+      "OR_crude": 2.239,
+      "OR_crude_95CI": [
+        2.22,
+        2.258
+      ],
+      "OR_adjusted": null,
+      "OR_adjusted_95CI": null,
+      "adjusted_model_n": null
+    },
+    {
+      "contrast": "HC (106) vs all others",
+      "gene_set": "Hereditary Cancer (106)",
+      "origin_filter": "none",
+      "n_exposed": 359743,
+      "rate_exposed_pct": 18.182,
+      "n_comparator": 3318560,
+      "rate_comparator_pct": 8.336,
+      "RR": 2.181,
+      "RR_95CI": [
+        2.164,
+        2.198
+      ],
+      "OR_crude": 2.444,
+      "OR_crude_95CI": [
+        2.421,
+        2.466
+      ],
+      "OR_adjusted": 1.458,
+      "OR_adjusted_95CI": [
+        1.443,
+        1.474
+      ],
+      "adjusted_model_n": 3678303
+    },
+    {
+      "contrast": "HC (106) vs all others",
+      "gene_set": "Hereditary Cancer (106)",
+      "origin_filter": "exclude has_somatic",
+      "n_exposed": 358054,
+      "rate_exposed_pct": 18.046,
+      "n_comparator": 3312291,
+      "rate_comparator_pct": 8.319,
+      "RR": 2.169,
+      "RR_95CI": [
+        2.152,
+        2.186
+      ],
+      "OR_crude": 2.427,
+      "OR_crude_95CI": [
+        2.404,
+        2.45
+      ],
+      "OR_adjusted": 1.45,
+      "OR_adjusted_95CI": [
+        1.435,
+        1.466
+      ],
+      "adjusted_model_n": 3670345
+    },
+    {
+      "contrast": "HC (106) vs true non-cancer",
+      "gene_set": "Hereditary Cancer (106), 198 drivers dropped",
+      "origin_filter": "none",
+      "n_exposed": 359743,
+      "rate_exposed_pct": 18.182,
+      "n_comparator": 3194481,
+      "rate_comparator_pct": 8.191,
+      "RR": 2.22,
+      "RR_95CI": [
+        2.203,
+        2.237
+      ],
+      "OR_crude": 2.491,
+      "OR_crude_95CI": [
+        2.468,
+        2.514
+      ],
+      "OR_adjusted": 1.478,
+      "OR_adjusted_95CI": [
+        1.462,
+        1.495
+      ],
+      "adjusted_model_n": 3554224
+    },
+    {
+      "contrast": "HC (106) vs true non-cancer",
+      "gene_set": "Hereditary Cancer (106), 198 drivers dropped",
+      "origin_filter": "exclude has_somatic",
+      "n_exposed": 358054,
+      "rate_exposed_pct": 18.046,
+      "n_comparator": 3189282,
+      "rate_comparator_pct": 8.179,
+      "RR": 2.206,
+      "RR_95CI": [
+        2.189,
+        2.224
+      ],
+      "OR_crude": 2.472,
+      "OR_crude_95CI": [
+        2.449,
+        2.495
+      ],
+      "OR_adjusted": 1.47,
+      "OR_adjusted_95CI": [
+        1.454,
+        1.487
+      ],
+      "adjusted_model_n": 3547336
+    },
+    {
+      "contrast": "CGC driver-only (198) vs non-cancer",
+      "gene_set": "CGC minus HC (198 somatic drivers)",
+      "origin_filter": "none",
+      "n_exposed": 124079,
+      "rate_exposed_pct": 12.087,
+      "n_comparator": 3194481,
+      "rate_comparator_pct": 8.191,
+      "RR": 1.476,
+      "RR_95CI": [
+        1.453,
+        1.499
+      ],
+      "OR_crude": 1.541,
+      "OR_crude_95CI": [
+        1.514,
+        1.568
+      ],
+      "OR_adjusted": 1.476,
+      "OR_adjusted_95CI": [
+        1.447,
+        1.507
+      ],
+      "adjusted_model_n": 3318560
+    }
+  ],
+  "T5_adjusted_models": [
+    {
+      "model": "a_baseline_CGC_all_variants",
+      "term": "is_cancer",
+      "n": 3678303,
+      "n_exposed": 483822,
+      "pseudo_r2": 0.2519,
+      "OR": 1.484,
+      "OR_lo": 1.47,
+      "OR_hi": 1.499,
+      "p": "0.00e+00"
+    },
+    {
+      "model": "b_CGC_exclude_somatic",
+      "term": "is_cancer",
+      "n": 3670345,
+      "n_exposed": 481063,
+      "pseudo_r2": 0.2518,
+      "OR": 1.479,
+      "OR_lo": 1.464,
+      "OR_hi": 1.494,
+      "p": "0.00e+00"
+    },
+    {
+      "model": "c_HC_all_variants",
+      "term": "is_hc",
+      "n": 3678303,
+      "n_exposed": 359743,
+      "pseudo_r2": 0.2513,
+      "OR": 1.458,
+      "OR_lo": 1.443,
+      "OR_hi": 1.474,
+      "p": "0.00e+00"
+    },
+    {
+      "model": "d_HC_exclude_somatic",
+      "term": "is_hc",
+      "n": 3670345,
+      "n_exposed": 358054,
+      "pseudo_r2": 0.2512,
+      "OR": 1.45,
+      "OR_lo": 1.435,
+      "OR_hi": 1.466,
+      "p": "0.00e+00"
+    },
+    {
+      "model": "e_HC_vs_noncancer_drop_drivers",
+      "term": "is_hc",
+      "n": 3554224,
+      "n_exposed": 359743,
+      "pseudo_r2": 0.2549,
+      "OR": 1.478,
+      "OR_lo": 1.462,
+      "OR_hi": 1.495,
+      "p": "0.00e+00"
+    },
+    {
+      "model": "f_HC_vs_noncancer_drop_drivers_excl_somatic",
+      "term": "is_hc",
+      "n": 3547336,
+      "n_exposed": 358054,
+      "pseudo_r2": 0.255,
+      "OR": 1.47,
+      "OR_lo": 1.454,
+      "OR_hi": 1.487,
+      "p": "0.00e+00"
+    },
+    {
+      "model": "g_CGCdriver_only_vs_noncancer",
+      "term": "is_cgc_not_hc",
+      "n": 3318560,
+      "n_exposed": 124079,
+      "pseudo_r2": 0.2546,
+      "OR": 1.476,
+      "OR_lo": 1.447,
+      "OR_hi": 1.507,
+      "p": "0.00e+00"
+    }
+  ],
+  "T5_notes": {
+    "baseline_covariates_source": "/Users/danielliang/Downloads/revision_analyses/outputs/baseline_covariates.csv",
+    "classification_history_needed": false,
+    "covariates_built": [
+      "log_base_subs",
+      "follow_up_yr",
+      "log_gene_span",
+      "vclass",
+      "base_review_tier",
+      "era"
+    ],
+    "covariates_dropped": [],
+    "model_formula": "05_multivariable_baseline.py:82-84 (M1), exposure swapped"
+  },
+  "sanity_gates": {
+    "crude_baseline_reproduced_exactly": true,
+    "adjusted_baseline_OR": 1.484,
+    "adjusted_baseline_published": 1.484,
+    "adjusted_baseline_match": true
+  }
+}

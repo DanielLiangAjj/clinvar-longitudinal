@@ -1,0 +1,265 @@
+{
+  "cgc_composition": {
+    "n_cgc": 304,
+    "n_hereditary_cancer": 106,
+    "n_cgc_and_hc": 106,
+    "n_cgc_not_hc": 198,
+    "n_hc_not_cgc": 0,
+    "pct_of_cgc_outside_hereditary_cancer": 65.1,
+    "hereditary_cancer_is_subset_of_cgc": true,
+    "examples_cgc_not_hc": [
+      "ABL1",
+      "ABL2",
+      "ACKR3",
+      "AKT1",
+      "AKT2",
+      "AKT3",
+      "ALK",
+      "AMER1",
+      "AR",
+      "ARAF",
+      "ARID1A",
+      "ARID1B",
+      "ARID2",
+      "ASXL1",
+      "ASXL2",
+      "ATRX",
+      "AXIN1",
+      "B2M",
+      "BCL10",
+      "BCL2",
+      "BCL6",
+      "BCOR",
+      "BCORL1",
+      "BCR",
+      "BIRC3"
+    ]
+  },
+  "crude": {
+    "hc_vs_all_others_all_variants": {
+      "group1": "Hereditary Cancer (106)",
+      "n1": 359743,
+      "changed1": 65410,
+      "rate1_pct": 18.182,
+      "group2": "All other genes",
+      "n2": 3318560,
+      "changed2": 276647,
+      "rate2_pct": 8.336,
+      "risk_ratio": 2.181,
+      "rr_95ci": [
+        2.164,
+        2.198
+      ],
+      "odds_ratio": 2.444,
+      "or_95ci": [
+        2.421,
+        2.466
+      ],
+      "chi2": 37304.3,
+      "p_value": "<1e-300"
+    },
+    "hc_vs_all_others_exclude_somatic": {
+      "group1": "Hereditary Cancer, somatic excluded",
+      "n1": 358054,
+      "changed1": 64615,
+      "rate1_pct": 18.046,
+      "group2": "All other genes, somatic excluded",
+      "n2": 3312291,
+      "changed2": 275556,
+      "rate2_pct": 8.319,
+      "risk_ratio": 2.169,
+      "rr_95ci": [
+        2.152,
+        2.186
+      ],
+      "odds_ratio": 2.427,
+      "or_95ci": [
+        2.404,
+        2.45
+      ],
+      "chi2": 36355.9,
+      "p_value": "<1e-300"
+    },
+    "hc_vs_noncancer_drop_somatic_drivers": {
+      "group1": "Hereditary Cancer (106)",
+      "n1": 359743,
+      "changed1": 65410,
+      "rate1_pct": 18.182,
+      "group2": "Genes in neither CGC nor HC",
+      "n2": 3194481,
+      "changed2": 261649,
+      "rate2_pct": 8.191,
+      "risk_ratio": 2.22,
+      "rr_95ci": [
+        2.203,
+        2.237
+      ],
+      "odds_ratio": 2.491,
+      "or_95ci": [
+        2.468,
+        2.514
+      ],
+      "chi2": 38634.5,
+      "p_value": "<1e-300"
+    },
+    "hc_vs_noncancer_drop_drivers_exclude_somatic": {
+      "group1": "Hereditary Cancer, somatic excl.",
+      "n1": 358054,
+      "changed1": 64615,
+      "rate1_pct": 18.046,
+      "group2": "Neither CGC nor HC, somatic excl.",
+      "n2": 3189282,
+      "changed2": 260851,
+      "rate2_pct": 8.179,
+      "risk_ratio": 2.206,
+      "rr_95ci": [
+        2.189,
+        2.224
+      ],
+      "odds_ratio": 2.472,
+      "or_95ci": [
+        2.449,
+        2.495
+      ],
+      "chi2": 37611.1,
+      "p_value": "<1e-300"
+    },
+    "cgc_not_hc_vs_noncancer": {
+      "group1": "CGC somatic-driver-only (198)",
+      "n1": 124079,
+      "changed1": 14998,
+      "rate1_pct": 12.087,
+      "group2": "Non-cancer (not in CGC)",
+      "n2": 3194481,
+      "changed2": 261649,
+      "rate2_pct": 8.191,
+      "risk_ratio": 1.476,
+      "rr_95ci": [
+        1.453,
+        1.499
+      ],
+      "odds_ratio": 1.541,
+      "or_95ci": [
+        1.514,
+        1.568
+      ],
+      "chi2": 2373.5,
+      "p_value": "<1e-300"
+    },
+    "hc_vs_noncancer": {
+      "group1": "Hereditary Cancer (106)",
+      "n1": 359743,
+      "changed1": 65410,
+      "rate1_pct": 18.182,
+      "group2": "Non-cancer (not in CGC)",
+      "n2": 3194481,
+      "changed2": 261649,
+      "rate2_pct": 8.191,
+      "risk_ratio": 2.22,
+      "rr_95ci": [
+        2.203,
+        2.237
+      ],
+      "odds_ratio": 2.491,
+      "or_95ci": [
+        2.468,
+        2.514
+      ],
+      "chi2": 38634.5,
+      "p_value": "<1e-300"
+    }
+  },
+  "adjusted": [
+    {
+      "model": "a_baseline_CGC_all_variants",
+      "term": "is_cancer",
+      "n": 3678303,
+      "n_exposed": 483822,
+      "pseudo_r2": 0.2519,
+      "OR": 1.484,
+      "OR_lo": 1.47,
+      "OR_hi": 1.499,
+      "p": "0.00e+00"
+    },
+    {
+      "model": "b_CGC_exclude_somatic",
+      "term": "is_cancer",
+      "n": 3670345,
+      "n_exposed": 481063,
+      "pseudo_r2": 0.2518,
+      "OR": 1.479,
+      "OR_lo": 1.464,
+      "OR_hi": 1.494,
+      "p": "0.00e+00"
+    },
+    {
+      "model": "c_HC_all_variants",
+      "term": "is_hc",
+      "n": 3678303,
+      "n_exposed": 359743,
+      "pseudo_r2": 0.2513,
+      "OR": 1.458,
+      "OR_lo": 1.443,
+      "OR_hi": 1.474,
+      "p": "0.00e+00"
+    },
+    {
+      "model": "d_HC_exclude_somatic",
+      "term": "is_hc",
+      "n": 3670345,
+      "n_exposed": 358054,
+      "pseudo_r2": 0.2512,
+      "OR": 1.45,
+      "OR_lo": 1.435,
+      "OR_hi": 1.466,
+      "p": "0.00e+00"
+    },
+    {
+      "model": "e_HC_vs_noncancer_drop_drivers",
+      "term": "is_hc",
+      "n": 3554224,
+      "n_exposed": 359743,
+      "pseudo_r2": 0.2549,
+      "OR": 1.478,
+      "OR_lo": 1.462,
+      "OR_hi": 1.495,
+      "p": "0.00e+00"
+    },
+    {
+      "model": "f_HC_vs_noncancer_drop_drivers_excl_somatic",
+      "term": "is_hc",
+      "n": 3547336,
+      "n_exposed": 358054,
+      "pseudo_r2": 0.255,
+      "OR": 1.47,
+      "OR_lo": 1.454,
+      "OR_hi": 1.487,
+      "p": "0.00e+00"
+    },
+    {
+      "model": "g_CGCdriver_only_vs_noncancer",
+      "term": "is_cgc_not_hc",
+      "n": 3318560,
+      "n_exposed": 124079,
+      "pseudo_r2": 0.2546,
+      "OR": 1.476,
+      "OR_lo": 1.447,
+      "OR_hi": 1.507,
+      "p": "0.00e+00"
+    }
+  ],
+  "notes": {
+    "baseline_covariates_source": "/Users/danielliang/Downloads/revision_analyses/outputs/baseline_covariates.csv",
+    "classification_history_needed": false,
+    "covariates_built": [
+      "log_base_subs",
+      "follow_up_yr",
+      "log_gene_span",
+      "vclass",
+      "base_review_tier",
+      "era"
+    ],
+    "covariates_dropped": [],
+    "model_formula": "05_multivariable_baseline.py:82-84 (M1), exposure swapped"
+  }
+}

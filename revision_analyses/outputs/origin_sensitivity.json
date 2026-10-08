@@ -1,0 +1,177 @@
+{
+  "baseline_published": {
+    "group1": "Cancer (COSMIC CGC)",
+    "n1": 483822,
+    "changed1": 80408,
+    "rate1_pct": 16.619,
+    "group2": "Non-cancer",
+    "n2": 3194481,
+    "changed2": 261649,
+    "rate2_pct": 8.191,
+    "risk_ratio": 2.029,
+    "rr_95ci": [
+      2.014,
+      2.044
+    ],
+    "odds_ratio": 2.234,
+    "or_95ci": [
+      2.215,
+      2.253
+    ],
+    "chi2": 35391.2,
+    "p_value": "<1e-300"
+  },
+  "sanity_gate_passed": true,
+  "coverage": {
+    "summary_rows": 3678303,
+    "origin_map_rows": 3594583,
+    "matched_in_checkpoint": 3594583,
+    "matched_pct": 97.724,
+    "not_in_checkpoint": 83720,
+    "with_populated_origin": 3593870,
+    "with_populated_origin_pct": 97.705,
+    "no_origin_data": 84433,
+    "has_somatic": 7958,
+    "has_somatic_pct": 0.216,
+    "germline_only_spec": 3585912,
+    "strict_germline": 3493264,
+    "reclass_rate_in_checkpoint_pct": 9.489,
+    "reclass_rate_not_in_checkpoint_pct": 1.167,
+    "has_somatic_pct_among_cancer": 0.57,
+    "has_somatic_pct_among_noncancer": 0.163
+  },
+  "scenarios": {
+    "a_all_variants": {
+      "group1": "Cancer (COSMIC CGC)",
+      "n1": 483822,
+      "changed1": 80408,
+      "rate1_pct": 16.619,
+      "group2": "Non-cancer",
+      "n2": 3194481,
+      "changed2": 261649,
+      "rate2_pct": 8.191,
+      "risk_ratio": 2.029,
+      "rr_95ci": [
+        2.014,
+        2.044
+      ],
+      "odds_ratio": 2.234,
+      "or_95ci": [
+        2.215,
+        2.253
+      ],
+      "chi2": 35391.2,
+      "p_value": "<1e-300"
+    },
+    "b_exclude_has_somatic": {
+      "group1": "Cancer (CGC), somatic-origin excluded",
+      "n1": 481063,
+      "changed1": 79320,
+      "rate1_pct": 16.488,
+      "group2": "Non-cancer, somatic-origin excluded",
+      "n2": 3189282,
+      "changed2": 260851,
+      "rate2_pct": 8.179,
+      "risk_ratio": 2.016,
+      "rr_95ci": [
+        2.001,
+        2.031
+      ],
+      "odds_ratio": 2.217,
+      "or_95ci": [
+        2.198,
+        2.236
+      ],
+      "chi2": 34323.1,
+      "p_value": "<1e-300"
+    },
+    "c_germline_only": {
+      "group1": "Cancer (CGC), germline_only",
+      "n1": 477164,
+      "changed1": 79233,
+      "rate1_pct": 16.605,
+      "group2": "Non-cancer, germline_only",
+      "n2": 3108748,
+      "changed2": 259958,
+      "rate2_pct": 8.362,
+      "risk_ratio": 1.986,
+      "rr_95ci": [
+        1.971,
+        2.0
+      ],
+      "odds_ratio": 2.182,
+      "or_95ci": [
+        2.163,
+        2.201
+      ],
+      "chi2": 32818.4,
+      "p_value": "<1e-300"
+    },
+    "d_in_checkpoint_only": {
+      "group1": "Cancer (CGC), in 2025-07 checkpoint",
+      "n1": 479970,
+      "changed1": 80321,
+      "rate1_pct": 16.735,
+      "group2": "Non-cancer, in 2025-07 checkpoint",
+      "n2": 3114613,
+      "changed2": 260759,
+      "rate2_pct": 8.372,
+      "risk_ratio": 1.999,
+      "rr_95ci": [
+        1.984,
+        2.013
+      ],
+      "odds_ratio": 2.2,
+      "or_95ci": [
+        2.181,
+        2.219
+      ],
+      "chi2": 33863.2,
+      "p_value": "<1e-300"
+    },
+    "e_in_checkpoint_exclude_somatic": {
+      "group1": "Cancer (CGC), in ckpt, somatic excluded",
+      "n1": 477211,
+      "changed1": 79233,
+      "rate1_pct": 16.603,
+      "group2": "Non-cancer, in ckpt, somatic excluded",
+      "n2": 3109414,
+      "changed2": 259961,
+      "rate2_pct": 8.36,
+      "risk_ratio": 1.986,
+      "rr_95ci": [
+        1.971,
+        2.001
+      ],
+      "odds_ratio": 2.182,
+      "or_95ci": [
+        2.164,
+        2.201
+      ],
+      "chi2": 32828.2,
+      "p_value": "<1e-300"
+    },
+    "f_strict_germline": {
+      "group1": "Cancer (CGC), strict germline origin",
+      "n1": 460015,
+      "changed1": 78976,
+      "rate1_pct": 17.168,
+      "group2": "Non-cancer, strict germline origin",
+      "n2": 3033249,
+      "changed2": 257018,
+      "rate2_pct": 8.473,
+      "risk_ratio": 2.026,
+      "rr_95ci": [
+        2.011,
+        2.041
+      ],
+      "odds_ratio": 2.239,
+      "or_95ci": [
+        2.22,
+        2.258
+      ],
+      "chi2": 34736.4,
+      "p_value": "<1e-300"
+    }
+  }
+}

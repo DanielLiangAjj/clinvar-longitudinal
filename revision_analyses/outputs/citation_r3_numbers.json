@@ -1,0 +1,141 @@
+{
+  "exclusion_pmids": [
+    "25741868",
+    "28492532"
+  ],
+  "n_variants_total": 3678303,
+  "n_variants_with_any_listed_pmid_summary": 2263112,
+  "n_variants_with_any_listed_pmid_extraction": 2249743,
+  "mean_raw_over_cited": 1.584,
+  "mean_filtered_over_cited": 0.497,
+  "mean_filtered_over_all": 0.304,
+  "n_ge1_filtered": 424410,
+  "pct_ge1_filtered_of_all": 11.54,
+  "pct_ge1_raw_of_all_summary": 61.53,
+  "total_refs_raw_summary": 3584781,
+  "total_refs_filtered": 1118247,
+  "by_domain": {
+    "Hereditary Cancer": {
+      "n": 359743,
+      "cit_classes": {
+        "0": 77.4,
+        "1": 8.62,
+        "2-5": 11.32,
+        ">=6": 2.67
+      },
+      "pct_ge1_filtered": 22.6,
+      "mean_filtered_all": 0.695,
+      "mean_filtered_cited": 3.074,
+      "median_filtered_cited": 2.0,
+      "q25_cited": 1.0,
+      "q75_cited": 3.0,
+      "mean_raw_all": 1.637
+    },
+    "Cardiovascular": {
+      "n": 198676,
+      "cit_classes": {
+        "0": 79.25,
+        "1": 7.66,
+        "2-5": 10.67,
+        ">=6": 2.42
+      },
+      "pct_ge1_filtered": 20.8,
+      "mean_filtered_all": 0.644,
+      "mean_filtered_cited": 3.103,
+      "median_filtered_cited": 2.0,
+      "q25_cited": 1.0,
+      "q75_cited": 4.0,
+      "mean_raw_all": 1.582
+    },
+    "Neurological": {
+      "n": 118581,
+      "cit_classes": {
+        "0": 81.51,
+        "1": 8.03,
+        "2-5": 8.96,
+        ">=6": 1.5
+      },
+      "pct_ge1_filtered": 18.5,
+      "mean_filtered_all": 0.486,
+      "mean_filtered_cited": 2.629,
+      "median_filtered_cited": 2.0,
+      "q25_cited": 1.0,
+      "q75_cited": 3.0,
+      "mean_raw_all": 1.323
+    },
+    "Renal": {
+      "n": 85215,
+      "cit_classes": {
+        "0": 82.82,
+        "1": 6.17,
+        "2-5": 8.33,
+        ">=6": 2.68
+      },
+      "pct_ge1_filtered": 17.2,
+      "mean_filtered_all": 0.59,
+      "mean_filtered_cited": 3.437,
+      "median_filtered_cited": 2.0,
+      "q25_cited": 1.0,
+      "q75_cited": 4.0,
+      "mean_raw_all": 1.505
+    },
+    "Ophthalmologic": {
+      "n": 87681,
+      "cit_classes": {
+        "0": 78.75,
+        "1": 6.19,
+        "2-5": 11.96,
+        ">=6": 3.1
+      },
+      "pct_ge1_filtered": 21.3,
+      "mean_filtered_all": 0.716,
+      "mean_filtered_cited": 3.368,
+      "median_filtered_cited": 2.0,
+      "q25_cited": 1.0,
+      "q75_cited": 4.0,
+      "mean_raw_all": 1.656
+    },
+    "Other/Unclassified": {
+      "n": 2828407,
+      "cit_classes": {
+        "0": 91.28,
+        "1": 4.13,
+        "2-5": 4.06,
+        ">=6": 0.53
+      },
+      "pct_ge1_filtered": 8.7,
+      "mean_filtered_all": 0.201,
+      "mean_filtered_cited": 2.309,
+      "median_filtered_cited": 2.0,
+      "q25_cited": 1.0,
+      "q75_cited": 3.0,
+      "mean_raw_all": 0.796
+    }
+  },
+  "subgroups": {
+    "cancer": {
+      "n": 483822,
+      "mean_raw_all": 1.488,
+      "mean_filtered_all": 0.587,
+      "pct_ge1_filtered": 19.5
+    },
+    "noncancer": {
+      "n": 3194481,
+      "mean_raw_all": 0.897,
+      "mean_filtered_all": 0.261,
+      "pct_ge1_filtered": 10.3
+    },
+    "common": {
+      "n": 28487,
+      "mean_raw_all": 2.317,
+      "mean_filtered_all": 1.542,
+      "pct_ge1_filtered": 32.2
+    },
+    "rare": {
+      "n": 3649816,
+      "mean_raw_all": 0.964,
+      "mean_filtered_all": 0.294,
+      "pct_ge1_filtered": 11.4
+    }
+  }
+}

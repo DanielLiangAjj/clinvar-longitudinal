@@ -911,16 +911,39 @@ def figure4(summary_agg, stats, out):
     pmid_vals = [summary_agg["pmid_bins"].get(k, 0) for k in pmid_order]
     pmid_pct = [v / max(summary_agg["total"], 1) * 100 for v in pmid_vals]
 
-    bar_cols_pmid = [NAT["grey"]] + [NAT["blue"]] * 5
-    ax.bar(range(len(pmid_order)), pmid_pct, color=bar_cols_pmid, width=0.65,
-           edgecolor="white", linewidth=0.3)
-    ax.set_xticks(range(len(pmid_order)))
-    ax.set_xticklabels(pmid_order, fontsize=6)
-    ax.set_xlabel("PubMed citations per variant")
-    ax.set_ylabel("Variants (%)")
-    ax.set_title("Literature evidence distribution")
-    for i, (v, pct) in enumerate(zip(pmid_vals, pmid_pct)):
-        ax.text(i, pct + 0.5, fmt(v), ha="center", fontsize=4.5, color=NAT["grey"])
+    filt_bins = summary_agg.get("pmid_bins_filtered")
+    if filt_bins:
+        # paired bars: all listed references vs variant-specific counts after
+        # excluding assertion-method papers (SHERLOC, ACMG/AMP 2015)
+        filt_vals = [filt_bins.get(k, 0) for k in pmid_order]
+        filt_pct = [v / max(summary_agg["total"], 1) * 100 for v in filt_vals]
+        x = np.arange(len(pmid_order))
+        bw = 0.38
+        ax.bar(x - bw / 2, pmid_pct, bw, color=NAT["grey"], alpha=0.55,
+               edgecolor="white", linewidth=0.3, label="All listed references")
+        ax.bar(x + bw / 2, filt_pct, bw, color=NAT["blue"],
+               edgecolor="white", linewidth=0.3,
+               label="Variant-specific (method papers excluded)")
+        ax.set_xticks(x)
+        ax.set_xticklabels(pmid_order, fontsize=6)
+        ax.set_xlabel("PubMed citations per variant")
+        ax.set_ylabel("Variants (%)")
+        ax.set_title("Literature evidence distribution")
+        for xi, pct in zip(x, filt_pct):
+            ax.text(xi + bw / 2, pct + 1.0, f"{pct:.1f}", ha="center",
+                    fontsize=5.0, color=NAT["blue"])
+        ax.legend(fontsize=6.0, frameon=False, loc="upper right")
+    else:
+        bar_cols_pmid = [NAT["grey"]] + [NAT["blue"]] * 5
+        ax.bar(range(len(pmid_order)), pmid_pct, color=bar_cols_pmid, width=0.65,
+               edgecolor="white", linewidth=0.3)
+        ax.set_xticks(range(len(pmid_order)))
+        ax.set_xticklabels(pmid_order, fontsize=6)
+        ax.set_xlabel("PubMed citations per variant")
+        ax.set_ylabel("Variants (%)")
+        ax.set_title("Literature evidence distribution")
+        for i, (v, pct) in enumerate(zip(pmid_vals, pmid_pct)):
+            ax.text(i, pct + 0.5, fmt(v), ha="center", fontsize=4.5, color=NAT["grey"])
     panel_label(ax, "b")
 
     # ── (c) New variants per year ────────────────────────────────────
@@ -936,7 +959,7 @@ def figure4(summary_agg, stats, out):
     ax.bar(range(len(years)), [v / 1e6 for v in year_vals],
            color=NAT["blue"], width=0.7, edgecolor="white", linewidth=0.3)
     ax.set_xticks(range(len(years)))
-    ax.set_xticklabels(years, rotation=45, ha="right", fontsize=5.5)
+    ax.set_xticklabels(years, rotation=45, ha="right", fontsize=6.5)
     ax.set_ylabel("New variants (millions)")
     ax.set_xlabel("Year of first ClinVar appearance")
     ax.set_title("Variant accession timeline")
@@ -957,7 +980,7 @@ def figure4(summary_agg, stats, out):
     ax.bar(range(len(years)), dbsnp_pct, color=NAT["aqua"], width=0.7,
            edgecolor="white", linewidth=0.3)
     ax.set_xticks(range(len(years)))
-    ax.set_xticklabels(years, rotation=45, ha="right", fontsize=5.5)
+    ax.set_xticklabels(years, rotation=45, ha="right", fontsize=6.5)
     ax.set_ylabel("Variants with dbSNP ID (%)")
     ax.set_xlabel("Year of first ClinVar appearance")
     ax.set_title("dbSNP cross-reference coverage")
@@ -1259,12 +1282,12 @@ def figure6(summary_agg, stats, out):
     ax.bar(range(len(acmg_order)), acmg_pct, color=NAT["violet"], width=0.6,
            edgecolor="white", linewidth=0.3, alpha=0.85)
     ax.set_xticks(range(len(acmg_order)))
-    ax.set_xticklabels(acmg_order, fontsize=6)
+    ax.set_xticklabels(acmg_order, fontsize=7)
     ax.set_xlabel("ACMG evidence codes per variant")
     ax.set_ylabel("Variants (%)")
     ax.set_title("ACMG/AMP evidence utilisation")
     for i, (v, pct) in enumerate(zip(acmg_vals, acmg_pct)):
-        ax.text(i, pct + 0.3, fmt(v), ha="center", fontsize=4.5, color=NAT["grey"])
+        ax.text(i, pct + 0.3, fmt(v), ha="center", fontsize=6, color=NAT["grey"])
     panel_label(ax, "a")
 
     # ── (b) Top 25 genes by variant count ────────────────────────────
@@ -1281,7 +1304,7 @@ def figure6(summary_agg, stats, out):
     ax.barh(range(len(g_labels)), g_vals, color=NAT["blue"], height=0.7,
             edgecolor="white", linewidth=0.2)
     ax.set_yticks(range(len(g_labels)))
-    ax.set_yticklabels(g_labels, fontsize=4.5)
+    ax.set_yticklabels(g_labels, fontsize=6, fontstyle="italic")
     ax.set_xlabel("Variants")
     ax.set_title("Top 25 genes by variant count")
     ax.xaxis.set_major_formatter(mticker.FuncFormatter(lambda v, _: fmt(v)))
@@ -1296,53 +1319,87 @@ def figure6(summary_agg, stats, out):
 
 def figure7(summary_agg, out):
     """Temporal evolution of PubMed citation density by variant entry cohort."""
-    fig, axes = plt.subplots(1, 2, figsize=(7.08, 2.8))
-    fig.subplots_adjust(wspace=0.40)
+    fig, axes = plt.subplots(1, 2, figsize=(7.08, 3.1))
+    fig.subplots_adjust(wspace=0.40, top=0.80)
 
     fdc = summary_agg["first_date_counts"]
     pmid_sum = summary_agg["pmid_sum_by_first_date"]
+    pmid_sum_filt = summary_agg.get("pmid_sum_by_first_date_filtered")
 
     # Aggregate by year
     year_total = defaultdict(int)
     year_pmid_sum = defaultdict(int)
+    year_filt_sum = defaultdict(int)
     for date, count in fdc.items():
         y = date.split("-")[0]
         year_total[y] += count
         year_pmid_sum[y] += pmid_sum.get(date, 0)
+        if pmid_sum_filt:
+            year_filt_sum[y] += pmid_sum_filt.get(date, 0)
 
     years = sorted(year_total.keys())
     mean_pmid_per_variant = [
         year_pmid_sum[y] / max(year_total[y], 1) for y in years
     ]
     total_pmids_cumul = np.cumsum([year_pmid_sum[y] for y in years])
+    if pmid_sum_filt:
+        mean_filt_per_variant = [
+            year_filt_sum[y] / max(year_total[y], 1) for y in years
+        ]
+        total_filt_cumul = np.cumsum([year_filt_sum[y] for y in years])
 
     # ── (a) Mean PubMed citations per variant by entry year ──────────
     ax = axes[0]
-    ax.bar(range(len(years)), mean_pmid_per_variant, color=NAT["dark_red"],
-           width=0.7, edgecolor="white", linewidth=0.3, alpha=0.85)
-    ax.set_xticks(range(len(years)))
-    ax.set_xticklabels(years, rotation=45, ha="right", fontsize=5.5)
-    ax.set_ylabel("Mean PubMed citations / variant")
+    if pmid_sum_filt:
+        x = np.arange(len(years))
+        bw = 0.40
+        ax.bar(x - bw / 2, mean_pmid_per_variant, bw, color=NAT["grey"],
+               alpha=0.55, edgecolor="white", linewidth=0.3,
+               label="All listed references")
+        ax.bar(x + bw / 2, mean_filt_per_variant, bw, color=NAT["dark_red"],
+               edgecolor="white", linewidth=0.3, alpha=0.85,
+               label="Variant-specific")
+        ax.set_xticks(x)
+        ax.legend(fontsize=6.0, frameon=False, loc="upper right")
+    else:
+        ax.bar(range(len(years)), mean_pmid_per_variant, color=NAT["dark_red"],
+               width=0.7, edgecolor="white", linewidth=0.3, alpha=0.85)
+        ax.set_xticks(range(len(years)))
+    ax.set_xticklabels(years, rotation=45, ha="right", fontsize=6.5)
+    ax.set_ylabel("Mean citations per variant")
     ax.set_xlabel("Year of first appearance")
     ax.set_title("Literature evidence by entry cohort")
-    panel_label(ax, "a")
+    panel_label(ax, "a", x=-0.24, y=1.20)
 
     # ── (b) Cumulative PubMed citations ──────────────────────────────
     ax = axes[1]
     ax.fill_between(range(len(years)), 0, total_pmids_cumul / 1e6,
-                    color=NAT["dark_red"], alpha=0.12)
+                    color=NAT["grey"] if pmid_sum_filt else NAT["dark_red"], alpha=0.12)
     ax.plot(range(len(years)), total_pmids_cumul / 1e6,
-            color=NAT["dark_red"], linewidth=1.2)
+            color=NAT["grey"] if pmid_sum_filt else NAT["dark_red"], linewidth=1.2,
+            linestyle="--" if pmid_sum_filt else "-",
+            label="All listed references" if pmid_sum_filt else None)
     ax.set_xticks(range(len(years)))
-    ax.set_xticklabels(years, rotation=45, ha="right", fontsize=5.5)
-    ax.set_ylabel("Cumulative PubMed citations (millions)")
+    ax.set_xticklabels(years, rotation=45, ha="right", fontsize=6.5)
+    ax.set_ylabel("Cumulative citations (millions)")
     ax.set_xlabel("Year")
     ax.set_title("Literature evidence accumulation")
-    ax.annotate(f"{total_pmids_cumul[-1] / 1e6:.2f}M",
-                xy=(len(years) - 1, total_pmids_cumul[-1] / 1e6),
-                fontsize=5.5, color=NAT["dark_red"], ha="right", va="bottom",
-                xytext=(-3, 4), textcoords="offset points")
-    panel_label(ax, "b")
+    ax.text(len(years) - 1.6, total_pmids_cumul[-1] / 1e6,
+            f"{total_pmids_cumul[-1] / 1e6:.2f}M", fontsize=6.5,
+            color=NAT["grey"] if pmid_sum_filt else NAT["dark_red"],
+            ha="right", va="center")
+    if pmid_sum_filt:
+        ax.fill_between(range(len(years)), 0, total_filt_cumul / 1e6,
+                        color=NAT["dark_red"], alpha=0.12)
+        ax.plot(range(len(years)), total_filt_cumul / 1e6,
+                color=NAT["dark_red"], linewidth=1.4,
+                label="Variant-specific")
+        ax.annotate(f"{total_filt_cumul[-1] / 1e6:.2f}M",
+                    xy=(len(years) - 1, total_filt_cumul[-1] / 1e6),
+                    fontsize=6.5, color=NAT["dark_red"], ha="right", va="bottom",
+                    xytext=(-3, 4), textcoords="offset points")
+        ax.legend(fontsize=6.0, frameon=False, loc="upper left")
+    panel_label(ax, "b", x=-0.24, y=1.20)
 
     _save(fig, out, "figure7_pubmed_citation_growth")
 
@@ -1570,6 +1627,7 @@ def figure9(acmg_stats, out):
                 edgecolor="white", linewidth=0.3)
         ax.set_yticks(y_pos)
         ax.set_yticklabels(labels_a, fontsize=6)
+        ax.margins(x=0.12)
         ax.set_xlabel("Submissions")
         ax.xaxis.set_major_formatter(mticker.FuncFormatter(lambda v, _: fmt(v)))
         for i, v in enumerate(values_a):
@@ -1635,7 +1693,7 @@ def figure9(acmg_stats, out):
     all_ticks = list(p_x) + list(b_x)
     all_labels = short_labels_p + short_labels_b
     ax.set_xticks(all_ticks)
-    ax.set_xticklabels(all_labels, fontsize=6)
+    ax.set_xticklabels(all_labels, fontsize=7)
     ax.set_ylabel("Submissions")
     ax.set_title("Pathogenic vs Benign criteria usage")
     # Add strength class annotations below x-axis
@@ -1643,10 +1701,10 @@ def figure9(acmg_stats, out):
     strength_b = ["Stand-\nalone", "Strong", "Supporting"]
     for i, (tick, s) in enumerate(zip(p_x, strength_p)):
         ax.text(tick, -0.15, s, transform=ax.get_xaxis_transform(),
-                ha="center", va="top", fontsize=3.5, color=NAT["grey"], style="italic")
+                ha="right", va="top", fontsize=4.8, color=NAT["grey"], style="italic", rotation=24)
     for i, (tick, s) in enumerate(zip(b_x, strength_b)):
         ax.text(tick, -0.15, s, transform=ax.get_xaxis_transform(),
-                ha="center", va="top", fontsize=3.5, color=NAT["grey"], style="italic")
+                ha="right", va="top", fontsize=4.8, color=NAT["grey"], style="italic", rotation=24)
     ax.yaxis.set_major_formatter(mticker.FuncFormatter(lambda v, _: fmt(v)))
     ax.legend(fontsize=5.5, loc="upper right",
               frameon=True, facecolor="white", edgecolor="none", framealpha=0.85)
@@ -1657,7 +1715,7 @@ def figure9(acmg_stats, out):
         if h > 0:
             ax.text(bar.get_x() + bar.get_width() / 2, h,
                     fmt(h), ha="center", va="bottom", fontsize=4, color=NAT["grey"])
-    panel_label(ax, "b")
+    panel_label(ax, "b", x=-0.26, y=1.14)
 
     # ── (c) Explicit vs Inferred stacked bar ────────────────────────
     ax = fig.add_subplot(gs[1, 0])
@@ -1699,10 +1757,10 @@ def figure9(acmg_stats, out):
         im = ax.imshow(mat_display, aspect="auto", cmap="YlOrRd",
                        interpolation="nearest")
         ax.set_yticks(range(len(top15_codes)))
-        ax.set_yticklabels(top15_codes, fontsize=5.5)
+        ax.set_yticklabels(top15_codes, fontsize=6.5)
         ax.set_xticks(range(len(cat_order)))
         ax.set_xticklabels([CATEGORY_LABELS.get(c, c) for c in cat_order],
-                            rotation=45, ha="right", fontsize=5.5)
+                            rotation=45, ha="right", fontsize=6.5)
 
         # Annotate cells
         for i in range(len(top15_codes)):
@@ -1711,14 +1769,14 @@ def figure9(acmg_stats, out):
                 if v > 0:
                     color = "white" if mat_display[i, j] > mat_display.max() * 0.6 else "black"
                     ax.text(j, i, fmt(v), ha="center", va="center",
-                            fontsize=3.8, color=color)
+                            fontsize=4.8, color=color)
 
         cbar = fig.colorbar(im, ax=ax, shrink=0.7, pad=0.03)
-        cbar.ax.tick_params(labelsize=5)
-        cbar.set_label("log₁₀(count + 1)", fontsize=6)
+        cbar.ax.tick_params(labelsize=6)
+        cbar.set_label("log10(count + 1)", fontsize=7)
 
     ax.set_title("Criteria by classification")
-    panel_label(ax, "d")
+    panel_label(ax, "d", x=-0.32, y=1.12)
 
     _save(fig, out, "figure9_acmg_criteria_analysis")
 
@@ -1755,7 +1813,7 @@ def figure10_disease_domain(domain_data, out):
     domains_present = [d for d in domain_order if d in by_domain]
 
     fig = plt.figure(figsize=(7.08, 9.5))
-    gs = GridSpec(4, 2, figure=fig, hspace=0.65, wspace=0.48)
+    gs = GridSpec(4, 2, figure=fig, hspace=0.80, wspace=0.55)
 
     # ── (a) Reclassification rate by domain + cancer vs non-cancer ────
     ax = fig.add_subplot(gs[0, 0])
@@ -1768,8 +1826,8 @@ def figure10_disease_domain(domain_data, out):
             linewidth=0.3)
     ax.set_yticks(y_pos)
     ax.set_yticklabels(d_labels, fontsize=6)
-    ax.set_xlabel("Reclassification rate (%)")
-    ax.set_title("Reclassification rate by disease domain")
+    ax.set_xlabel("Reclassification rate (%)", fontsize=7)
+    ax.set_title("Reclassification rate by domain", fontsize=7)
     for i, v in enumerate(d_rates):
         ax.text(v + 0.2, i, f"{v:.1f}%", va="center", fontsize=5, color=NAT["grey"])
     panel_label(ax, "a", x=-0.28)
@@ -1788,8 +1846,8 @@ def figure10_disease_domain(domain_data, out):
                       linewidth=0.5)
         ax.set_xticks(x_pos)
         ax.set_xticklabels(group_labels, fontsize=6)
-        ax.set_ylabel("Reclassification rate (%)")
-        ax.set_title("Cancer vs non-cancer reclassification")
+        ax.set_ylabel("Reclassification rate (%)", fontsize=7)
+        ax.set_title("Cancer vs non-cancer rate", fontsize=7)
         for i, (v, t) in enumerate(zip(rates, totals)):
             ax.text(i, v + 0.3, f"{v:.1f}%\n(n={t:,})", ha="center",
                     va="bottom", fontsize=5.5, fontweight="bold", color=NAT["grey"])
@@ -1808,7 +1866,7 @@ def figure10_disease_domain(domain_data, out):
                     transform=ax.transAxes, fontsize=5, ha="right", va="top",
                     bbox=dict(boxstyle="round,pad=0.3", fc="#f5f5f5",
                               ec=NAT["lt_grey"], lw=0.5))
-    panel_label(ax, "b")
+    panel_label(ax, "b", x=-0.24, y=1.16)
 
     # ── (c) Classification distribution: Cancer vs Non-Cancer ─────────
     ax = fig.add_subplot(gs[1, 0])
@@ -1833,12 +1891,12 @@ def figure10_disease_domain(domain_data, out):
 
         ax.set_xticks(x_pos)
         ax.set_xticklabels(group_labels, fontsize=6)
-        ax.set_ylabel("Proportion (%)")
+        ax.set_ylabel("Proportion (%)", fontsize=7)
         ax.set_ylim(0, 105)
-        ax.set_title("Classification: cancer vs non-cancer", pad=14)
-        ax.legend(loc="upper center", bbox_to_anchor=(0.5, 1.18),
-                  ncol=5, fontsize=4.5, frameon=False)
-    panel_label(ax, "c", x=-0.28)
+        ax.set_title("Cancer vs non-cancer", fontsize=7, pad=10)
+        ax.legend(loc="upper center", bbox_to_anchor=(0.5, 1.34),
+                  ncol=5, fontsize=5.0, frameon=False, handlelength=1.0, columnspacing=0.7, handletextpad=0.4)
+    panel_label(ax, "c", x=-0.28, y=1.18)
 
     # ── (d) Classification distribution: Rare vs Common ───────────────
     ax = fig.add_subplot(gs[1, 1])
@@ -1863,12 +1921,12 @@ def figure10_disease_domain(domain_data, out):
 
         ax.set_xticks(x_pos)
         ax.set_xticklabels(group_labels, fontsize=5.5)
-        ax.set_ylabel("Proportion (%)")
+        ax.set_ylabel("Proportion (%)", fontsize=7)
         ax.set_ylim(0, 105)
-        ax.set_title("Classification: rare vs higher-prevalence Mendelian", pad=14)
-        ax.legend(loc="upper center", bbox_to_anchor=(0.5, 1.18),
-                  ncol=5, fontsize=4.5, frameon=False)
-    panel_label(ax, "d")
+        ax.set_title("Rare vs higher-prevalence Mendelian", fontsize=7, pad=10)
+        ax.legend(loc="upper center", bbox_to_anchor=(0.5, 1.34),
+                  ncol=5, fontsize=5.0, frameon=False, handlelength=1.0, columnspacing=0.7, handletextpad=0.4)
+    panel_label(ax, "d", x=-0.24, y=1.18)
 
     # ── (e) P↔B reversal rates by domain ──────────────────────────────
     ax = fig.add_subplot(gs[2, 0])
@@ -1888,8 +1946,8 @@ def figure10_disease_domain(domain_data, out):
             edgecolor="white", linewidth=0.3, label="B-side \u2192 P-side")
     ax.set_yticks(y_pos)
     ax.set_yticklabels(d_labels_c, fontsize=6)
-    ax.set_xlabel("Reversals per 1,000 variants")
-    ax.set_title("P \u2194 B reversal rates by domain")
+    ax.set_xlabel("Reversals per 1,000 variants", fontsize=7)
+    ax.set_title("P \u2194 B reversal rates by domain", fontsize=7)
     ax.legend(fontsize=5, loc="lower right",
               frameon=True, facecolor="white", edgecolor="none", framealpha=0.85)
     panel_label(ax, "e", x=-0.28)
@@ -1915,31 +1973,88 @@ def figure10_disease_domain(domain_data, out):
         ax.barh(y_pos, g_vals, color=g_cols, height=0.7, edgecolor="white",
                 linewidth=0.2)
         ax.set_yticks(y_pos)
-        ax.set_yticklabels(g_labels, fontsize=5)
-        ax.set_xlabel("Total variants")
-        ax.set_title("Top 20 genes by variant count")
+        ax.set_yticklabels(g_labels, fontsize=5, fontstyle="italic")
+        ax.set_xlabel("Total variants", fontsize=7)
+        ax.set_title("Top 20 genes by variant count", fontsize=7)
         ax.xaxis.set_major_formatter(mticker.FuncFormatter(lambda v, _: fmt(v)))
         domain_patches = [mpatches.Patch(color=DOMAIN_COLORS.get(d, NAT["grey"]), label=d)
                           for d in domains_present if d != "Other/Unclassified"]
-        ax.legend(handles=domain_patches, fontsize=4.5, loc="lower right",
+        ax.legend(handles=domain_patches, fontsize=5.5, loc="lower right",
                   frameon=True, facecolor="white", edgecolor="none", framealpha=0.85)
     panel_label(ax, "f", x=-0.22)
 
-    # ── (g) Evidence depth by domain ──────────────────────────────────
+    # ── (g) Distribution of per-variant PubMed citations by domain ─────
+    # Citation counts are strongly right-skewed (Reviewer 2): vertical box (IQR) +
+    # whisker (5th=0 → 95th) + median line + mean diamond, on a symlog axis so the
+    # skew is visible. Uses injected cit_* quantiles + cit_mean; falls back to mean
+    # bars if the quantiles are absent.
     ax = fig.add_subplot(gs[3, 0])
-    d_labels_e = [d for d in domains_present if d != "Other/Unclassified"]
-    mean_pmids = [by_domain[d].get("mean_pmids", 0) for d in d_labels_e]
-    d_cols_e = [DOMAIN_COLORS.get(d, NAT["grey"]) for d in d_labels_e]
+    _order_g = ["Hereditary Cancer", "Cardiovascular", "Neurological", "Renal",
+                "Ophthalmologic", "Other/Unclassified"]
+    d_labels_g = [d for d in _order_g if d in by_domain] or list(by_domain.keys())
+    x_pos = np.arange(len(d_labels_g))
+    has_comp = all("cit_classes" in by_domain[d] for d in d_labels_g) and d_labels_g
+    has_dist = all("cit_median" in by_domain[d] for d in d_labels_g) and d_labels_g
 
-    y_pos = np.arange(len(d_labels_e))
-    ax.barh(y_pos, mean_pmids, color=d_cols_e, height=0.6, edgecolor="white",
-            linewidth=0.3)
-    ax.set_yticks(y_pos)
-    ax.set_yticklabels(d_labels_e, fontsize=6)
-    ax.set_xlabel("Mean PubMed citations per variant")
-    ax.set_title("Literature evidence depth by domain")
-    for i, v in enumerate(mean_pmids):
-        ax.text(v + 0.01, i, f"{v:.2f}", va="center", fontsize=5, color=NAT["grey"])
+    if has_comp:
+        # stacked composition of VARIANT-SPECIFIC citation counts per variant
+        # (assertion-method papers excluded); honest display for a zero-inflated
+        # distribution where the median is 0 in every domain
+        classes = ["0", "1", "2-5", ">=6"]
+        cls_labels = ["0", "1", "2–5", "≥6"]
+        cls_colors = ["#d9d9d9", "#9ecae1", "#4292c6", "#08519c"]
+        bottoms = np.zeros(len(d_labels_g))
+        for ci, cl in enumerate(classes):
+            hts = np.array([by_domain[d]["cit_classes"].get(cl, 0.0)
+                            for d in d_labels_g])
+            ax.bar(x_pos, hts, 0.62, bottom=bottoms, color=cls_colors[ci],
+                   edgecolor="white", linewidth=0.3, label=cls_labels[ci])
+            bottoms += hts
+        for i, d in enumerate(d_labels_g):
+            ge1 = 100.0 - by_domain[d]["cit_classes"].get("0", 0.0)
+            ax.text(i, 101.5, f"{ge1:.0f}%≥1", ha="center", fontsize=5.5,
+                    color="#08519c")
+        ax.set_ylim(0, 115)
+        ax.set_xlim(-0.6, len(d_labels_g) - 0.4)
+        ax.set_xticks(x_pos)
+        ax.set_xticklabels(d_labels_g, fontsize=6.0, rotation=28, ha="right")
+        ax.set_ylabel("Variants (%)", fontsize=6)
+        ax.set_title("Variant-specific citations by domain", fontsize=7)
+        ax.legend(title="citations", title_fontsize=6, fontsize=6, ncol=2,
+                  loc="center right", frameon=True, facecolor="white",
+                  edgecolor="none", framealpha=0.85)
+    elif has_dist:
+        BOX, MED, MEAN, WHIS = "#AEC7E8", "#F08C1E", "#C0392B", "#666666"
+        for i, d in enumerate(d_labels_g):
+            med = by_domain[d]["cit_median"]; q25 = by_domain[d]["cit_q25"]
+            q75 = by_domain[d]["cit_q75"]; q95 = by_domain[d]["cit_q95"]
+            mn = by_domain[d].get("cit_mean")
+            ax.plot([i, i], [0, q95], color=WHIS, lw=0.9, zorder=1)                  # whisker (5th=0 → 95th)
+            ax.plot([i - 0.10, i + 0.10], [q95, q95], color=WHIS, lw=0.9, zorder=1)   # 95th cap
+            ax.add_patch(mpatches.Rectangle((i - 0.30, q25), 0.60, max(q75 - q25, 0.04),
+                         facecolor=BOX, edgecolor="#4472A8", linewidth=0.6, zorder=2))  # IQR box
+            ax.plot([i - 0.30, i + 0.30], [med, med], color=MED, lw=1.6, zorder=3)      # median
+            if mn is not None:
+                ax.plot(i, mn, marker="D", color=MEAN, markersize=4.0,
+                        markeredgecolor="white", markeredgewidth=0.4, zorder=4)          # mean
+        ax.set_yscale("symlog", linthresh=1)
+        ax.set_ylim(0, max(by_domain[d]["cit_q95"] for d in d_labels_g) * 1.8)
+        ax.set_xlim(-0.6, len(d_labels_g) - 0.4)
+        ax.set_xticks(x_pos)
+        ax.set_xticklabels(d_labels_g, fontsize=6.0, rotation=28, ha="right")
+        ax.set_ylabel("PubMed citations per variant (symlog)", fontsize=6)
+        ax.set_title("Distribution of citations by domain", fontsize=7)
+        ax.plot([], [], marker="D", color=MEAN, markeredgecolor="white", markersize=4,
+                lw=0, label="mean")
+        ax.legend(fontsize=4.5, loc="upper right", frameon=False)
+    else:
+        d_cols_g = [DOMAIN_COLORS.get(d, NAT["grey"]) for d in d_labels_g]
+        mean_pmids = [by_domain[d].get("mean_pmids", 0) for d in d_labels_g]
+        ax.bar(x_pos, mean_pmids, color=d_cols_g, width=0.6, edgecolor="white", linewidth=0.3)
+        ax.set_xticks(x_pos)
+        ax.set_xticklabels(d_labels_g, fontsize=6.0, rotation=28, ha="right")
+        ax.set_ylabel("Mean PubMed citations per variant", fontsize=6)
+        ax.set_title("Literature evidence depth by domain")
     panel_label(ax, "g", x=-0.28)
 
     # ── (h) Evidence depth: rare vs common ────────────────────────────
@@ -1950,31 +2065,59 @@ def figure10_disease_domain(domain_data, out):
         sub_colors = [NAT["dark_red"], NAT["blue"], NAT["cyan"], NAT["salmon"]]
         subs_vals = []
         pmid_vals = []
+        filt_vals = []
         for sg in subgroups:
             source = cancer_vs if sg in ("cancer", "noncancer") else rare_vs
             subs_vals.append(source.get(sg, {}).get("mean_submissions", 0))
             pmid_vals.append(source.get(sg, {}).get("mean_pmids", 0))
+            filt_vals.append(source.get(sg, {}).get("mean_pmids_filtered"))
 
         x_pos = np.arange(len(subgroups))
-        bar_w = 0.35
-        bars1 = ax.bar(x_pos - bar_w / 2, subs_vals, bar_w, color=sub_colors,
-                        alpha=0.7, edgecolor="white", linewidth=0.3,
-                        label="Mean submissions")
-        bars2 = ax.bar(x_pos + bar_w / 2, pmid_vals, bar_w, color=sub_colors,
-                        alpha=0.4, edgecolor="white", linewidth=0.3,
-                        hatch="//", label="Mean PubMed IDs")
-        ax.set_xticks(x_pos)
-        ax.set_xticklabels(sub_labels, fontsize=5.5)
-        ax.set_ylabel("Mean per variant")
-        ax.set_title("Evidence depth by subgroup", pad=18)
-        for i, (s, p) in enumerate(zip(subs_vals, pmid_vals)):
-            ax.text(i - bar_w / 2, s + 0.03, f"{s:.2f}", ha="center",
-                    fontsize=4.5, va="bottom")
-            ax.text(i + bar_w / 2, p + 0.03, f"{p:.2f}", ha="center",
-                    fontsize=4.5, va="bottom")
-        ax.legend(loc="upper center", bbox_to_anchor=(0.5, 1.12),
-                  ncol=2, fontsize=4.5, frameon=False)
-    panel_label(ax, "h")
+        if all(v is not None for v in filt_vals):
+            # three bars: submissions, all references, variant-specific references
+            bar_w = 0.26
+            ax.bar(x_pos - bar_w, subs_vals, bar_w, color=sub_colors,
+                   alpha=0.7, edgecolor="white", linewidth=0.3,
+                   label="Mean submissions")
+            ax.bar(x_pos, pmid_vals, bar_w, color=sub_colors,
+                   alpha=0.35, edgecolor="white", linewidth=0.3,
+                   label="Mean PubMed refs (all)")
+            ax.bar(x_pos + bar_w, filt_vals, bar_w, color=sub_colors,
+                   alpha=0.55, edgecolor="white", linewidth=0.3, hatch="//",
+                   label="Mean variant-specific refs")
+            ax.set_xticks(x_pos)
+            ax.set_xticklabels(sub_labels, fontsize=6.0, rotation=15, ha="right")
+            ax.set_ylabel("Mean per variant")
+            ax.set_title("Evidence depth by subgroup", fontsize=7, pad=26)
+            for i, (s, p, f) in enumerate(zip(subs_vals, pmid_vals, filt_vals)):
+                ax.text(i - bar_w, s + 0.03, f"{s:.2f}", ha="center",
+                        fontsize=5.0, va="bottom")
+                ax.text(i, p + 0.03, f"{p:.2f}", ha="center",
+                        fontsize=5.0, va="bottom")
+                ax.text(i + bar_w, f + 0.03, f"{f:.2f}", ha="center",
+                        fontsize=5.0, va="bottom")
+            ax.legend(loc="upper center", bbox_to_anchor=(0.5, 1.26),
+                      ncol=3, fontsize=5.5, frameon=False)
+        else:
+            bar_w = 0.35
+            bars1 = ax.bar(x_pos - bar_w / 2, subs_vals, bar_w, color=sub_colors,
+                            alpha=0.7, edgecolor="white", linewidth=0.3,
+                            label="Mean submissions")
+            bars2 = ax.bar(x_pos + bar_w / 2, pmid_vals, bar_w, color=sub_colors,
+                            alpha=0.4, edgecolor="white", linewidth=0.3,
+                            hatch="//", label="Mean PubMed IDs")
+            ax.set_xticks(x_pos)
+            ax.set_xticklabels(sub_labels, fontsize=6.0, rotation=15, ha="right")
+            ax.set_ylabel("Mean per variant")
+            ax.set_title("Evidence depth by subgroup", fontsize=7, pad=26)
+            for i, (s, p) in enumerate(zip(subs_vals, pmid_vals)):
+                ax.text(i - bar_w / 2, s + 0.03, f"{s:.2f}", ha="center",
+                        fontsize=4.5, va="bottom")
+                ax.text(i + bar_w / 2, p + 0.03, f"{p:.2f}", ha="center",
+                        fontsize=4.5, va="bottom")
+            ax.legend(loc="upper center", bbox_to_anchor=(0.5, 1.12),
+                      ncol=2, fontsize=4.5, frameon=False)
+    panel_label(ax, "h", x=-0.30, y=1.34)
 
     _save(fig, out, "figure10_disease_domain_analysis")
 
@@ -2042,17 +2185,19 @@ def figure11_reclassification_drivers(driver_data, out):
     if counts:
         wedges, texts, autotexts = ax.pie(
             counts, labels=None,
-            autopct=lambda p: f"{p:.1f}%" if p > 1.0 else "",
+            autopct=lambda p: f"{p:.1f}%" if p > 4.0 else "",
             colors=colors, startangle=90, pctdistance=0.78,
             wedgeprops=dict(width=0.42, edgecolor="white", linewidth=1.0),
         )
         for at in autotexts:
             at.set_fontsize(5)
             at.set_fontweight("bold")
-        ax.legend(labels, fontsize=5, loc="upper center",
+        ax.legend(labels, fontsize=6, loc="upper center",
                   bbox_to_anchor=(0.5, -0.08), ncol=2, frameon=False,
                   columnspacing=0.8, handletextpad=0.4)
-        total_events = sum(counts)
+        # Include transition_ambiguous events (excluded from the donut wedges as
+        # visually redundant) so the center total matches the 697,698 reported in the text.
+        total_events = sum(counts) + summary.get("transition_ambiguous", {}).get("count", 0)
         ax.text(0, 0, f"{total_events:,}\nevents", ha="center", va="center",
                 fontsize=7, fontweight="bold", color=NAT["grey"])
     ax.set_title("Reclassification mechanism breakdown", fontsize=9, pad=14)
@@ -2687,8 +2832,8 @@ def figure13_batch_event_decomposition(comment_data_dir, out):
     with open(batch_path) as f:
         batch_data = json.load(f)
 
-    fig, (ax_a, ax_b) = plt.subplots(1, 2, figsize=(7.08, 3.2),
-                                      gridspec_kw={"wspace": 0.45})
+    fig, (ax_a, ax_b) = plt.subplots(1, 2, figsize=(7.08, 3.6),
+                                      gridspec_kw={"wspace": 0.38})
 
     dates = sorted(batch_data.keys())
     x_pos = np.arange(len(dates))
@@ -2714,25 +2859,26 @@ def figure13_batch_event_decomposition(comment_data_dir, out):
     # Event count annotation on top
     for i, d in enumerate(dates):
         n = batch_data[d]["total_events"]
-        ax_a.text(x_pos[i], 102, f"n={n:,}", ha="center", fontsize=4.5,
+        ax_a.text(x_pos[i], 102, f"n={n:,}", ha="center", fontsize=5.5,
                   color=NAT["grey"], fontweight="bold")
         # Source label at bottom
         source = batch_data[d]["likely_source"].split("(")[0].strip()
-        short_source = {"ClinVar-wide re-processing": "ClinVar\nre-processing",
+        short_source = {"ClinVar-wide re-processing": "Re-\nprocessing",
                         "Large-scale lab submission": "Lab\nsubmission",
                         "ClinVar re-aggregation": "ClinVar\nre-aggregation",
                         "Mixed": "Mixed"}.get(source, source[:12])
-        ax_a.text(x_pos[i], -12, short_source, ha="center", fontsize=4,
-                  color=NAT["grey"], style="italic")
+        src_labels = locals().setdefault("src_labels", [])
+        src_labels.append(short_source)
 
     ax_a.set_xticks(x_pos)
-    ax_a.set_xticklabels(date_labels, fontsize=6)
+    ax_a.set_xticklabels([f"{dl}\n{sl}" for dl, sl in zip(date_labels, src_labels)],
+                         fontsize=5.8, linespacing=1.15)
     ax_a.set_ylabel("Percentage of events")
     ax_a.set_ylim(0, 110)
-    ax_a.set_title("Submission count changes in batch events")
-    ax_a.legend(loc="upper center", bbox_to_anchor=(0.5, -0.18),
-                ncol=3, fontsize=5, frameon=False)
-    panel_label(ax_a, "a")
+    ax_a.set_title("Submission counts in batch events", fontsize=8, pad=14)
+    ax_a.legend(loc="upper center", bbox_to_anchor=(0.5, -0.30),
+                ncol=3, fontsize=6, frameon=False)
+    panel_label(ax_a, "a", x=-0.22, y=1.16)
 
     # ── (b) Gene concentration + top change patterns ──────────────
     gene_counts = [batch_data[d]["unique_genes"] for d in dates]
@@ -2755,19 +2901,20 @@ def figure13_batch_event_decomposition(comment_data_dir, out):
         label = "concentrated" if hhi > 0.1 else \
                 "moderate" if hhi > 0.02 else "dispersed"
         ax_b.text(x_pos[i], gc + 50, f"HHI={hhi:.3f}\n({label})",
-                  ha="center", fontsize=4, color=NAT["grey"])
+                  ha="center", fontsize=5.2, color=NAT["grey"])
 
     # Top gene annotation (rotated to avoid overlap)
+    gene_lines = []
     for i, d in enumerate(dates):
         top_genes = batch_data[d]["top_10_genes"][:2]
-        gene_str = ", ".join(g["gene"] for g in top_genes)
-        ax_b.text(x_pos[i], -80, gene_str, ha="center", fontsize=4,
-                  color=NAT["grey"], style="italic", rotation=0)
+        gene_lines.append(",\n".join(r"$\it{" + g["gene"] + "}$" for g in top_genes))
 
     ax_b.set_xticks(x_pos)
-    ax_b.set_xticklabels(date_labels, fontsize=6)
+    ax_b.set_xticklabels([f"{dl}\n{gl}" for dl, gl in zip(date_labels, gene_lines)],
+                         fontsize=5.8, linespacing=1.15)
+    ax_b.set_ylim(0, max(gene_counts) * 1.18)
     ax_b.set_ylabel("Unique genes affected")
-    ax_b.set_title("Gene concentration in batch events")
+    ax_b.set_title("Gene concentration in batch events", fontsize=8, pad=14)
 
     # Legend for concentration categories
     from matplotlib.patches import Patch
@@ -2777,11 +2924,11 @@ def figure13_batch_event_decomposition(comment_data_dir, out):
         Patch(color=NAT["dark_red"], label="Concentrated (HHI>0.1)"),
     ]
     ax_b.legend(handles=legend_patches, loc="upper center",
-                bbox_to_anchor=(0.5, -0.18), ncol=3, fontsize=5,
+                bbox_to_anchor=(0.5, -0.30), ncol=2, fontsize=6,
                 frameon=False)
-    panel_label(ax_b, "b")
+    panel_label(ax_b, "b", x=-0.24, y=1.16)
 
-    plt.subplots_adjust(bottom=0.22)
+    plt.subplots_adjust(bottom=0.30, top=0.88)
     _save(fig, out, "figure13_batch_event_decomposition")
 
 
@@ -3215,9 +3362,9 @@ def _figure15_submitter_deep_dive(gene_matrix_path, reclass_link_path,
     im = ax_a.imshow(heat, aspect="auto", cmap="YlOrRd",
                      interpolation="nearest")
     ax_a.set_xticks(np.arange(len(genes)))
-    ax_a.set_xticklabels(genes, rotation=60, ha="right", fontsize=4.5)
+    ax_a.set_xticklabels(genes, rotation=60, ha="right", fontsize=5.5, fontstyle="italic")
     ax_a.set_yticks(np.arange(len(submitters)))
-    ax_a.set_yticklabels([short_name(s) for s in submitters], fontsize=5)
+    ax_a.set_yticklabels([short_name(s) for s in submitters], fontsize=5.5)
     ax_a.set_title("Submitter specialization: % of submissions per gene")
 
     cbar = fig.colorbar(im, ax=ax_a, shrink=0.6, aspect=20, pad=0.02)
@@ -3247,7 +3394,12 @@ def _figure15_submitter_deep_dive(gene_matrix_path, reclass_link_path,
                          key=lambda x: x[1]["new"] + x[1]["reinterp"],
                          reverse=True)[:12]
 
-    b_names = [short_name(s[0], 22) for s in sorted_subs][::-1]
+    _seen, b_names = set(), []
+    for s_ in sorted_subs:
+        nm = short_name(s_[0], 22)
+        b_names.append(nm + " (alt. name)" if nm in _seen else nm)
+        _seen.add(nm)
+    b_names = b_names[::-1]
     b_new = [s[1]["new"] for s in sorted_subs][::-1]
     b_reint = [s[1]["reinterp"] for s in sorted_subs][::-1]
 
@@ -3258,7 +3410,7 @@ def _figure15_submitter_deep_dive(gene_matrix_path, reclass_link_path,
     ax_b.barh(y_b - bh / 2, b_reint, bh, color=NAT["blue"],
               edgecolor="white", linewidth=0.3, label="Reinterpretation")
     ax_b.set_yticks(y_b)
-    ax_b.set_yticklabels(b_names, fontsize=4.5)
+    ax_b.set_yticklabels(b_names, fontsize=5)
     ax_b.set_xlabel("Reclassification events", fontsize=6)
     ax_b.set_title("Reclassification triggers by submitter", fontsize=8)
     ax_b.legend(loc="lower right", fontsize=5,
@@ -3267,15 +3419,19 @@ def _figure15_submitter_deep_dive(gene_matrix_path, reclass_link_path,
 
     # ── (c) Conflict pairs ────────────────────────────────────────
     pairs = conflict_data.get("top_50_conflict_pairs", [])[:12]
-    c_labels = [f"{short_name(p['submitter_a'], 16)} vs\n{short_name(p['submitter_b'], 16)}"
-                for p in pairs][::-1]
+    _seen, c_labels = set(), []
+    for p in pairs:
+        lab = f"{short_name(p['submitter_a'], 16)} vs\n{short_name(p['submitter_b'], 16)}"
+        c_labels.append(lab + " (alt. name)" if lab in _seen else lab)
+        _seen.add(lab)
+    c_labels = c_labels[::-1]
     c_vals = [p["variant_count"] for p in pairs][::-1]
 
     y_c = np.arange(len(c_labels))
     ax_c.barh(y_c, c_vals, height=0.65, color=NAT["violet"],
               edgecolor="white", linewidth=0.3)
     ax_c.set_yticks(y_c)
-    ax_c.set_yticklabels(c_labels, fontsize=4.2, linespacing=0.85)
+    ax_c.set_yticklabels(c_labels, fontsize=4.8, linespacing=0.9)
     ax_c.set_xlabel("Variants with conflicting classifications", fontsize=6)
     ax_c.set_title("Most frequent inter-submitter conflicts", fontsize=8)
     ax_c.xaxis.set_major_formatter(mticker.FuncFormatter(
@@ -3516,9 +3672,9 @@ def figure16_case_study_trajectories(comment_data_dir, out):
                           ec="none", alpha=0.7))
 
         # ---- title ----
-        alias = f" ({spec['alias']})" if "alias" in spec else ""
+        alias = (" ($\\bf{\\it{" + spec['alias'] + "}}$)") if "alias" in spec else ""
         ax.set_title(
-            f"{spec['gene']}{alias} {spec['var']}  \u2014  "
+            "$\\bf{\\it{" + spec['gene'] + "}}$" + f"{alias} {spec['var']}  \u2014  "
             f"{d['n_events']} reclassification events, "
             f"{d['n_subs']} submitters",
             fontsize=7, fontweight="bold", loc="left", pad=4)

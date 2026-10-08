@@ -1,0 +1,1382 @@
+{
+  "reviewers": {
+    "a": {
+      "name": "Reviewer 1 (G.Z.)",
+      "workbook": "Mechanism_Validation_Review_FINAL_GZ_returned.xlsx"
+    },
+    "b": {
+      "name": "Reviewer 2 (Y.L.)",
+      "workbook": "Mechanism_Validation_Review_FINAL_YL_returned.xlsx"
+    }
+  },
+  "n_events": 48,
+  "population_events": 697698,
+  "n_bootstrap": 20000,
+  "seed": 20260720,
+  "inter_rater": {
+    "observed_agreement": 0.8333333333333334,
+    "expected_agreement": 0.1519097222222222,
+    "cohens_kappa": 0.8034800409416581,
+    "kappa_ci": [
+      0.7015544041450777,
+      0.9024885728796342
+    ],
+    "n_agreed": 40,
+    "n_split": 8
+  },
+  "by_reference_standard": {
+    "reviewer_a": {
+      "n": 48,
+      "k": 40,
+      "n_c": {
+        "reinterpretation": 6,
+        "conflict_emerged": 6,
+        "conflict_resolved": 6,
+        "transition_ambiguous": 6,
+        "new_submitter": 6,
+        "likely_schema_driven": 6,
+        "likely_knowledge_driven": 6,
+        "batch_event": 6
+      },
+      "unweighted": [
+        0.8333333333333334,
+        0.7042189996260375,
+        0.9130458996054678
+      ],
+      "weighted": [
+        0.9313994020335447,
+        0.8414024883736707,
+        0.9956220313086751
+      ],
+      "precision": {
+        "reinterpretation": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "new_submitter": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "conflict_emerged": [
+          0.8333333333333334,
+          0.5,
+          1.0
+        ],
+        "conflict_resolved": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "batch_event": [
+          0.8333333333333334,
+          0.5,
+          1.0
+        ],
+        "likely_schema_driven": [
+          0.6666666666666666,
+          0.3333333333333333,
+          1.0
+        ],
+        "likely_knowledge_driven": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "transition_ambiguous": [
+          0.3333333333333333,
+          0.0,
+          0.6666666666666666
+        ]
+      },
+      "recall": {
+        "reinterpretation": [
+          0.895775922293056,
+          0.7412613592730065,
+          1.0
+        ],
+        "new_submitter": [
+          0.9998629273240671,
+          0.9995888946748156,
+          1.0
+        ],
+        "conflict_emerged": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "conflict_resolved": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "batch_event": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "likely_schema_driven": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "likely_knowledge_driven": [
+          0.545878752784341,
+          0.31102569845317996,
+          0.9983766233766234
+        ],
+        "transition_ambiguous": [
+          0.011591323066732903,
+          0.0,
+          1.0
+        ]
+      },
+      "corrected": {
+        "reinterpretation": [
+          0.370665627057361,
+          0.3320333439396415,
+          0.44793019329280004
+        ],
+        "new_submitter": [
+          0.18298676504734138,
+          0.18296168256179604,
+          0.18303693001843202
+        ],
+        "conflict_emerged": [
+          0.19316141558859753,
+          0.11589684935315853,
+          0.23179369870631705
+        ],
+        "conflict_resolved": [
+          0.06866724571376154,
+          0.06866724571376154,
+          0.06866724571376154
+        ],
+        "batch_event": [
+          0.10656353704133688,
+          0.06393812222480214,
+          0.12787624444960427
+        ],
+        "likely_schema_driven": [
+          0.017110554996574448,
+          0.008555277498287224,
+          0.02566583249486167
+        ],
+        "likely_knowledge_driven": [
+          0.056517050834792894,
+          0.03090162219183658,
+          0.0991926306224183
+        ],
+        "transition_ambiguous": [
+          0.004327803720234256,
+          0.0,
+          0.012883081218521478
+        ]
+      },
+      "confusion": {
+        "reinterpretation": {
+          "reinterpretation": 6
+        },
+        "new_submitter": {
+          "new_submitter": 6
+        },
+        "conflict_emerged": {
+          "conflict_emerged": 5,
+          "reinterpretation": 1
+        },
+        "conflict_resolved": {
+          "conflict_resolved": 6
+        },
+        "batch_event": {
+          "batch_event": 5,
+          "likely_knowledge_driven": 1
+        },
+        "likely_schema_driven": {
+          "likely_schema_driven": 4,
+          "likely_knowledge_driven": 1,
+          "transition_ambiguous": 1
+        },
+        "likely_knowledge_driven": {
+          "likely_knowledge_driven": 6
+        },
+        "transition_ambiguous": {
+          "new_submitter": 1,
+          "likely_knowledge_driven": 3,
+          "transition_ambiguous": 2
+        }
+      }
+    },
+    "reviewer_b": {
+      "n": 48,
+      "k": 36,
+      "n_c": {
+        "reinterpretation": 6,
+        "conflict_emerged": 6,
+        "conflict_resolved": 6,
+        "transition_ambiguous": 6,
+        "new_submitter": 6,
+        "likely_schema_driven": 6,
+        "likely_knowledge_driven": 6,
+        "batch_event": 6
+      },
+      "unweighted": [
+        0.75,
+        0.6121535625207293,
+        0.8507951119028996
+      ],
+      "weighted": [
+        0.8975382854281747,
+        0.8506352318624963,
+        0.9486938952574514
+      ],
+      "precision": {
+        "reinterpretation": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "new_submitter": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "conflict_emerged": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "conflict_resolved": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "batch_event": [
+          0.3333333333333333,
+          0.0,
+          0.6666666666666666
+        ],
+        "likely_schema_driven": [
+          0.3333333333333333,
+          0.0,
+          0.6666666666666666
+        ],
+        "likely_knowledge_driven": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "transition_ambiguous": [
+          0.3333333333333333,
+          0.0,
+          0.6666666666666666
+        ]
+      },
+      "recall": {
+        "reinterpretation": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "new_submitter": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "conflict_emerged": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "conflict_resolved": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "batch_event": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "likely_schema_driven": [
+          0.16715829957246606,
+          0.0,
+          1.0
+        ],
+        "likely_knowledge_driven": [
+          0.4447053719307066,
+          0.265381983614743,
+          0.7804144082084005
+        ],
+        "transition_ambiguous": [
+          0.0023482315579957283,
+          0.0,
+          1.0
+        ]
+      },
+      "corrected": {
+        "reinterpretation": [
+          0.3320333439396415,
+          0.3320333439396415,
+          0.3320333439396415
+        ],
+        "new_submitter": [
+          0.18296168256179604,
+          0.18296168256179604,
+          0.18296168256179604
+        ],
+        "conflict_emerged": [
+          0.23179369870631705,
+          0.23179369870631705,
+          0.23179369870631705
+        ],
+        "conflict_resolved": [
+          0.06866724571376154,
+          0.06866724571376154,
+          0.06866724571376154
+        ],
+        "batch_event": [
+          0.04262541481653476,
+          0.0,
+          0.08525082963306951
+        ],
+        "likely_schema_driven": [
+          0.05118069231482198,
+          0.004277638749143612,
+          0.10236138462964396
+        ],
+        "likely_knowledge_driven": [
+          0.06937504956776905,
+          0.039532147146759775,
+          0.1162530206479021
+        ],
+        "transition_ambiguous": [
+          0.021362872379358022,
+          0.0,
+          0.0640133696814381
+        ]
+      },
+      "confusion": {
+        "reinterpretation": {
+          "reinterpretation": 6
+        },
+        "new_submitter": {
+          "new_submitter": 6
+        },
+        "conflict_emerged": {
+          "conflict_emerged": 6
+        },
+        "conflict_resolved": {
+          "conflict_resolved": 6
+        },
+        "batch_event": {
+          "transition_ambiguous": 1,
+          "batch_event": 2,
+          "likely_schema_driven": 2,
+          "likely_knowledge_driven": 1
+        },
+        "likely_schema_driven": {
+          "likely_knowledge_driven": 4,
+          "likely_schema_driven": 2
+        },
+        "likely_knowledge_driven": {
+          "likely_knowledge_driven": 6
+        },
+        "transition_ambiguous": {
+          "likely_knowledge_driven": 4,
+          "transition_ambiguous": 2
+        }
+      }
+    },
+    "both_concur": {
+      "n": 40,
+      "k": 35,
+      "n_c": {
+        "reinterpretation": 6,
+        "conflict_emerged": 5,
+        "conflict_resolved": 6,
+        "new_submitter": 6,
+        "likely_knowledge_driven": 6,
+        "likely_schema_driven": 3,
+        "transition_ambiguous": 5,
+        "batch_event": 3
+      },
+      "unweighted": [
+        0.875,
+        0.7388757932976187,
+        0.9454058022645873
+      ],
+      "weighted": [
+        0.9487290107372148,
+        0.8635082800867997,
+        0.9999398020346912
+      ],
+      "precision": {
+        "reinterpretation": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "new_submitter": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "conflict_emerged": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "conflict_resolved": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "batch_event": [
+          0.6666666666666666,
+          0.0,
+          1.0
+        ],
+        "likely_schema_driven": [
+          0.6666666666666666,
+          0.0,
+          1.0
+        ],
+        "likely_knowledge_driven": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "transition_ambiguous": [
+          0.4,
+          0.0,
+          0.8
+        ]
+      },
+      "recall": {
+        "reinterpretation": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "new_submitter": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "conflict_emerged": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "conflict_resolved": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "batch_event": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "likely_schema_driven": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "likely_knowledge_driven": [
+          0.37567630461341556,
+          0.18436041283028565,
+          0.9980525803310614
+        ],
+        "transition_ambiguous": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "corrected": {
+        "reinterpretation": [
+          0.3320333439396415,
+          0.3320333439396415,
+          0.3320333439396415
+        ],
+        "new_submitter": [
+          0.18296168256179604,
+          0.18296168256179604,
+          0.18296168256179604
+        ],
+        "conflict_emerged": [
+          0.23179369870631703,
+          0.23179369870631703,
+          0.23179369870631703
+        ],
+        "conflict_resolved": [
+          0.06866724571376154,
+          0.06866724571376154,
+          0.06866724571376154
+        ],
+        "batch_event": [
+          0.08525082963306951,
+          0.0,
+          0.12787624444960427
+        ],
+        "likely_schema_driven": [
+          0.017110554996574448,
+          0.0,
+          0.02566583249486167
+        ],
+        "likely_knowledge_driven": [
+          0.08212244648353108,
+          0.03091165518605471,
+          0.1673431771339462
+        ],
+        "transition_ambiguous": [
+          6.019796530877256e-05,
+          0.0,
+          0.00012039593061754512
+        ]
+      },
+      "confusion": {
+        "reinterpretation": {
+          "reinterpretation": 6
+        },
+        "new_submitter": {
+          "new_submitter": 6
+        },
+        "conflict_emerged": {
+          "conflict_emerged": 5
+        },
+        "conflict_resolved": {
+          "conflict_resolved": 6
+        },
+        "batch_event": {
+          "batch_event": 2,
+          "likely_knowledge_driven": 1
+        },
+        "likely_schema_driven": {
+          "likely_schema_driven": 2,
+          "likely_knowledge_driven": 1
+        },
+        "likely_knowledge_driven": {
+          "likely_knowledge_driven": 6
+        },
+        "transition_ambiguous": {
+          "likely_knowledge_driven": 3,
+          "transition_ambiguous": 2
+        }
+      }
+    },
+    "adjudicated_upper_bound": {
+      "n": 48,
+      "k": 41,
+      "n_c": {
+        "reinterpretation": 6,
+        "conflict_emerged": 6,
+        "conflict_resolved": 6,
+        "new_submitter": 6,
+        "likely_knowledge_driven": 6,
+        "likely_schema_driven": 6,
+        "transition_ambiguous": 6,
+        "batch_event": 6
+      },
+      "unweighted": [
+        0.8541666666666666,
+        0.7283255295714138,
+        0.9275184258620602
+      ],
+      "weighted": [
+        0.9700316851512641,
+        0.927381187849184,
+        0.9998745875722733
+      ],
+      "precision": {
+        "reinterpretation": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "new_submitter": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "conflict_emerged": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "conflict_resolved": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "batch_event": [
+          0.8333333333333334,
+          0.5,
+          1.0
+        ],
+        "likely_schema_driven": [
+          0.6666666666666666,
+          0.3333333333333333,
+          1.0
+        ],
+        "likely_knowledge_driven": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "transition_ambiguous": [
+          0.3333333333333333,
+          0.0,
+          0.6666666666666666
+        ]
+      },
+      "recall": {
+        "reinterpretation": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "new_submitter": [
+          0.9998629273240671,
+          0.9995888946748156,
+          1.0
+        ],
+        "conflict_emerged": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "conflict_resolved": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "batch_event": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "likely_schema_driven": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "likely_knowledge_driven": [
+          0.545878752784341,
+          0.3111043663010016,
+          0.9983766233766234
+        ],
+        "transition_ambiguous": [
+          0.011591323066732903,
+          0.0,
+          1.0
+        ]
+      },
+      "corrected": {
+        "reinterpretation": [
+          0.3320333439396415,
+          0.3320333439396415,
+          0.3320333439396415
+        ],
+        "new_submitter": [
+          0.18298676504734138,
+          0.18296168256179604,
+          0.18303693001843202
+        ],
+        "conflict_emerged": [
+          0.23179369870631705,
+          0.23179369870631705,
+          0.23179369870631705
+        ],
+        "conflict_resolved": [
+          0.06866724571376154,
+          0.06866724571376154,
+          0.06866724571376154
+        ],
+        "batch_event": [
+          0.10656353704133688,
+          0.06393812222480214,
+          0.12787624444960427
+        ],
+        "likely_schema_driven": [
+          0.017110554996574448,
+          0.008555277498287224,
+          0.02566583249486167
+        ],
+        "likely_knowledge_driven": [
+          0.056517050834792894,
+          0.03090162219183658,
+          0.09916754813687298
+        ],
+        "transition_ambiguous": [
+          0.004327803720234256,
+          0.0,
+          0.0129081637040668
+        ]
+      },
+      "confusion": {
+        "reinterpretation": {
+          "reinterpretation": 6
+        },
+        "new_submitter": {
+          "new_submitter": 6
+        },
+        "conflict_emerged": {
+          "conflict_emerged": 6
+        },
+        "conflict_resolved": {
+          "conflict_resolved": 6
+        },
+        "batch_event": {
+          "batch_event": 5,
+          "likely_knowledge_driven": 1
+        },
+        "likely_schema_driven": {
+          "likely_schema_driven": 4,
+          "likely_knowledge_driven": 1,
+          "transition_ambiguous": 1
+        },
+        "likely_knowledge_driven": {
+          "likely_knowledge_driven": 6
+        },
+        "transition_ambiguous": {
+          "likely_knowledge_driven": 3,
+          "transition_ambiguous": 2,
+          "new_submitter": 1
+        }
+      }
+    },
+    "adjudicated_lower_bound": {
+      "n": 48,
+      "k": 35,
+      "n_c": {
+        "reinterpretation": 6,
+        "conflict_emerged": 6,
+        "conflict_resolved": 6,
+        "new_submitter": 6,
+        "likely_knowledge_driven": 6,
+        "likely_schema_driven": 6,
+        "transition_ambiguous": 6,
+        "batch_event": 6
+      },
+      "unweighted": [
+        0.7291666666666666,
+        0.5900276538379887,
+        0.8343419643836709
+      ],
+      "weighted": [
+        0.8589060023104552,
+        0.7688338411939454,
+        0.9401135352736188
+      ],
+      "precision": {
+        "reinterpretation": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "new_submitter": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "conflict_emerged": [
+          0.8333333333333334,
+          0.5,
+          1.0
+        ],
+        "conflict_resolved": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "batch_event": [
+          0.3333333333333333,
+          0.0,
+          0.6666666666666666
+        ],
+        "likely_schema_driven": [
+          0.3333333333333333,
+          0.0,
+          0.6666666666666666
+        ],
+        "likely_knowledge_driven": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "transition_ambiguous": [
+          0.3333333333333333,
+          0.0,
+          0.6666666666666666
+        ]
+      },
+      "recall": {
+        "reinterpretation": [
+          0.895775922293056,
+          0.7412613592730065,
+          1.0
+        ],
+        "new_submitter": [
+          0.9998629273240671,
+          0.9995888946748156,
+          1.0
+        ],
+        "conflict_emerged": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "conflict_resolved": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "batch_event": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "likely_schema_driven": [
+          0.16715829957246606,
+          0.0,
+          1.0
+        ],
+        "likely_knowledge_driven": [
+          0.47411024026724913,
+          0.27564348828275065,
+          0.8763537171240127
+        ],
+        "transition_ambiguous": [
+          0.001956473131102333,
+          0.0,
+          1.0
+        ]
+      },
+      "corrected": {
+        "reinterpretation": [
+          0.370665627057361,
+          0.3320333439396415,
+          0.44793019329280004
+        ],
+        "new_submitter": [
+          0.18298676504734138,
+          0.18296168256179604,
+          0.18303693001843202
+        ],
+        "conflict_emerged": [
+          0.19316141558859753,
+          0.11589684935315853,
+          0.23179369870631705
+        ],
+        "conflict_resolved": [
+          0.06866724571376154,
+          0.06866724571376154,
+          0.06866724571376154
+        ],
+        "batch_event": [
+          0.04262541481653476,
+          0.0,
+          0.08525082963306951
+        ],
+        "likely_schema_driven": [
+          0.05118069231482198,
+          0.004277638749143612,
+          0.10236138462964396
+        ],
+        "likely_knowledge_driven": [
+          0.06507232833308012,
+          0.035204343426525515,
+          0.11195029941321316
+        ],
+        "transition_ambiguous": [
+          0.025640511128501634,
+          2.50824855453219e-05,
+          0.06831609091612703
+        ]
+      },
+      "confusion": {
+        "reinterpretation": {
+          "reinterpretation": 6
+        },
+        "new_submitter": {
+          "new_submitter": 6
+        },
+        "conflict_emerged": {
+          "conflict_emerged": 5,
+          "reinterpretation": 1
+        },
+        "conflict_resolved": {
+          "conflict_resolved": 6
+        },
+        "batch_event": {
+          "batch_event": 2,
+          "likely_knowledge_driven": 1,
+          "transition_ambiguous": 1,
+          "likely_schema_driven": 2
+        },
+        "likely_schema_driven": {
+          "likely_schema_driven": 2,
+          "likely_knowledge_driven": 3,
+          "transition_ambiguous": 1
+        },
+        "likely_knowledge_driven": {
+          "likely_knowledge_driven": 6
+        },
+        "transition_ambiguous": {
+          "likely_knowledge_driven": 3,
+          "transition_ambiguous": 2,
+          "new_submitter": 1
+        }
+      }
+    }
+  },
+  "split_events": [
+    {
+      "review_id": "R0005",
+      "gene": "TYRP1",
+      "heuristic": "transition_ambiguous",
+      "reviewer_a": "new_submitter",
+      "reviewer_b": "likely_knowledge_driven",
+      "conf_a": "High",
+      "conf_b": "Low"
+    },
+    {
+      "review_id": "R0007",
+      "gene": "CACNA1S",
+      "heuristic": "likely_schema_driven",
+      "reviewer_a": "likely_schema_driven",
+      "reviewer_b": "likely_knowledge_driven",
+      "conf_a": "High",
+      "conf_b": "Low"
+    },
+    {
+      "review_id": "R0010",
+      "gene": "SLC12A3",
+      "heuristic": "likely_schema_driven",
+      "reviewer_a": "likely_schema_driven",
+      "reviewer_b": "likely_knowledge_driven",
+      "conf_a": "High",
+      "conf_b": "Medium"
+    },
+    {
+      "review_id": "R0013",
+      "gene": "GPR101",
+      "heuristic": "batch_event",
+      "reviewer_a": "batch_event",
+      "reviewer_b": "transition_ambiguous",
+      "conf_a": "Low",
+      "conf_b": "Low"
+    },
+    {
+      "review_id": "R0023",
+      "gene": "COL11A2",
+      "heuristic": "conflict_emerged",
+      "reviewer_a": "reinterpretation",
+      "reviewer_b": "conflict_emerged",
+      "conf_a": "Medium",
+      "conf_b": "High"
+    },
+    {
+      "review_id": "R0034",
+      "gene": "KCNQ1",
+      "heuristic": "batch_event",
+      "reviewer_a": "batch_event",
+      "reviewer_b": "likely_schema_driven",
+      "conf_a": "High",
+      "conf_b": "High"
+    },
+    {
+      "review_id": "R0041",
+      "gene": "KRAS",
+      "heuristic": "likely_schema_driven",
+      "reviewer_a": "transition_ambiguous",
+      "reviewer_b": "likely_knowledge_driven",
+      "conf_a": "Medium",
+      "conf_b": "Medium"
+    },
+    {
+      "review_id": "R0042",
+      "gene": "RAPSN",
+      "heuristic": "batch_event",
+      "reviewer_a": "batch_event",
+      "reviewer_b": "likely_schema_driven",
+      "conf_a": "Low",
+      "conf_b": "High"
+    }
+  ],
+  "admissibility": {
+    "reviewer_a_inadmissible": {},
+    "reviewer_b_inadmissible": {},
+    "reviewer_a_admissible_only": {
+      "n": 48,
+      "k": 40,
+      "n_c": {
+        "reinterpretation": 6,
+        "conflict_emerged": 6,
+        "conflict_resolved": 6,
+        "transition_ambiguous": 6,
+        "new_submitter": 6,
+        "likely_schema_driven": 6,
+        "likely_knowledge_driven": 6,
+        "batch_event": 6
+      },
+      "unweighted": [
+        0.8333333333333334,
+        0.7042189996260375,
+        0.9130458996054678
+      ],
+      "weighted": [
+        0.9313994020335447,
+        0.8414024883736707,
+        0.9956220313086751
+      ],
+      "precision": {
+        "reinterpretation": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "new_submitter": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "conflict_emerged": [
+          0.8333333333333334,
+          0.5,
+          1.0
+        ],
+        "conflict_resolved": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "batch_event": [
+          0.8333333333333334,
+          0.5,
+          1.0
+        ],
+        "likely_schema_driven": [
+          0.6666666666666666,
+          0.3333333333333333,
+          1.0
+        ],
+        "likely_knowledge_driven": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "transition_ambiguous": [
+          0.3333333333333333,
+          0.0,
+          0.6666666666666666
+        ]
+      },
+      "recall": {
+        "reinterpretation": [
+          0.895775922293056,
+          0.7412613592730065,
+          1.0
+        ],
+        "new_submitter": [
+          0.9998629273240671,
+          0.9995888946748156,
+          1.0
+        ],
+        "conflict_emerged": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "conflict_resolved": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "batch_event": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "likely_schema_driven": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "likely_knowledge_driven": [
+          0.545878752784341,
+          0.31102569845317996,
+          0.9983766233766234
+        ],
+        "transition_ambiguous": [
+          0.011591323066732903,
+          0.0,
+          1.0
+        ]
+      },
+      "corrected": {
+        "reinterpretation": [
+          0.370665627057361,
+          0.3320333439396415,
+          0.44793019329280004
+        ],
+        "new_submitter": [
+          0.18298676504734138,
+          0.18296168256179604,
+          0.18303693001843202
+        ],
+        "conflict_emerged": [
+          0.19316141558859753,
+          0.11589684935315853,
+          0.23179369870631705
+        ],
+        "conflict_resolved": [
+          0.06866724571376154,
+          0.06866724571376154,
+          0.06866724571376154
+        ],
+        "batch_event": [
+          0.10656353704133688,
+          0.06393812222480214,
+          0.12787624444960427
+        ],
+        "likely_schema_driven": [
+          0.017110554996574448,
+          0.008555277498287224,
+          0.02566583249486167
+        ],
+        "likely_knowledge_driven": [
+          0.056517050834792894,
+          0.03090162219183658,
+          0.0991926306224183
+        ],
+        "transition_ambiguous": [
+          0.004327803720234256,
+          0.0,
+          0.012883081218521478
+        ]
+      },
+      "confusion": {
+        "reinterpretation": {
+          "reinterpretation": 6
+        },
+        "new_submitter": {
+          "new_submitter": 6
+        },
+        "conflict_emerged": {
+          "conflict_emerged": 5,
+          "reinterpretation": 1
+        },
+        "conflict_resolved": {
+          "conflict_resolved": 6
+        },
+        "batch_event": {
+          "batch_event": 5,
+          "likely_knowledge_driven": 1
+        },
+        "likely_schema_driven": {
+          "likely_schema_driven": 4,
+          "likely_knowledge_driven": 1,
+          "transition_ambiguous": 1
+        },
+        "likely_knowledge_driven": {
+          "likely_knowledge_driven": 6
+        },
+        "transition_ambiguous": {
+          "new_submitter": 1,
+          "likely_knowledge_driven": 3,
+          "transition_ambiguous": 2
+        }
+      }
+    },
+    "reviewer_b_admissible_only": {
+      "n": 48,
+      "k": 36,
+      "n_c": {
+        "reinterpretation": 6,
+        "conflict_emerged": 6,
+        "conflict_resolved": 6,
+        "transition_ambiguous": 6,
+        "new_submitter": 6,
+        "likely_schema_driven": 6,
+        "likely_knowledge_driven": 6,
+        "batch_event": 6
+      },
+      "unweighted": [
+        0.75,
+        0.6121535625207293,
+        0.8507951119028996
+      ],
+      "weighted": [
+        0.8975382854281747,
+        0.8506352318624963,
+        0.9486938952574514
+      ],
+      "precision": {
+        "reinterpretation": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "new_submitter": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "conflict_emerged": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "conflict_resolved": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "batch_event": [
+          0.3333333333333333,
+          0.0,
+          0.6666666666666666
+        ],
+        "likely_schema_driven": [
+          0.3333333333333333,
+          0.0,
+          0.6666666666666666
+        ],
+        "likely_knowledge_driven": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "transition_ambiguous": [
+          0.3333333333333333,
+          0.0,
+          0.6666666666666666
+        ]
+      },
+      "recall": {
+        "reinterpretation": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "new_submitter": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "conflict_emerged": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "conflict_resolved": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "batch_event": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "likely_schema_driven": [
+          0.16715829957246606,
+          0.0,
+          1.0
+        ],
+        "likely_knowledge_driven": [
+          0.4447053719307066,
+          0.265381983614743,
+          0.7804144082084005
+        ],
+        "transition_ambiguous": [
+          0.0023482315579957283,
+          0.0,
+          1.0
+        ]
+      },
+      "corrected": {
+        "reinterpretation": [
+          0.3320333439396415,
+          0.3320333439396415,
+          0.3320333439396415
+        ],
+        "new_submitter": [
+          0.18296168256179604,
+          0.18296168256179604,
+          0.18296168256179604
+        ],
+        "conflict_emerged": [
+          0.23179369870631705,
+          0.23179369870631705,
+          0.23179369870631705
+        ],
+        "conflict_resolved": [
+          0.06866724571376154,
+          0.06866724571376154,
+          0.06866724571376154
+        ],
+        "batch_event": [
+          0.04262541481653476,
+          0.0,
+          0.08525082963306951
+        ],
+        "likely_schema_driven": [
+          0.05118069231482198,
+          0.004277638749143612,
+          0.10236138462964396
+        ],
+        "likely_knowledge_driven": [
+          0.06937504956776905,
+          0.039532147146759775,
+          0.1162530206479021
+        ],
+        "transition_ambiguous": [
+          0.021362872379358022,
+          0.0,
+          0.0640133696814381
+        ]
+      },
+      "confusion": {
+        "reinterpretation": {
+          "reinterpretation": 6
+        },
+        "new_submitter": {
+          "new_submitter": 6
+        },
+        "conflict_emerged": {
+          "conflict_emerged": 6
+        },
+        "conflict_resolved": {
+          "conflict_resolved": 6
+        },
+        "batch_event": {
+          "transition_ambiguous": 1,
+          "batch_event": 2,
+          "likely_schema_driven": 2,
+          "likely_knowledge_driven": 1
+        },
+        "likely_schema_driven": {
+          "likely_knowledge_driven": 4,
+          "likely_schema_driven": 2
+        },
+        "likely_knowledge_driven": {
+          "likely_knowledge_driven": 6
+        },
+        "transition_ambiguous": {
+          "likely_knowledge_driven": 4,
+          "transition_ambiguous": 2
+        }
+      }
+    },
+    "kappa_admissible_only": {
+      "kappa": 0.8034800409416581,
+      "observed_agreement": 0.8333333333333334,
+      "n": 48
+    }
+  }
+}
