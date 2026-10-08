@@ -899,7 +899,7 @@ def figure4(summary_agg, stats, out):
     ax.set_yticks(y_pos)
     ax.set_yticklabels(fields, fontsize=6)
     ax.set_xlabel("Completeness (%)")
-    ax.set_xlim(0, 105)
+    ax.set_xlim(0, 124)
     ax.set_title("Field-level data completeness")
     for i, v in enumerate(vals):
         ax.text(v + 0.8, i, f"{v:.1f}%", va="center", fontsize=5, color=NAT["grey"])
@@ -923,7 +923,7 @@ def figure4(summary_agg, stats, out):
                edgecolor="white", linewidth=0.3, label="All listed references")
         ax.bar(x + bw / 2, filt_pct, bw, color=NAT["blue"],
                edgecolor="white", linewidth=0.3,
-               label="Variant-specific (method papers excluded)")
+               label="Variant-specific")
         ax.set_xticks(x)
         ax.set_xticklabels(pmid_order, fontsize=6)
         ax.set_xlabel("PubMed citations per variant")
@@ -932,6 +932,8 @@ def figure4(summary_agg, stats, out):
         for xi, pct in zip(x, filt_pct):
             ax.text(xi + bw / 2, pct + 1.0, f"{pct:.1f}", ha="center",
                     fontsize=5.0, color=NAT["blue"])
+        ax.set_ylim(0, max(max(pmid_pct), max(filt_pct)) * 1.17)
+        ax.legend(fontsize=6.0, frameon=False, loc="upper right")
         ax.legend(fontsize=6.0, frameon=False, loc="upper right")
     else:
         bar_cols_pmid = [NAT["grey"]] + [NAT["blue"]] * 5
@@ -944,7 +946,7 @@ def figure4(summary_agg, stats, out):
         ax.set_title("Literature evidence distribution")
         for i, (v, pct) in enumerate(zip(pmid_vals, pmid_pct)):
             ax.text(i, pct + 0.5, fmt(v), ha="center", fontsize=4.5, color=NAT["grey"])
-    panel_label(ax, "b")
+    panel_label(ax, "b", x=-0.22, y=1.13)
 
     # ── (c) New variants per year ────────────────────────────────────
     ax = axes[1, 0]
@@ -963,7 +965,7 @@ def figure4(summary_agg, stats, out):
     ax.set_ylabel("New variants (millions)")
     ax.set_xlabel("Year of first ClinVar appearance")
     ax.set_title("Variant accession timeline")
-    panel_label(ax, "c")
+    panel_label(ax, "c", x=-0.22, y=1.17)
 
     # ── (d) dbSNP coverage by entry cohort ───────────────────────────
     ax = axes[1, 1]
@@ -981,11 +983,11 @@ def figure4(summary_agg, stats, out):
            edgecolor="white", linewidth=0.3)
     ax.set_xticks(range(len(years)))
     ax.set_xticklabels(years, rotation=45, ha="right", fontsize=6.5)
-    ax.set_ylabel("Variants with dbSNP ID (%)")
+    ax.set_ylabel("Variants with dbSNP ID (%)", fontsize=8)
     ax.set_xlabel("Year of first ClinVar appearance")
     ax.set_title("dbSNP cross-reference coverage")
     ax.set_ylim(0, 105)
-    panel_label(ax, "d")
+    panel_label(ax, "d", x=-0.22, y=1.17)
 
     _save(fig, out, "figure4_evidence_linkage_completeness")
 
@@ -1022,8 +1024,8 @@ def figure5(xml_data, out, hist_agg=None):
         ax.axvline(vcv_start, color=NAT["grey"], linestyle="--", linewidth=0.5, alpha=0.6)
         ax.set_ylim(ylim)
 
-    fig = plt.figure(figsize=(7.08, 7.5))
-    gs = GridSpec(3, 2, figure=fig, hspace=0.55, wspace=0.42)
+    fig = plt.figure(figsize=(7.08, 8.4))
+    gs = GridSpec(3, 2, figure=fig, hspace=0.78, wspace=0.42)
 
     # ── (a) Format era timeline + variant count ───────────────────────
     ax = fig.add_subplot(gs[0, 0])
@@ -1045,10 +1047,11 @@ def figure5(xml_data, out, hist_agg=None):
 
     ax.axvline(vcv_start, color="black", linestyle=":", linewidth=0.5, alpha=0.5)
     ylim = ax.get_ylim()
-    ax.text(2016.0, ylim[1] * 0.90, "RCV\n(submission-\ncentric)",
-            fontsize=5.5, color=NAT["blue"], ha="center", fontweight="bold")
-    ax.text(2022.5, ylim[1] * 0.90, "VCV\n(variant-\ncentric)",
-            fontsize=5.5, color=NAT["yellow"], ha="center", fontweight="bold")
+    ax.set_ylim(0, ylim[1] * 1.34)
+    ax.text(2016.0, ylim[1] * 1.29, "RCV\n(submission-\ncentric)",
+            fontsize=5.5, color=NAT["blue"], ha="center", va="top", fontweight="bold")
+    ax.text(2022.5, ylim[1] * 1.29, "VCV\n(variant-\ncentric)",
+            fontsize=5.5, color=NAT["yellow"], ha="center", va="top", fontweight="bold")
 
     legend_patches = [mpatches.Patch(color=NAT["blue"], label="RCV format"),
                       mpatches.Patch(color=NAT["yellow"], label="VCV format")]
@@ -1169,7 +1172,7 @@ def figure5(xml_data, out, hist_agg=None):
                         ha="right", fontsize=4.5)
     ax.set_xlabel("Release", fontsize=6)
     ax.set_title("Field availability (grouped)")
-    panel_label(ax, "c")
+    panel_label(ax, "c", x=-0.40, y=1.12)
 
     # ── (d) Element lifecycle ─────────────────────────────────────────
     ax = fig.add_subplot(gs[1, 1])
@@ -1186,8 +1189,8 @@ def figure5(xml_data, out, hist_agg=None):
     ax.set_ylabel("Element count")
     ax.set_xlabel("Year")
     ax.set_title("Element lifecycle")
-    ax.legend(fontsize=5, loc="lower left",
-              frameon=True, facecolor="white", edgecolor="none", framealpha=0.85)
+    ax.legend(fontsize=5.5, loc="upper center", bbox_to_anchor=(0.5, -0.24), ncol=2,
+              frameon=False)
     ax.xaxis.set_major_locator(mticker.MultipleLocator(2))
 
     ax2 = ax.twinx()
@@ -1221,8 +1224,8 @@ def figure5(xml_data, out, hist_agg=None):
         ax.set_ylabel("Elements changed")
         ax.set_xlabel("Year")
         ax.set_title("Schema change taxonomy")
-        ax.legend(fontsize=4.5, loc="lower left",
-                  frameon=True, facecolor="white", edgecolor="none", framealpha=0.85)
+        ax.legend(fontsize=5.5, loc="upper center", bbox_to_anchor=(0.5, -0.24), ncol=3,
+                  frameon=False)
         ax.xaxis.set_major_locator(mticker.MultipleLocator(2))
 
         # Cumulative overlay
@@ -1285,7 +1288,7 @@ def figure6(summary_agg, stats, out):
     ax.set_xticklabels(acmg_order, fontsize=7)
     ax.set_xlabel("ACMG evidence codes per variant")
     ax.set_ylabel("Variants (%)")
-    ax.set_title("ACMG/AMP evidence utilisation")
+    ax.set_title("ACMG/AMP evidence utilization")
     for i, (v, pct) in enumerate(zip(acmg_vals, acmg_pct)):
         ax.text(i, pct + 0.3, fmt(v), ha="center", fontsize=6, color=NAT["grey"])
     panel_label(ax, "a")
@@ -1812,8 +1815,8 @@ def figure10_disease_domain(domain_data, out):
                     "Renal", "Ophthalmologic", "Other/Unclassified"]
     domains_present = [d for d in domain_order if d in by_domain]
 
-    fig = plt.figure(figsize=(7.08, 9.5))
-    gs = GridSpec(4, 2, figure=fig, hspace=0.80, wspace=0.55)
+    fig = plt.figure(figsize=(7.08, 11.2))
+    gs = GridSpec(4, 2, figure=fig, hspace=0.80, wspace=0.55, height_ratios=[1, 1, 1.5, 1])
 
     # ── (a) Reclassification rate by domain + cancer vs non-cancer ────
     ax = fig.add_subplot(gs[0, 0])
@@ -1830,6 +1833,7 @@ def figure10_disease_domain(domain_data, out):
     ax.set_title("Reclassification rate by domain", fontsize=7)
     for i, v in enumerate(d_rates):
         ax.text(v + 0.2, i, f"{v:.1f}%", va="center", fontsize=5, color=NAT["grey"])
+    ax.set_xlim(0, max(d_rates) * 1.22)
     panel_label(ax, "a", x=-0.28)
 
     # ── (b) Cancer vs non-cancer reclassification rate comparison ─────
@@ -1973,7 +1977,7 @@ def figure10_disease_domain(domain_data, out):
         ax.barh(y_pos, g_vals, color=g_cols, height=0.7, edgecolor="white",
                 linewidth=0.2)
         ax.set_yticks(y_pos)
-        ax.set_yticklabels(g_labels, fontsize=5, fontstyle="italic")
+        ax.set_yticklabels(g_labels, fontsize=5.5, fontstyle="italic")
         ax.set_xlabel("Total variants", fontsize=7)
         ax.set_title("Top 20 genes by variant count", fontsize=7)
         ax.xaxis.set_major_formatter(mticker.FuncFormatter(lambda v, _: fmt(v)))
@@ -1988,7 +1992,8 @@ def figure10_disease_domain(domain_data, out):
     # whisker (5th=0 → 95th) + median line + mean diamond, on a symlog axis so the
     # skew is visible. Uses injected cit_* quantiles + cit_mean; falls back to mean
     # bars if the quantiles are absent.
-    ax = fig.add_subplot(gs[3, 0])
+    _g_split = gs[3, 0].subgridspec(1, 2, width_ratios=[3.6, 1.0], wspace=0.04)
+    ax = fig.add_subplot(_g_split[0, 0])
     _order_g = ["Hereditary Cancer", "Cardiovascular", "Neurological", "Renal",
                 "Ophthalmologic", "Other/Unclassified"]
     d_labels_g = [d for d in _order_g if d in by_domain] or list(by_domain.keys())
@@ -2012,16 +2017,16 @@ def figure10_disease_domain(domain_data, out):
             bottoms += hts
         for i, d in enumerate(d_labels_g):
             ge1 = 100.0 - by_domain[d]["cit_classes"].get("0", 0.0)
-            ax.text(i, 101.5, f"{ge1:.0f}%≥1", ha="center", fontsize=5.5,
+            ax.text(i, 101.5, f"{ge1:.0f}%\n≥1", ha="center", fontsize=5.2, linespacing=1.0,
                     color="#08519c")
-        ax.set_ylim(0, 115)
+        ax.set_ylim(0, 124)
         ax.set_xlim(-0.6, len(d_labels_g) - 0.4)
         ax.set_xticks(x_pos)
         ax.set_xticklabels(d_labels_g, fontsize=6.0, rotation=28, ha="right")
         ax.set_ylabel("Variants (%)", fontsize=6)
         ax.set_title("Variant-specific citations by domain", fontsize=7)
-        ax.legend(title="citations", title_fontsize=6, fontsize=6, ncol=2,
-                  loc="center right", frameon=True, facecolor="white",
+        ax.legend(title="citations", title_fontsize=6, fontsize=6, ncol=1,
+                  loc="center left", bbox_to_anchor=(1.03, 0.5), frameon=False, facecolor="white",
                   edgecolor="none", framealpha=0.85)
     elif has_dist:
         BOX, MED, MEAN, WHIS = "#AEC7E8", "#F08C1E", "#C0392B", "#666666"
@@ -2091,11 +2096,12 @@ def figure10_disease_domain(domain_data, out):
             ax.set_title("Evidence depth by subgroup", fontsize=7, pad=26)
             for i, (s, p, f) in enumerate(zip(subs_vals, pmid_vals, filt_vals)):
                 ax.text(i - bar_w, s + 0.03, f"{s:.2f}", ha="center",
-                        fontsize=5.0, va="bottom")
-                ax.text(i, p + 0.03, f"{p:.2f}", ha="center",
-                        fontsize=5.0, va="bottom")
+                        fontsize=4.4, va="bottom")
+                ax.text(i, p + (0.16 if abs(p - s) < 0.2 else 0.03), f"{p:.2f}", ha="center",
+                        fontsize=4.4, va="bottom")
                 ax.text(i + bar_w, f + 0.03, f"{f:.2f}", ha="center",
-                        fontsize=5.0, va="bottom")
+                        fontsize=4.4, va="bottom")
+            ax.set_ylim(0, max(max(subs_vals), max(pmid_vals), max(filt_vals)) * 1.2)
             ax.legend(loc="upper center", bbox_to_anchor=(0.5, 1.26),
                       ncol=3, fontsize=5.5, frameon=False)
         else:
@@ -2201,7 +2207,8 @@ def figure11_reclassification_drivers(driver_data, out):
         ax.text(0, 0, f"{total_events:,}\nevents", ha="center", va="center",
                 fontsize=7, fontweight="bold", color=NAT["grey"])
     ax.set_title("Reclassification mechanism breakdown", fontsize=9, pad=14)
-    panel_label(ax, "a", x=-0.05, y=1.18)
+    _cell = ax.get_subplotspec().get_position(fig)
+    fig.text(_cell.x0 - 0.045, _cell.y1 + 0.035, "a", fontsize=10, fontweight="bold", va="top", ha="left")
 
     # ── (b) Mechanism breakdown by era (stacked bar) ─────────────────
     ax = axes[0, 1]
@@ -2261,12 +2268,16 @@ def figure11_reclassification_drivers(driver_data, out):
         ax.set_ylim(0, 100)
         ax.set_ylabel("Proportion (%)", fontsize=7)
         ax.set_xlabel("Year", fontsize=7)
-        ax.set_title("Reclassification mechanism over time", fontsize=9, pad=14)
+        ax.set_title("Reclassification mechanism over time", fontsize=9, pad=26)
         ax.xaxis.set_major_locator(mticker.MultipleLocator(2))
         ax.axvline(x=date_to_float("2020-01"), color="black", linestyle="--",
-                   linewidth=0.6, alpha=0.5)
-        ax.text(date_to_float("2020-01"), 95, "RCV\u2192VCV", fontsize=5.5,
-                ha="left", va="top", style="italic", alpha=0.6)
+                   linewidth=1.2, alpha=0.95, zorder=6)
+        ax.annotate("RCV\u2192VCV transition", xy=(date_to_float("2020-01"), 100),
+                    xytext=(date_to_float("2020-01") - 3.4, 104), textcoords="data",
+                    annotation_clip=False, fontsize=6.5, fontweight="bold", color="black",
+                    ha="center", va="bottom",
+                    arrowprops=dict(arrowstyle="-|>", color="black", lw=1.0,
+                                    connectionstyle="arc3,rad=-0.2"))
         ax.legend(fontsize=4.5, loc="upper center", bbox_to_anchor=(0.5, -0.28),
                   ncol=4, frameon=False, columnspacing=0.8, handletextpad=0.3)
     panel_label(ax, "c", x=-0.14, y=1.18)

@@ -80,6 +80,7 @@ python revision_analyses/31_its_r3.py                         # flow-based inter
 python revision_analyses/17_rebuild_figure5_native.py         # Figure 5
 python revision_analyses/r4_figures.py                        # Figures 6, 8, 9, 11-15 and Additional file 1 Fig. S3 (final)
 python revision_analyses/r4_suppfig_review_status.py         # Additional file 1 Fig. S4
+python revision_analyses/r4_fig4.py                           # Figure 4
 ```
 
 `revision_analyses/outputs/mechanism_validation_labels_two_reviewers.csv` holds the per-event labels
